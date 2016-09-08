@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mall.dao.comm.TSysSequnecesMapper" >
+
+<!-- 系统序列号更新 -->
+<update id="update" parameterType="java.util.Map">
+UPDATE 
+	t_sys_sequences
+SET
+	SEQ_NO = #{seqNo}
+WHERE
+	SEQ_CODE = #{seqCode}
+</update>
+
+<select id="querySeqNo" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+SELECT
+	(
+		CASE
+		WHEN SEQ_NO = 0 THEN
+			SEQ_MIN
+		ELSE
+			SEQ_NO + SEQ_STEP
+		END
+	) AS SEQ_NO
+FROM
+	t_sys_sequences
+WHERE
+	SEQ_CODE = ${seqCode}
+</select>
+
+</mapper>

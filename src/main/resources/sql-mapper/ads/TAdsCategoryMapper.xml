@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mall.dao.ads.TAdsCategoryMapper" >
+
+  <!-- 所有列 -->
+    <sql id="tAdsCategoryList">
+        ID,
+        SORT_NAME,
+        SORT_REMARKS,
+        CREATED_TIME,
+        IS_ACTIVE
+    </sql>
+
+    <resultMap id="tAdsCategoryParam" type="com.mall.model.ads.TAdsCategory" >
+        <id  column="ID" property="id" />
+        <result column="SORT_NAME" property="sortName" />
+        <result column="SORT_REMARKS" property="sortRemarks" />
+        <result column="CREATED_TIME" property="createdTime" />
+        <result column="IS_ACTIVE" property="isActive" />
+    </resultMap>
+  
+  <!--查询广告类型集合  -->
+  <select id="query" resultMap="tAdsCategoryParam" parameterType="TAdsCategory" >
+    select <include refid="tAdsCategoryList"/> from t_ads_category
+  </select>
+  
+  <!--新增广告类型  -->
+  <insert id="insert" parameterType="TAdsCategory">
+   insert into t_ads_category 
+   (
+   ID, 
+   SORT_NAME,
+   SORT_REMARKS,
+   CREATED_TIME, 
+   IS_ACTIVE
+   )
+    values 
+    (
+    #{id}, 
+    #{sortName},
+    #{sortRemarks}, 
+    #{createdTime},
+    #{isActive}
+    )
+  </insert>
+ 
+ <!--删除广告类型  -->
+ <delete id="delete" parameterType="java.lang.Integer">
+  delete from t_ads_category where ID = #{id}
+ </delete>
+ 
+ <!--判断广告类型是否已经存在  -->
+ <select id="queryIsExistTAdsCategory" parameterType="java.lang.String" resultType="java.lang.Integer">
+  select count(1) from t_ads_category where SORT_NAME=#{sortName}
+ </select>
+ 
+ <!--修改广告类型  -->
+ <update id="update" parameterType="TAdsCategory">
+ update t_ads_category 
+ <set>
+ <if test="sortRemarks!=null and ''!=sortRemarks"> 
+ SORT_REMARKS=${sortRemarks},
+ </if>
+ IS_ACTIVE=${isActive}
+ </set>
+ where ID=${id}
+ </update>
+ 
+ <!--批量删除广告类型  -->
+ <delete id="deleteByIds" parameterType = "java.util.List">
+ delete from t_ads_category where ID in <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">
+ ${item}
+ </foreach>
+ </delete>
+</mapper>
