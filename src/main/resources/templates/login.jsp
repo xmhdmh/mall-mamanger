@@ -1,4 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,14 +61,14 @@
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="登录名"  name="登录名">
+															<input type="text" class="form-control" placeholder="登录名"  name="登录名"/>
 															<i class="icon-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="密码" name="密码">
+															<input type="password" class="form-control" placeholder="密码" name="密码"/>
 															<i class="icon-lock"></i>
 														</span>
 													</label>
@@ -78,7 +77,7 @@
 
 													<div class="clearfix">
 														<label class="inline">
-															<input type="checkbox" class="ace">
+															<input type="checkbox" class="ace"/>
 															<span class="lbl">保存密码</span>
 														</label>
 
