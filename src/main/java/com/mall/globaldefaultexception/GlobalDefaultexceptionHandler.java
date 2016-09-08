@@ -12,7 +12,9 @@ package com.mall.globaldefaultexception;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @ClassName: GlobalDefaultexceptionHandler
@@ -21,11 +23,15 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
  * @date 2016年9月8日 下午2:27:29
  * 
  */
-
+@ControllerAdvice
 public class GlobalDefaultexceptionHandler {
     @ExceptionHandler(value=Exception.class)
-    public String defaultErrorHandler(HttpServletRequest req, Exception e){
-        System.out.println(e.getMessage());
-        return "404";
+    public ModelAndView defaultErrorHandler(HttpServletRequest req, Exception e){
+      System.out.println("全局异常:"+e.getMessage());
+      ModelAndView mav = new ModelAndView();
+      mav.addObject("exception", e);
+      mav.addObject("url", req.getRequestURL());
+      mav.setViewName("404");
+      return mav;
     }
 }
