@@ -62,11 +62,11 @@
             <artifactId>spring-boot-starter-jetty</artifactId>
         </dependency>
         <!--包含支持UI模版（Velocity，FreeMarker，JasperReports），邮件服务，脚本服务(JRuby)， 缓存Cache（EHCache）， 
-            任务计划Scheduling（uartz）。 -->
+            任务计划Scheduling（uartz）-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
-        </dependency>
+        </dependency> 
         <!-- 添加redis支持 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -77,12 +77,6 @@
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-spring</artifactId>
             <version>1.2.2</version>
-        </dependency>
-        <!-- junit测试 -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
         </dependency>
         <!-- shiro ehcache -->
         <dependency>
