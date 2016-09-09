@@ -19121,3 +19121,524 @@ Caused by: org.xml.sax.SAXParseException: 元素类型 "script" 必须后跟属�
 	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplateUsingPool(AbstractNonValidatingSAXTemplateParser.java:134) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
 	... 63 common frames omitted
 
+2016-09-09 10:14:04.781  INFO 6796 --- [main] com.mall.WebApp                          : Starting WebApp on 93KP1HRPCLTK9FS with PID 6796 (E:\mall-mamanger\target\classes started by Administrator in E:\mall-mamanger)
+2016-09-09 10:14:04.821 DEBUG 6796 --- [main] com.mall.WebApp                          : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-09-09 10:14:04.821  INFO 6796 --- [main] com.mall.WebApp                          : No active profile set, falling back to default profiles: default
+2016-09-09 10:14:07.085  INFO 6796 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d9e8ef7: startup date [Fri Sep 09 10:14:06 CST 2016]; root of context hierarchy
+2016-09-09 10:14:12.455  INFO 6796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 10:14:12.573  INFO 6796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 10:14:13.928  INFO 6796 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$84ad4211] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-09-09 10:14:15.016  INFO 6796 --- [main] org.eclipse.jetty.util.log               : Logging initialized @17036ms
+2016-09-09 10:14:15.630  INFO 6796 --- [main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 80
+2016-09-09 10:14:15.640  INFO 6796 --- [main] org.eclipse.jetty.server.Server          : jetty-9.3.11.v20160721
+2016-09-09 10:14:16.390  INFO 6796 --- [main] application                              : Initializing Spring embedded WebApplicationContext
+2016-09-09 10:14:16.391  INFO 6796 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9403 ms
+2016-09-09 10:14:16.953  INFO 6796 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-09 10:14:16.957  INFO 6796 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricFilter' to: [/*]
+2016-09-09 10:14:16.958  INFO 6796 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-09 10:14:16.958  INFO 6796 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-09 10:14:16.959  INFO 6796 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-09 10:14:16.959  INFO 6796 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-09 10:14:16.959  INFO 6796 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-09-09 10:14:16.959  INFO 6796 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-09-09 10:14:18.701  INFO 6796 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@4182a651{/,file:///E:/mall-mamanger/src/main/webapp/,AVAILABLE}
+2016-09-09 10:14:18.702  INFO 6796 --- [main] org.eclipse.jetty.server.Server          : Started @20738ms
+2016-09-09 10:14:20.773  INFO 6796 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-09 10:14:20.873  INFO 6796 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-09 10:14:21.180  INFO 6796 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-09-09 10:14:21.182  INFO 6796 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-09-09 10:14:21.188  INFO 6796 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-09-09 10:14:21.539  INFO 6796 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-09-09 10:14:22.128  INFO 6796 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-09-09 10:14:22.821  INFO 6796 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-09 10:14:24.463  INFO 6796 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d9e8ef7: startup date [Fri Sep 09 10:14:06 CST 2016]; root of context hierarchy
+2016-09-09 10:14:24.712  INFO 6796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/update]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.update(com.mall.model.ads.TAdsCategory)
+2016-09-09 10:14:24.714  INFO 6796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/delete]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.delete(java.lang.Integer)
+2016-09-09 10:14:24.715  INFO 6796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/deleteIds]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.delete(java.util.List<java.lang.Integer>)
+2016-09-09 10:14:24.715  INFO 6796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/insert]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.insert(com.mall.model.ads.TAdsCategory)
+2016-09-09 10:14:24.715  INFO 6796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/query]}" onto public com.github.pagehelper.PageInfo<com.mall.model.ads.TAdsCategory> com.mall.controller.ads.TAdsCategoryController.query()
+2016-09-09 10:14:24.716  INFO 6796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.mall.controller.IndexController.index()
+2016-09-09 10:14:24.717  INFO 6796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String com.mall.controller.IndexController.main()
+2016-09-09 10:14:24.717  INFO 6796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sort]}" onto public java.lang.String com.mall.controller.IndexController.sort()
+2016-09-09 10:14:24.724  INFO 6796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-09 10:14:24.725  INFO 6796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-09 10:14:24.817  INFO 6796 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 10:14:24.817  INFO 6796 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 10:14:24.863  INFO 6796 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalDefaultexceptionHandler
+2016-09-09 10:14:24.929  INFO 6796 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 10:14:27.097  INFO 6796 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:14:27.098  INFO 6796 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:14:27.099  INFO 6796 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:14:27.100  INFO 6796 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:14:27.104  INFO 6796 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:14:27.106  INFO 6796 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-09-09 10:14:27.106  INFO 6796 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:14:27.108  INFO 6796 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2016-09-09 10:14:27.109  INFO 6796 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:14:27.111  INFO 6796 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-09-09 10:14:27.115  INFO 6796 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:14:27.117  INFO 6796 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-09-09 10:14:27.117  INFO 6796 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:14:27.119  INFO 6796 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-09-09 10:14:27.797  INFO 6796 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2016-09-09 10:14:28.046  WARN 6796 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2016-09-09 10:14:28.427  INFO 6796 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-09 10:14:28.443  INFO 6796 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-09-09 10:14:28.669  INFO 6796 --- [main] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-09 10:14:28.669  INFO 6796 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-09 10:14:28.720  INFO 6796 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 51 ms
+2016-09-09 10:14:28.906  INFO 6796 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@104a3bfa{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+2016-09-09 10:14:28.922  INFO 6796 --- [main] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 80 (http/1.1)
+2016-09-09 10:14:28.937  INFO 6796 --- [main] com.mall.WebApp                          : Started WebApp in 27.118 seconds (JVM running for 30.974)
+2016-09-09 10:15:40.811  INFO 6672 --- [main] com.mall.WebApp                          : Starting WebApp on 93KP1HRPCLTK9FS with PID 6672 (E:\mall-mamanger\target\classes started by Administrator in E:\mall-mamanger)
+2016-09-09 10:15:40.902 DEBUG 6672 --- [main] com.mall.WebApp                          : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-09-09 10:15:40.903  INFO 6672 --- [main] com.mall.WebApp                          : No active profile set, falling back to default profiles: default
+2016-09-09 10:15:41.542  INFO 6672 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b98f307: startup date [Fri Sep 09 10:15:41 CST 2016]; root of context hierarchy
+2016-09-09 10:15:43.574  INFO 6672 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 10:15:43.681  INFO 6672 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 10:15:44.812  INFO 6672 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5cda6db1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-09-09 10:15:45.290  INFO 6672 --- [main] org.eclipse.jetty.util.log               : Logging initialized @6063ms
+2016-09-09 10:15:45.423  INFO 6672 --- [main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 80
+2016-09-09 10:15:45.427  INFO 6672 --- [main] org.eclipse.jetty.server.Server          : jetty-9.3.11.v20160721
+2016-09-09 10:15:45.679  INFO 6672 --- [main] application                              : Initializing Spring embedded WebApplicationContext
+2016-09-09 10:15:45.679  INFO 6672 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4141 ms
+2016-09-09 10:15:46.084  INFO 6672 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-09 10:15:46.088  INFO 6672 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricFilter' to: [/*]
+2016-09-09 10:15:46.088  INFO 6672 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-09 10:15:46.088  INFO 6672 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-09 10:15:46.089  INFO 6672 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-09 10:15:46.089  INFO 6672 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-09 10:15:46.089  INFO 6672 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-09-09 10:15:46.089  INFO 6672 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-09-09 10:15:46.645  INFO 6672 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@36551e97{/,file:///E:/mall-mamanger/src/main/webapp/,AVAILABLE}
+2016-09-09 10:15:46.646  INFO 6672 --- [main] org.eclipse.jetty.server.Server          : Started @7422ms
+2016-09-09 10:15:48.140  INFO 6672 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-09 10:15:48.167  INFO 6672 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-09 10:15:48.289  INFO 6672 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-09-09 10:15:48.292  INFO 6672 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-09-09 10:15:48.295  INFO 6672 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-09-09 10:15:48.356  INFO 6672 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-09-09 10:15:48.555  INFO 6672 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-09-09 10:15:49.200  WARN 6672 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.mall.model.user.UserInfo
+2016-09-09 10:15:49.234  INFO 6672 --- [main] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@36551e97{/,file:///E:/mall-mamanger/src/main/webapp/,UNAVAILABLE}
+2016-09-09 10:15:49.246  INFO 6672 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report enable debug logging (start with --debug)
+
+
+2016-09-09 10:15:49.447 ERROR 6672 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.mall.model.user.UserInfo
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at com.mall.WebApp.main(WebApp.java:10) [classes/:na]
+Caused by: org.hibernate.AnnotationException: No identifier specified for entity: com.mall.model.user.UserInfo
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:265) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:211) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:710) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:245) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:222) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:265) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:847) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:874) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:338) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:373) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:362) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	... 16 common frames omitted
+
+2016-09-09 10:17:05.757  INFO 6576 --- [main] com.mall.WebApp                          : Starting WebApp on 93KP1HRPCLTK9FS with PID 6576 (E:\mall-mamanger\target\classes started by Administrator in E:\mall-mamanger)
+2016-09-09 10:17:05.760 DEBUG 6576 --- [main] com.mall.WebApp                          : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-09-09 10:17:05.761  INFO 6576 --- [main] com.mall.WebApp                          : No active profile set, falling back to default profiles: default
+2016-09-09 10:17:06.161  INFO 6576 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b98f307: startup date [Fri Sep 09 10:17:06 CST 2016]; root of context hierarchy
+2016-09-09 10:17:08.241  INFO 6576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 10:17:08.339  INFO 6576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 10:17:09.025  INFO 6576 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5ed07198] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-09-09 10:17:09.517  INFO 6576 --- [main] org.eclipse.jetty.util.log               : Logging initialized @4766ms
+2016-09-09 10:17:09.586  INFO 6576 --- [main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 80
+2016-09-09 10:17:09.588  INFO 6576 --- [main] org.eclipse.jetty.server.Server          : jetty-9.3.11.v20160721
+2016-09-09 10:17:09.696  INFO 6576 --- [main] application                              : Initializing Spring embedded WebApplicationContext
+2016-09-09 10:17:09.696  INFO 6576 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3539 ms
+2016-09-09 10:17:10.004  INFO 6576 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-09 10:17:10.008  INFO 6576 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricFilter' to: [/*]
+2016-09-09 10:17:10.008  INFO 6576 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-09 10:17:10.009  INFO 6576 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-09 10:17:10.009  INFO 6576 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-09 10:17:10.009  INFO 6576 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-09 10:17:10.010  INFO 6576 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-09-09 10:17:10.010  INFO 6576 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-09-09 10:17:10.520  INFO 6576 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@25533bba{/,file:///E:/mall-mamanger/src/main/webapp/,AVAILABLE}
+2016-09-09 10:17:10.520  INFO 6576 --- [main] org.eclipse.jetty.server.Server          : Started @5770ms
+2016-09-09 10:17:10.905  INFO 6576 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-09 10:17:10.931  INFO 6576 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-09 10:17:11.011  INFO 6576 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-09-09 10:17:11.012  INFO 6576 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-09-09 10:17:11.014  INFO 6576 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-09-09 10:17:11.063  INFO 6576 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-09-09 10:17:11.918  INFO 6576 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-09 10:17:12.072  WARN 6576 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.mall.model.user.UserInfo
+2016-09-09 10:17:12.083  INFO 6576 --- [main] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@25533bba{/,file:///E:/mall-mamanger/src/main/webapp/,UNAVAILABLE}
+2016-09-09 10:17:12.099  INFO 6576 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report enable debug logging (start with --debug)
+
+
+2016-09-09 10:17:12.112 ERROR 6576 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.mall.model.user.UserInfo
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at com.mall.WebApp.main(WebApp.java:10) [classes/:na]
+Caused by: org.hibernate.AnnotationException: No identifier specified for entity: com.mall.model.user.UserInfo
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:265) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:211) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:710) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:245) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:222) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:265) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:847) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:874) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:338) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:373) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:362) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	... 16 common frames omitted
+
+2016-09-09 10:20:34.764  INFO 6500 --- [main] com.mall.WebApp                          : Starting WebApp on 93KP1HRPCLTK9FS with PID 6500 (E:\mall-mamanger\target\classes started by Administrator in E:\mall-mamanger)
+2016-09-09 10:20:34.767 DEBUG 6500 --- [main] com.mall.WebApp                          : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-09-09 10:20:34.768  INFO 6500 --- [main] com.mall.WebApp                          : No active profile set, falling back to default profiles: default
+2016-09-09 10:20:35.202  INFO 6500 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b98f307: startup date [Fri Sep 09 10:20:35 CST 2016]; root of context hierarchy
+2016-09-09 10:20:37.209  INFO 6500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 10:20:37.314  INFO 6500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 10:20:38.095  INFO 6500 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5cda6db1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-09-09 10:20:38.593  INFO 6500 --- [main] org.eclipse.jetty.util.log               : Logging initialized @4844ms
+2016-09-09 10:20:38.677  INFO 6500 --- [main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 80
+2016-09-09 10:20:38.680  INFO 6500 --- [main] org.eclipse.jetty.server.Server          : jetty-9.3.11.v20160721
+2016-09-09 10:20:38.824  INFO 6500 --- [main] application                              : Initializing Spring embedded WebApplicationContext
+2016-09-09 10:20:38.825  INFO 6500 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3629 ms
+2016-09-09 10:20:39.143  INFO 6500 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-09 10:20:39.146  INFO 6500 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricFilter' to: [/*]
+2016-09-09 10:20:39.147  INFO 6500 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-09 10:20:39.147  INFO 6500 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-09 10:20:39.147  INFO 6500 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-09 10:20:39.148  INFO 6500 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-09 10:20:39.148  INFO 6500 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-09-09 10:20:39.148  INFO 6500 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-09-09 10:20:39.655  INFO 6500 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@36551e97{/,file:///E:/mall-mamanger/src/main/webapp/,AVAILABLE}
+2016-09-09 10:20:39.656  INFO 6500 --- [main] org.eclipse.jetty.server.Server          : Started @5908ms
+2016-09-09 10:20:40.046  INFO 6500 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-09 10:20:40.068  INFO 6500 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-09 10:20:40.150  INFO 6500 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-09-09 10:20:40.153  INFO 6500 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-09-09 10:20:40.156  INFO 6500 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-09-09 10:20:40.218  INFO 6500 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-09-09 10:20:41.144  INFO 6500 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-09 10:20:41.304  WARN 6500 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.mall.model.user.UserInfo
+2016-09-09 10:20:41.314  INFO 6500 --- [main] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@36551e97{/,file:///E:/mall-mamanger/src/main/webapp/,UNAVAILABLE}
+2016-09-09 10:20:41.325  INFO 6500 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report enable debug logging (start with --debug)
+
+
+2016-09-09 10:20:41.335 ERROR 6500 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.mall.model.user.UserInfo
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at com.mall.WebApp.main(WebApp.java:10) [classes/:na]
+Caused by: org.hibernate.AnnotationException: No identifier specified for entity: com.mall.model.user.UserInfo
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:265) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:211) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:710) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:245) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:222) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:265) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:847) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:874) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:338) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:373) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:362) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	... 16 common frames omitted
+
+2016-09-09 10:22:32.267  INFO 6680 --- [main] com.mall.WebApp                          : Starting WebApp on 93KP1HRPCLTK9FS with PID 6680 (E:\mall-mamanger\target\classes started by Administrator in E:\mall-mamanger)
+2016-09-09 10:22:32.272 DEBUG 6680 --- [main] com.mall.WebApp                          : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-09-09 10:22:32.272  INFO 6680 --- [main] com.mall.WebApp                          : No active profile set, falling back to default profiles: default
+2016-09-09 10:22:32.739  INFO 6680 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b98f307: startup date [Fri Sep 09 10:22:32 CST 2016]; root of context hierarchy
+2016-09-09 10:22:34.782  INFO 6680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 10:22:34.881  INFO 6680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 10:22:35.594  INFO 6680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5cda6db1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-09-09 10:22:36.085  INFO 6680 --- [main] org.eclipse.jetty.util.log               : Logging initialized @4854ms
+2016-09-09 10:22:36.190  INFO 6680 --- [main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 80
+2016-09-09 10:22:36.193  INFO 6680 --- [main] org.eclipse.jetty.server.Server          : jetty-9.3.11.v20160721
+2016-09-09 10:22:36.359  INFO 6680 --- [main] application                              : Initializing Spring embedded WebApplicationContext
+2016-09-09 10:22:36.360  INFO 6680 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3627 ms
+2016-09-09 10:22:36.690  INFO 6680 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-09 10:22:36.693  INFO 6680 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricFilter' to: [/*]
+2016-09-09 10:22:36.694  INFO 6680 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-09 10:22:36.694  INFO 6680 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-09 10:22:36.694  INFO 6680 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-09 10:22:36.695  INFO 6680 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-09 10:22:36.695  INFO 6680 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-09-09 10:22:36.695  INFO 6680 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-09-09 10:22:37.417  INFO 6680 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@36551e97{/,file:///E:/mall-mamanger/src/main/webapp/,AVAILABLE}
+2016-09-09 10:22:37.418  INFO 6680 --- [main] org.eclipse.jetty.server.Server          : Started @6189ms
+2016-09-09 10:22:37.889  INFO 6680 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-09 10:22:37.910  INFO 6680 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-09 10:22:37.993  INFO 6680 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-09-09 10:22:37.996  INFO 6680 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-09-09 10:22:37.999  INFO 6680 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-09-09 10:22:38.058  INFO 6680 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-09-09 10:22:38.929  INFO 6680 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-09 10:22:39.085  WARN 6680 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.mall.model.user.UserInfo
+2016-09-09 10:22:39.094  INFO 6680 --- [main] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@36551e97{/,file:///E:/mall-mamanger/src/main/webapp/,UNAVAILABLE}
+2016-09-09 10:22:39.108  INFO 6680 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report enable debug logging (start with --debug)
+
+
+2016-09-09 10:22:39.121 ERROR 6680 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.mall.model.user.UserInfo
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at com.mall.WebApp.main(WebApp.java:10) [classes/:na]
+Caused by: org.hibernate.AnnotationException: No identifier specified for entity: com.mall.model.user.UserInfo
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:265) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:211) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:710) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:245) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:222) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:265) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:847) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:874) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:338) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:373) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:362) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	... 16 common frames omitted
+
+2016-09-09 10:24:20.039  INFO 4668 --- [main] com.mall.WebApp                          : Starting WebApp on 93KP1HRPCLTK9FS with PID 4668 (E:\mall-mamanger\target\classes started by Administrator in E:\mall-mamanger)
+2016-09-09 10:24:20.042 DEBUG 4668 --- [main] com.mall.WebApp                          : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-09-09 10:24:20.042  INFO 4668 --- [main] com.mall.WebApp                          : No active profile set, falling back to default profiles: default
+2016-09-09 10:24:20.450  INFO 4668 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b98f307: startup date [Fri Sep 09 10:24:20 CST 2016]; root of context hierarchy
+2016-09-09 10:24:22.698  INFO 4668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 10:24:22.795  INFO 4668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 10:24:23.614  INFO 4668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5cda6db1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-09-09 10:24:24.134  INFO 4668 --- [main] org.eclipse.jetty.util.log               : Logging initialized @5148ms
+2016-09-09 10:24:24.627  INFO 4668 --- [main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 80
+2016-09-09 10:24:24.631  INFO 4668 --- [main] org.eclipse.jetty.server.Server          : jetty-9.3.11.v20160721
+2016-09-09 10:24:24.813  INFO 4668 --- [main] application                              : Initializing Spring embedded WebApplicationContext
+2016-09-09 10:24:24.814  INFO 4668 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4368 ms
+2016-09-09 10:24:25.128  INFO 4668 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-09 10:24:25.132  INFO 4668 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricFilter' to: [/*]
+2016-09-09 10:24:25.132  INFO 4668 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-09 10:24:25.133  INFO 4668 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-09 10:24:25.133  INFO 4668 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-09 10:24:25.133  INFO 4668 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-09 10:24:25.134  INFO 4668 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-09-09 10:24:25.134  INFO 4668 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-09-09 10:24:25.735  INFO 4668 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@36551e97{/,file:///E:/mall-mamanger/src/main/webapp/,AVAILABLE}
+2016-09-09 10:24:25.736  INFO 4668 --- [main] org.eclipse.jetty.server.Server          : Started @6751ms
+2016-09-09 10:24:26.144  INFO 4668 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-09 10:24:26.165  INFO 4668 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-09 10:24:26.264  INFO 4668 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-09-09 10:24:26.266  INFO 4668 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-09-09 10:24:26.267  INFO 4668 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-09-09 10:24:26.316  INFO 4668 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-09-09 10:24:27.200  INFO 4668 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-09 10:24:27.934  INFO 4668 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-09-09 10:24:27.946  INFO 4668 --- [main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: sys_role
+2016-09-09 10:24:27.948  INFO 4668 --- [main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: sys_role
+2016-09-09 10:24:28.282  INFO 4668 --- [main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: user_info
+2016-09-09 10:24:28.284  INFO 4668 --- [main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: user_info
+2016-09-09 10:24:28.576  INFO 4668 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-09 10:24:29.608  INFO 4668 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b98f307: startup date [Fri Sep 09 10:24:20 CST 2016]; root of context hierarchy
+2016-09-09 10:24:29.719  INFO 4668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/update]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.update(com.mall.model.ads.TAdsCategory)
+2016-09-09 10:24:29.720  INFO 4668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/delete]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.delete(java.lang.Integer)
+2016-09-09 10:24:29.721  INFO 4668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/deleteIds]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.delete(java.util.List<java.lang.Integer>)
+2016-09-09 10:24:29.721  INFO 4668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/insert]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.insert(com.mall.model.ads.TAdsCategory)
+2016-09-09 10:24:29.722  INFO 4668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/query]}" onto public com.github.pagehelper.PageInfo<com.mall.model.ads.TAdsCategory> com.mall.controller.ads.TAdsCategoryController.query()
+2016-09-09 10:24:29.723  INFO 4668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.mall.controller.IndexController.index()
+2016-09-09 10:24:29.723  INFO 4668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String com.mall.controller.IndexController.main()
+2016-09-09 10:24:29.723  INFO 4668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sort]}" onto public java.lang.String com.mall.controller.IndexController.sort()
+2016-09-09 10:24:29.726  INFO 4668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-09 10:24:29.727  INFO 4668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-09 10:24:29.785  INFO 4668 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 10:24:29.785  INFO 4668 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 10:24:29.813  INFO 4668 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalDefaultexceptionHandler
+2016-09-09 10:24:29.848  INFO 4668 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 10:24:31.009  INFO 4668 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:24:31.010  INFO 4668 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:24:31.012  INFO 4668 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-09-09 10:24:31.012  INFO 4668 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:24:31.016  INFO 4668 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-09-09 10:24:31.016  INFO 4668 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:24:31.018  INFO 4668 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:24:31.019  INFO 4668 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:24:31.023  INFO 4668 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:24:31.024  INFO 4668 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-09-09 10:24:31.025  INFO 4668 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2016-09-09 10:24:31.027  INFO 4668 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:24:31.028  INFO 4668 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:24:31.029  INFO 4668 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-09-09 10:24:31.469  INFO 4668 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2016-09-09 10:24:31.604  WARN 4668 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2016-09-09 10:24:31.702  INFO 4668 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-09 10:24:31.720  INFO 4668 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-09-09 10:24:31.843  INFO 4668 --- [main] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-09 10:24:31.843  INFO 4668 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-09 10:24:31.861  INFO 4668 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2016-09-09 10:24:31.897  INFO 4668 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@49d6a96a{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+2016-09-09 10:24:31.901  INFO 4668 --- [main] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 80 (http/1.1)
+2016-09-09 10:24:31.907  INFO 4668 --- [main] com.mall.WebApp                          : Started WebApp in 12.394 seconds (JVM running for 12.922)
+2016-09-09 10:24:50.376  INFO 6108 --- [main] com.mall.WebApp                          : Starting WebApp on 93KP1HRPCLTK9FS with PID 6108 (E:\mall-mamanger\target\classes started by Administrator in E:\mall-mamanger)
+2016-09-09 10:24:50.379 DEBUG 6108 --- [main] com.mall.WebApp                          : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-09-09 10:24:50.379  INFO 6108 --- [main] com.mall.WebApp                          : No active profile set, falling back to default profiles: default
+2016-09-09 10:24:50.879  INFO 6108 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b98f307: startup date [Fri Sep 09 10:24:50 CST 2016]; root of context hierarchy
+2016-09-09 10:24:53.070  INFO 6108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 10:24:53.176  INFO 6108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 10:24:54.011  INFO 6108 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5cda6db1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-09-09 10:24:54.643  INFO 6108 --- [main] org.eclipse.jetty.util.log               : Logging initialized @5466ms
+2016-09-09 10:24:54.775  INFO 6108 --- [main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 80
+2016-09-09 10:24:54.780  INFO 6108 --- [main] org.eclipse.jetty.server.Server          : jetty-9.3.11.v20160721
+2016-09-09 10:24:54.974  INFO 6108 --- [main] application                              : Initializing Spring embedded WebApplicationContext
+2016-09-09 10:24:54.975  INFO 6108 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4102 ms
+2016-09-09 10:24:55.390  INFO 6108 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-09 10:24:55.393  INFO 6108 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricFilter' to: [/*]
+2016-09-09 10:24:55.394  INFO 6108 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-09 10:24:55.394  INFO 6108 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-09 10:24:55.394  INFO 6108 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-09 10:24:55.395  INFO 6108 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-09 10:24:55.395  INFO 6108 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-09-09 10:24:55.395  INFO 6108 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-09-09 10:24:56.066  INFO 6108 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@36551e97{/,file:///E:/mall-mamanger/src/main/webapp/,AVAILABLE}
+2016-09-09 10:24:56.066  INFO 6108 --- [main] org.eclipse.jetty.server.Server          : Started @6891ms
+2016-09-09 10:24:56.519  INFO 6108 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-09 10:24:56.544  INFO 6108 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-09 10:24:56.658  INFO 6108 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-09-09 10:24:56.660  INFO 6108 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-09-09 10:24:56.662  INFO 6108 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-09-09 10:24:56.731  INFO 6108 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-09-09 10:24:57.802  INFO 6108 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-09 10:24:58.290  INFO 6108 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-09-09 10:24:58.302  INFO 6108 --- [main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: sys_permission
+2016-09-09 10:24:58.304  INFO 6108 --- [main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: sys_permission
+2016-09-09 10:24:58.621  INFO 6108 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-09 10:24:59.576  INFO 6108 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b98f307: startup date [Fri Sep 09 10:24:50 CST 2016]; root of context hierarchy
+2016-09-09 10:24:59.718  INFO 6108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/update]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.update(com.mall.model.ads.TAdsCategory)
+2016-09-09 10:24:59.720  INFO 6108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/delete]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.delete(java.lang.Integer)
+2016-09-09 10:24:59.720  INFO 6108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/deleteIds]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.delete(java.util.List<java.lang.Integer>)
+2016-09-09 10:24:59.720  INFO 6108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/insert]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.insert(com.mall.model.ads.TAdsCategory)
+2016-09-09 10:24:59.721  INFO 6108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/query]}" onto public com.github.pagehelper.PageInfo<com.mall.model.ads.TAdsCategory> com.mall.controller.ads.TAdsCategoryController.query()
+2016-09-09 10:24:59.722  INFO 6108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.mall.controller.IndexController.index()
+2016-09-09 10:24:59.722  INFO 6108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String com.mall.controller.IndexController.main()
+2016-09-09 10:24:59.722  INFO 6108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sort]}" onto public java.lang.String com.mall.controller.IndexController.sort()
+2016-09-09 10:24:59.725  INFO 6108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-09 10:24:59.726  INFO 6108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-09 10:24:59.782  INFO 6108 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 10:24:59.783  INFO 6108 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 10:24:59.811  INFO 6108 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalDefaultexceptionHandler
+2016-09-09 10:24:59.849  INFO 6108 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 10:25:01.033  INFO 6108 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-09-09 10:25:01.038  INFO 6108 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-09-09 10:25:01.039  INFO 6108 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:25:01.040  INFO 6108 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:25:01.042  INFO 6108 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:25:01.045  INFO 6108 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:25:01.047  INFO 6108 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2016-09-09 10:25:01.049  INFO 6108 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:25:01.050  INFO 6108 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:25:01.052  INFO 6108 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:25:01.058  INFO 6108 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:25:01.107  INFO 6108 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-09-09 10:25:01.107  INFO 6108 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 10:25:01.108  INFO 6108 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-09-09 10:25:01.542  INFO 6108 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2016-09-09 10:25:01.689  WARN 6108 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2016-09-09 10:25:01.775  INFO 6108 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-09 10:25:01.791  INFO 6108 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-09-09 10:25:01.904  INFO 6108 --- [main] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-09 10:25:01.905  INFO 6108 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-09 10:25:01.926  INFO 6108 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2016-09-09 10:25:01.959  INFO 6108 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@4e3d809b{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+2016-09-09 10:25:01.965  INFO 6108 --- [main] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 80 (http/1.1)
+2016-09-09 10:25:01.973  INFO 6108 --- [main] com.mall.WebApp                          : Started WebApp in 12.116 seconds (JVM running for 12.796)
