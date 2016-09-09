@@ -47,4 +47,8 @@ public class IndexController {
     public String test(){
         return "/test";
     }
+    @RequestMapping("/403")
+    public String noPermission(){
+        return "/403";
+    }
 }
