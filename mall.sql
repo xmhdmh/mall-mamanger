@@ -1,144 +1,128 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost_3306
-Source Server Version : 50624
-Source Host           : localhost:3306
-Source Database       : mall
+Source Server         : 192.168.16.199
+Source Server Version : 50712
+Source Host           : 192.168.16.199:3306
+Source Database       : zyq
 
 Target Server Type    : MYSQL
-Target Server Version : 50624
+Target Server Version : 50712
 File Encoding         : 65001
 
-Date: 2016-09-02 11:45:25
+Date: 2016-09-09 17:06:34
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for demo
+-- Table structure for ads
 -- ----------------------------
-DROP TABLE IF EXISTS `demo`;
-CREATE TABLE `demo` (
+DROP TABLE IF EXISTS `ads`;
+CREATE TABLE `ads` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `link_address` varchar(255) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
-  `user_age` varchar(255) DEFAULT NULL,
-  `user_name` varchar(255) DEFAULT NULL,
+  `picture_address` varchar(255) DEFAULT NULL,
+  `remark` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ads
+-- ----------------------------
+INSERT INTO `ads` VALUES ('1', '23', '23', '23', '32');
+
+-- ----------------------------
+-- Table structure for sys_permission
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_permission`;
+CREATE TABLE `sys_permission` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `available` bit(1) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `parent_id` bigint(20) DEFAULT NULL,
+  `parent_ids` varchar(255) DEFAULT NULL,
+  `permission` varchar(255) DEFAULT NULL,
+  `resource_type` varchar(255) DEFAULT NULL,
+  `url` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of sys_permission
+-- ----------------------------
+INSERT INTO `sys_permission` VALUES ('1', '', '用户管理', '0', '0/', 'userInfo:view', 'menu', 'userInfo/userList');
+INSERT INTO `sys_permission` VALUES ('2', '', '用户添加', '1', '0/1', 'userInfo:add', 'button', 'userInfo/userAdd');
+INSERT INTO `sys_permission` VALUES ('3', '', '用户删除', '1', '0/1', 'userInfo:del', 'button', 'userInfo/userDel');
+
+-- ----------------------------
+-- Table structure for sys_role
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_role`;
+CREATE TABLE `sys_role` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `available` bit(1) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `role` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of demo
+-- Records of sys_role
 -- ----------------------------
-INSERT INTO `demo` VALUES ('1', '测试', null, null);
-INSERT INTO `demo` VALUES ('2', '测试', null, null);
+INSERT INTO `sys_role` VALUES ('1', '', '管理员', 'admin');
+INSERT INTO `sys_role` VALUES ('2', '', 'VIP会员', 'vip');
 
 -- ----------------------------
--- Table structure for t_ads
+-- Table structure for sys_role_permission
 -- ----------------------------
-DROP TABLE IF EXISTS `t_ads`;
-CREATE TABLE `t_ads` (
-  `ID` int(8) NOT NULL AUTO_INCREMENT,
-  `SORT_ID` int(8) DEFAULT NULL,
-  `ABS_PATH` varchar(128) DEFAULT NULL,
-  `ABS_LINK` varchar(255) DEFAULT NULL,
-  `CREATED_TIME` datetime DEFAULT NULL,
-  `CREATED_BY` int(8) DEFAULT NULL,
-  `UPDATED_TIME` datetime DEFAULT NULL,
-  `UPDATED_BY` int(8) DEFAULT NULL,
-  `IS_SHOW` int(1) DEFAULT '0',
-  `ABS_ORDER` int(11) DEFAULT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `FK_T_ABS_CATEGORY` (`SORT_ID`),
-  CONSTRAINT `FK_T_ABS_CATEGORY` FOREIGN KEY (`SORT_ID`) REFERENCES `t_ads_category` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='广告表';
+DROP TABLE IF EXISTS `sys_role_permission`;
+CREATE TABLE `sys_role_permission` (
+  `role_id` bigint(20) DEFAULT NULL,
+  `permission_id` bigint(20) DEFAULT NULL,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of t_ads
+-- Records of sys_role_permission
 -- ----------------------------
+INSERT INTO `sys_role_permission` VALUES ('1', '1', '1');
+INSERT INTO `sys_role_permission` VALUES ('2', '1', '2');
 
 -- ----------------------------
--- Table structure for t_ads_category
+-- Table structure for sys_user_role
 -- ----------------------------
-DROP TABLE IF EXISTS `t_ads_category`;
-CREATE TABLE `t_ads_category` (
-  `ID` int(8) NOT NULL AUTO_INCREMENT,
-  `SORT_NAME` varchar(64) DEFAULT NULL,
-  `SORT_REMARKS` varchar(255) DEFAULT NULL,
-  `CREATED_TIME` datetime DEFAULT NULL,
-  `IS_ACTIVE` int(1) DEFAULT '0',
-  `CREATED_BY` int(8) DEFAULT NULL,
-  `UPDATED_TIME` datetime DEFAULT NULL,
-  `UPDATED_BY` int(8) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='广告分类';
+DROP TABLE IF EXISTS `sys_user_role`;
+CREATE TABLE `sys_user_role` (
+  `user_id` bigint(20) DEFAULT NULL,
+  `role_id` bigint(20) DEFAULT NULL,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of t_ads_category
+-- Records of sys_user_role
 -- ----------------------------
-INSERT INTO `t_ads_category` VALUES ('1', '幻灯片', '备注', null, '0', null, null, null);
-INSERT INTO `t_ads_category` VALUES ('9', '撒的', '是的', '2016-08-19 16:41:19', '0', null, null, null);
-INSERT INTO `t_ads_category` VALUES ('10', 'sdfd', 'sfsdf', '2016-08-19 17:55:57', '0', null, null, null);
-INSERT INTO `t_ads_category` VALUES ('11', 'dfg', 'dfgdg', '2016-08-19 17:56:20', '0', null, null, null);
+INSERT INTO `sys_user_role` VALUES ('1', '1', '1');
+INSERT INTO `sys_user_role` VALUES ('2', '1', '2');
 
 -- ----------------------------
--- Table structure for t_pro_category
+-- Table structure for user_info
 -- ----------------------------
-DROP TABLE IF EXISTS `t_pro_category`;
-CREATE TABLE `t_pro_category` (
-  `ID` int(8) NOT NULL AUTO_INCREMENT,
-  `CATE_NAME` varchar(64) DEFAULT NULL,
-  `IS_ONE_CATEGORY` int(1) DEFAULT NULL,
-  `CREATED_BY` int(8) DEFAULT NULL,
-  `CREATED_TIME` datetime DEFAULT NULL,
-  `UPDATED_BY` int(8) DEFAULT NULL,
-  `UPDATED_TIME` datetime DEFAULT NULL,
-  `REMARKS` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品分类';
+DROP TABLE IF EXISTS `user_info`;
+CREATE TABLE `user_info` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `salt` varchar(255) DEFAULT NULL,
+  `state` tinyint(4) NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of t_pro_category
+-- Records of user_info
 -- ----------------------------
-
--- ----------------------------
--- Table structure for t_sys_dic
--- ----------------------------
-DROP TABLE IF EXISTS `t_sys_dic`;
-CREATE TABLE `t_sys_dic` (
-  `DICT_KEY` int(8) NOT NULL AUTO_INCREMENT,
-  `DICT_NO` int(4) DEFAULT NULL,
-  `DICT_NAME` varchar(64) DEFAULT NULL,
-  `IS_ACTIVE` int(1) DEFAULT NULL,
-  `CREATED_BY` int(8) DEFAULT NULL,
-  `CREATED_TIME` datetime DEFAULT NULL,
-  `UPDATED_BY` int(8) DEFAULT NULL,
-  `UPDATED_TIME` datetime DEFAULT NULL,
-  PRIMARY KEY (`DICT_KEY`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='系统字典表';
-
--- ----------------------------
--- Records of t_sys_dic
--- ----------------------------
-
--- ----------------------------
--- Table structure for t_sys_sequences
--- ----------------------------
-DROP TABLE IF EXISTS `t_sys_sequences`;
-CREATE TABLE `t_sys_sequences` (
-  `SEQ_CODE` int(8) NOT NULL AUTO_INCREMENT,
-  `SEQ_NAME` varchar(32) DEFAULT NULL,
-  `SEQ_NO` int(12) DEFAULT NULL,
-  `SEQ_DATE` datetime DEFAULT NULL,
-  `SEQ_STEP` int(8) DEFAULT NULL,
-  `SEQ_MIN` int(12) DEFAULT NULL,
-  `SEQ_MAX` int(12) DEFAULT NULL,
-  PRIMARY KEY (`SEQ_CODE`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of t_sys_sequences
--- ----------------------------
-INSERT INTO `t_sys_sequences` VALUES ('1', 't_abs', '1', '2016-08-10 15:38:53', '1', '1', '99999999');
-INSERT INTO `t_sys_sequences` VALUES ('2', 't_abs_category', '11', '2016-08-10 15:40:05', '1', '1', '99999999');
-INSERT INTO `t_sys_sequences` VALUES ('3', 't_pro_category', '1', '2016-08-10 15:40:28', '1', '1', '99999999');
+INSERT INTO `user_info` VALUES ('2', '管理员', 'd3c59d25033dbf980d29554025c23a75', '8d78869f470951332959580424d4bf4f', '0', 'admin');
