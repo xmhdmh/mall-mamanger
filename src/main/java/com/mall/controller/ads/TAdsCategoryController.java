@@ -12,6 +12,7 @@ import com.mall.dao.user.UserInfoMapper;
 import com.mall.model.ads.TAdsCategory;
 import com.mall.model.user.UserInfo;
 import com.mall.service.ads.ITAdsCategoryService;
+import com.mall.utils.JsonUtil;
 
 @RestController
 @RequestMapping("/tAdsCategory")
@@ -19,7 +20,7 @@ public class TAdsCategoryController {
 
 	@Autowired
 	private ITAdsCategoryService categoryService;
-	
+
 	@RequestMapping("/query")
 	public PageInfo<TAdsCategory> query(){
 		List<TAdsCategory> list=categoryService.query(null);
