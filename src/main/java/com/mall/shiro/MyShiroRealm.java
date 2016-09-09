@@ -9,6 +9,8 @@ package com.mall.shiro;
  */
 
 import java.util.List;
+
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -16,7 +18,9 @@ import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
+import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -58,7 +62,7 @@ public class MyShiroRealm extends AuthorizingRealm {
         // 通过username从数据库中查找 User对象，如果找到，没找到.
         // 实际项目中，这里可以根据实际情况做缓存，如果不做，Shiro自己也是有时间间隔机制，2分钟内不会重复执行该方法
         UserInfo userInfo = userInfoService.findByName(username);
-        System.out.println("----->>userInfo=" + userInfo);
+        //System.out.println("----->>userInfo=" + userInfo);
         if (userInfo == null) {
             return null;
         }
@@ -79,7 +83,9 @@ public class MyShiroRealm extends AuthorizingRealm {
                 ByteSource.Util.bytes(userInfo.getCredentialsSalt()),// salt=username+salt
                 getName() // realm name
         );
-
+        Subject currentUser = SecurityUtils.getSubject(); 
+        Session session = currentUser.getSession();
+        session.setAttribute("userInfo",userInfo);
         // 明文: 若存在，将此用户存放到登录认证info中，无需自己做密码对比，Shiro会为我们进行密码对比校验
         // SimpleAuthenticationInfo authenticationInfo = new
         // SimpleAuthenticationInfo(
@@ -109,7 +115,7 @@ public class MyShiroRealm extends AuthorizingRealm {
          * 当没有使用缓存的时候，不断刷新页面的话，这个代码会不断执行， 当其实没有必要每次都重新设置权限信息，所以我们需要放到缓存中进行管理；
          * 当放到缓存中时，这样的话，doGetAuthorizationInfo就只会执行一次了， 缓存过期之后会再次执行。
          */
-        System.out.println("权限配置-->MyShiroRealm.doGetAuthorizationInfo()");
+        //System.out.println("权限配置-->MyShiroRealm.doGetAuthorizationInfo()");
 
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
         UserInfo userInfo = (UserInfo) principals.getPrimaryPrincipal();
