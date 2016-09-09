@@ -68,4 +68,17 @@
       permission_id = #{permissionId,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
+  
+  <select id="query" resultMap="BaseResultMap" parameterType="com.mall.model.user.SysRolePermission" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_role_permission
+    where 1 = 1
+    <if test="roleId != null" >
+        AND role_id = #{roleId,jdbcType=BIGINT},
+    </if>
+    <if test="permissionId != null" >
+        AND permission_id = #{permissionId,jdbcType=BIGINT},
+    </if>
+  </select>
 </mapper>

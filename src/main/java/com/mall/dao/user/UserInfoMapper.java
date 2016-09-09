@@ -1,6 +1,7 @@
 package com.mall.dao.user;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import com.mall.dao.BaseMapper;
 import com.mall.model.user.UserInfo;
@@ -18,4 +19,7 @@ public interface UserInfoMapper extends BaseMapper{
     int updateByPrimaryKeySelective(UserInfo record);
 
     int updateByPrimaryKey(UserInfo record);
+    
+    @SuppressWarnings("unchecked")
+    UserInfo findByName(@Param("userName")String  userName);
 }

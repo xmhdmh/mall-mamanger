@@ -57,18 +57,18 @@
 
 											<div class="login_icon"><img src="images/login.png"  /></div>
 
-											<form class="">
+											<form class="" th:method="post" >
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="登录名"  name="登录名"/>
+															<input type="text" class="form-control" placeholder="登录名"  name="username"/>
 															<i class="icon-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="密码" name="密码"/>
+															<input type="password" class="form-control" placeholder="密码" name="password"/>
 															<i class="icon-lock"></i>
 														</span>
 													</label>
@@ -81,7 +81,7 @@
 															<span class="lbl">保存密码</span>
 														</label>
 
-														<button type="button" class="width-35 pull-right btn btn-sm btn-primary" id="login_btn">
+														<button type="submit" class="width-35 pull-right btn btn-sm btn-primary" ><!--  id="login_btn"-->
 															<i class="icon-key"></i>
 															登陆
 														</button>
@@ -136,7 +136,7 @@ $('#login_btn').on('click', function(){
 			   icon:1,		
 			  });
 	          location.href="index.html";
-			   layer.close(index);	
+			  layer.close(index);	
 		  }		  		     						
 		
 	})

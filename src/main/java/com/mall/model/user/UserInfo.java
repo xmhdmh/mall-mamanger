@@ -62,4 +62,13 @@ public class UserInfo{
     public void setState(byte state) {
         this.state = state;
     }
+    
+    /**
+     * 密码盐.
+     * 
+     * @return
+     */
+    public String getCredentialsSalt() {
+        return this.username + this.salt;
+    }
 }

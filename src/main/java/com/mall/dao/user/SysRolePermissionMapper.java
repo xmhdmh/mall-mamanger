@@ -1,5 +1,7 @@
 package com.mall.dao.user;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import com.mall.dao.BaseMapper;
@@ -18,4 +20,6 @@ public interface SysRolePermissionMapper extends BaseMapper{
     int updateByPrimaryKeySelective(SysRolePermission record);
 
     int updateByPrimaryKey(SysRolePermission record);
+    
+    List<SysRolePermission> query(SysRolePermission record);
 }

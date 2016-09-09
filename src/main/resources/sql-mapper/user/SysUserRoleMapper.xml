@@ -68,4 +68,17 @@
       role_id = #{roleId,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
+  
+  <select id="query" resultMap="BaseResultMap" parameterType="com.mall.model.user.SysUserRole" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_user_role
+    where 1 = 1
+    <if test="userId != null" >
+        AND user_id =#{userId,jdbcType=BIGINT},
+    </if>
+    <if test="roleId != null" >
+        AND role_id =#{roleId,jdbcType=BIGINT}
+    </if>
+  </select>
 </mapper>
