@@ -19642,3 +19642,246 @@ Caused by: org.hibernate.AnnotationException: No identifier specified for entity
 2016-09-09 10:25:01.959  INFO 6108 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@4e3d809b{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
 2016-09-09 10:25:01.965  INFO 6108 --- [main] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 80 (http/1.1)
 2016-09-09 10:25:01.973  INFO 6108 --- [main] com.mall.WebApp                          : Started WebApp in 12.116 seconds (JVM running for 12.796)
+2016-09-09 11:00:34.174  INFO 7964 --- [main] com.mall.WebApp                          : Starting WebApp on 93KP1HRPCLTK9FS with PID 7964 (E:\mall-mamanger\target\classes started by Administrator in E:\mall-mamanger)
+2016-09-09 11:00:34.177 DEBUG 7964 --- [main] com.mall.WebApp                          : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-09-09 11:00:34.178  INFO 7964 --- [main] com.mall.WebApp                          : No active profile set, falling back to default profiles: default
+2016-09-09 11:00:34.637  INFO 7964 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b98f307: startup date [Fri Sep 09 11:00:34 CST 2016]; root of context hierarchy
+2016-09-09 11:00:36.769  INFO 7964 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 11:00:36.880  INFO 7964 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 11:00:37.613  INFO 7964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5cda6db1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-09-09 11:00:38.170  INFO 7964 --- [main] org.eclipse.jetty.util.log               : Logging initialized @5039ms
+2016-09-09 11:00:38.261  INFO 7964 --- [main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 80
+2016-09-09 11:00:38.263  INFO 7964 --- [main] org.eclipse.jetty.server.Server          : jetty-9.3.11.v20160721
+2016-09-09 11:00:38.418  INFO 7964 --- [main] application                              : Initializing Spring embedded WebApplicationContext
+2016-09-09 11:00:38.419  INFO 7964 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3786 ms
+2016-09-09 11:00:38.734  INFO 7964 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-09 11:00:38.738  INFO 7964 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricFilter' to: [/*]
+2016-09-09 11:00:38.738  INFO 7964 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-09 11:00:38.739  INFO 7964 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-09 11:00:38.739  INFO 7964 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-09 11:00:38.739  INFO 7964 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-09 11:00:38.739  INFO 7964 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-09-09 11:00:38.740  INFO 7964 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-09-09 11:00:39.275  INFO 7964 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@1ad1c363{/,file:///E:/mall-mamanger/src/main/webapp/,AVAILABLE}
+2016-09-09 11:00:39.275  INFO 7964 --- [main] org.eclipse.jetty.server.Server          : Started @6147ms
+2016-09-09 11:00:40.568  INFO 7964 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-09 11:00:40.591  INFO 7964 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-09 11:00:40.699  INFO 7964 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-09-09 11:00:40.701  INFO 7964 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-09-09 11:00:40.703  INFO 7964 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-09-09 11:00:40.762  INFO 7964 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-09-09 11:00:40.932  INFO 7964 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-09-09 11:00:41.255  INFO 7964 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-09 11:00:42.270  INFO 7964 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b98f307: startup date [Fri Sep 09 11:00:34 CST 2016]; root of context hierarchy
+2016-09-09 11:00:42.390  INFO 7964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/update]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.update(com.mall.model.ads.TAdsCategory)
+2016-09-09 11:00:42.391  INFO 7964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/delete]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.delete(java.lang.Integer)
+2016-09-09 11:00:42.392  INFO 7964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/deleteIds]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.delete(java.util.List<java.lang.Integer>)
+2016-09-09 11:00:42.393  INFO 7964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/insert]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.insert(com.mall.model.ads.TAdsCategory)
+2016-09-09 11:00:42.393  INFO 7964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/query]}" onto public com.github.pagehelper.PageInfo<com.mall.model.ads.TAdsCategory> com.mall.controller.ads.TAdsCategoryController.query()
+2016-09-09 11:00:42.394  INFO 7964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.mall.controller.IndexController.index()
+2016-09-09 11:00:42.394  INFO 7964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String com.mall.controller.IndexController.main()
+2016-09-09 11:00:42.395  INFO 7964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sort]}" onto public java.lang.String com.mall.controller.IndexController.sort()
+2016-09-09 11:00:42.398  INFO 7964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-09 11:00:42.399  INFO 7964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-09 11:00:42.457  INFO 7964 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 11:00:42.457  INFO 7964 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 11:00:42.497  INFO 7964 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalDefaultexceptionHandler
+2016-09-09 11:00:42.531  INFO 7964 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 11:00:43.714  INFO 7964 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:00:43.716  INFO 7964 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:00:43.717  INFO 7964 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:00:43.718  INFO 7964 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:00:43.720  INFO 7964 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2016-09-09 11:00:43.725  INFO 7964 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:00:43.726  INFO 7964 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-09-09 11:00:43.728  INFO 7964 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-09-09 11:00:43.729  INFO 7964 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:00:43.730  INFO 7964 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:00:43.734  INFO 7964 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:00:43.736  INFO 7964 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-09-09 11:00:43.736  INFO 7964 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:00:43.737  INFO 7964 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-09-09 11:00:44.089  INFO 7964 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2016-09-09 11:00:44.231  WARN 7964 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2016-09-09 11:00:44.343  INFO 7964 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-09 11:00:44.364  INFO 7964 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-09-09 11:00:44.501  INFO 7964 --- [main] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-09 11:00:44.502  INFO 7964 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-09 11:00:44.526  INFO 7964 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2016-09-09 11:00:44.616  INFO 7964 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@57617a75{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+2016-09-09 11:00:44.620  INFO 7964 --- [main] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 80 (http/1.1)
+2016-09-09 11:00:44.628  INFO 7964 --- [main] com.mall.WebApp                          : Started WebApp in 10.992 seconds (JVM running for 11.501)
+2016-09-09 11:01:06.116 DEBUG 7964 --- [qtp94690722-18] c.mall.dao.ads.TAdsCategoryMapper.query  : ==>  Preparing: select ID, SORT_NAME, SORT_REMARKS, CREATED_TIME, IS_ACTIVE from t_ads_category 
+2016-09-09 11:01:06.136 DEBUG 7964 --- [qtp94690722-18] c.mall.dao.ads.TAdsCategoryMapper.query  : ==> Parameters: 
+2016-09-09 11:01:06.352  INFO 7964 --- [qtp94690722-18] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2016-09-09 11:01:06.446  INFO 7964 --- [qtp94690722-18] o.s.jdbc.support.SQLErrorCodesFactory    : SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2016-09-09 11:01:06.454 ERROR 7964 --- [qtp94690722-18] c.m.g.GlobalDefaultexceptionHandler      : org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'zyq.t_ads_category' doesn't exist
+### The error may exist in file [E:\mall-mamanger\target\classes\sql-mapper\ads\TAdsCategoryMapper.xml]
+### The error may involve com.mall.dao.ads.TAdsCategoryMapper.query-Inline
+### The error occurred while setting parameters
+### SQL: select           ID,         SORT_NAME,         SORT_REMARKS,         CREATED_TIME,         IS_ACTIVE       from t_ads_category
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'zyq.t_ads_category' doesn't exist
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'zyq.t_ads_category' doesn't exist
+2016-09-09 11:01:06.455 ERROR 7964 --- [qtp94690722-18] c.m.g.GlobalDefaultexceptionHandler      : http://127.0.0.1/tAdsCategory/query
+2016-09-09 11:02:59.733 DEBUG 7964 --- [qtp94690722-18] c.mall.dao.ads.TAdsCategoryMapper.query  : ==>  Preparing: select ID, SORT_NAME, SORT_REMARKS, CREATED_TIME, IS_ACTIVE from t_ads_category 
+2016-09-09 11:02:59.734 DEBUG 7964 --- [qtp94690722-18] c.mall.dao.ads.TAdsCategoryMapper.query  : ==> Parameters: 
+2016-09-09 11:02:59.735 ERROR 7964 --- [qtp94690722-18] c.m.g.GlobalDefaultexceptionHandler      : org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'zyq.t_ads_category' doesn't exist
+### The error may exist in file [E:\mall-mamanger\target\classes\sql-mapper\ads\TAdsCategoryMapper.xml]
+### The error may involve com.mall.dao.ads.TAdsCategoryMapper.query-Inline
+### The error occurred while setting parameters
+### SQL: select           ID,         SORT_NAME,         SORT_REMARKS,         CREATED_TIME,         IS_ACTIVE       from t_ads_category
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'zyq.t_ads_category' doesn't exist
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'zyq.t_ads_category' doesn't exist
+2016-09-09 11:02:59.735 ERROR 7964 --- [qtp94690722-18] c.m.g.GlobalDefaultexceptionHandler      : http://127.0.0.1/tAdsCategory/query
+2016-09-09 11:06:02.011  INFO 7588 --- [main] com.mall.WebApp                          : Starting WebApp on 93KP1HRPCLTK9FS with PID 7588 (E:\mall-mamanger\target\classes started by Administrator in E:\mall-mamanger)
+2016-09-09 11:06:02.014 DEBUG 7588 --- [main] com.mall.WebApp                          : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-09-09 11:06:02.015  INFO 7588 --- [main] com.mall.WebApp                          : No active profile set, falling back to default profiles: default
+2016-09-09 11:06:02.489  INFO 7588 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b98f307: startup date [Fri Sep 09 11:06:02 CST 2016]; root of context hierarchy
+2016-09-09 11:06:04.590  INFO 7588 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 11:06:04.692  INFO 7588 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 11:06:05.371  INFO 7588 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5cda6db1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-09-09 11:06:05.898  INFO 7588 --- [main] org.eclipse.jetty.util.log               : Logging initialized @4842ms
+2016-09-09 11:06:05.998  INFO 7588 --- [main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 80
+2016-09-09 11:06:06.001  INFO 7588 --- [main] org.eclipse.jetty.server.Server          : jetty-9.3.11.v20160721
+2016-09-09 11:06:06.154  INFO 7588 --- [main] application                              : Initializing Spring embedded WebApplicationContext
+2016-09-09 11:06:06.154  INFO 7588 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3670 ms
+2016-09-09 11:06:06.470  INFO 7588 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-09 11:06:06.474  INFO 7588 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricFilter' to: [/*]
+2016-09-09 11:06:06.475  INFO 7588 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-09 11:06:06.475  INFO 7588 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-09 11:06:06.475  INFO 7588 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-09 11:06:06.476  INFO 7588 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-09 11:06:06.476  INFO 7588 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-09-09 11:06:06.476  INFO 7588 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-09-09 11:06:07.061  INFO 7588 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@1ad1c363{/,file:///E:/mall-mamanger/src/main/webapp/,AVAILABLE}
+2016-09-09 11:06:07.062  INFO 7588 --- [main] org.eclipse.jetty.server.Server          : Started @6007ms
+2016-09-09 11:06:08.227  INFO 7588 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-09 11:06:08.246  INFO 7588 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-09 11:06:08.364  INFO 7588 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-09-09 11:06:08.366  INFO 7588 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-09-09 11:06:08.369  INFO 7588 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-09-09 11:06:08.427  INFO 7588 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-09-09 11:06:08.591  INFO 7588 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-09-09 11:06:09.113  INFO 7588 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-09 11:06:10.059  INFO 7588 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b98f307: startup date [Fri Sep 09 11:06:02 CST 2016]; root of context hierarchy
+2016-09-09 11:06:10.171  INFO 7588 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/update]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.update(com.mall.model.ads.TAdsCategory)
+2016-09-09 11:06:10.173  INFO 7588 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/delete]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.delete(java.lang.Integer)
+2016-09-09 11:06:10.173  INFO 7588 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/deleteIds]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.delete(java.util.List<java.lang.Integer>)
+2016-09-09 11:06:10.174  INFO 7588 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/insert]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.insert(com.mall.model.ads.TAdsCategory)
+2016-09-09 11:06:10.175  INFO 7588 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/query]}" onto public com.github.pagehelper.PageInfo<com.mall.model.ads.TAdsCategory> com.mall.controller.ads.TAdsCategoryController.query()
+2016-09-09 11:06:10.176  INFO 7588 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.mall.controller.IndexController.index()
+2016-09-09 11:06:10.176  INFO 7588 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String com.mall.controller.IndexController.main()
+2016-09-09 11:06:10.176  INFO 7588 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sort]}" onto public java.lang.String com.mall.controller.IndexController.sort()
+2016-09-09 11:06:10.179  INFO 7588 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-09 11:06:10.180  INFO 7588 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-09 11:06:10.224  INFO 7588 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 11:06:10.225  INFO 7588 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 11:06:10.245  INFO 7588 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalDefaultexceptionHandler
+2016-09-09 11:06:10.278  INFO 7588 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 11:06:11.384  INFO 7588 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:06:11.385  INFO 7588 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-09-09 11:06:11.387  INFO 7588 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:06:11.389  INFO 7588 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-09-09 11:06:11.389  INFO 7588 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:06:11.390  INFO 7588 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2016-09-09 11:06:11.394  INFO 7588 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-09-09 11:06:11.394  INFO 7588 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:06:11.395  INFO 7588 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-09-09 11:06:11.396  INFO 7588 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:06:11.397  INFO 7588 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:06:11.401  INFO 7588 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:06:11.403  INFO 7588 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:06:11.404  INFO 7588 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:06:11.720  INFO 7588 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2016-09-09 11:06:11.838  WARN 7588 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2016-09-09 11:06:11.934  INFO 7588 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-09 11:06:11.952  INFO 7588 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-09-09 11:06:12.072  INFO 7588 --- [main] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-09 11:06:12.073  INFO 7588 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-09 11:06:12.091  INFO 7588 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2016-09-09 11:06:12.121  INFO 7588 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@1b53e6fc{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+2016-09-09 11:06:12.125  INFO 7588 --- [main] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 80 (http/1.1)
+2016-09-09 11:06:12.133  INFO 7588 --- [main] com.mall.WebApp                          : Started WebApp in 10.577 seconds (JVM running for 11.078)
+2016-09-09 11:10:10.344  INFO 7348 --- [main] com.mall.WebApp                          : Starting WebApp on 93KP1HRPCLTK9FS with PID 7348 (E:\mall-mamanger\target\classes started by Administrator in E:\mall-mamanger)
+2016-09-09 11:10:10.348 DEBUG 7348 --- [main] com.mall.WebApp                          : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-09-09 11:10:10.348  INFO 7348 --- [main] com.mall.WebApp                          : No active profile set, falling back to default profiles: default
+2016-09-09 11:10:10.780  INFO 7348 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b98f307: startup date [Fri Sep 09 11:10:10 CST 2016]; root of context hierarchy
+2016-09-09 11:10:12.962  INFO 7348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 11:10:13.066  INFO 7348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-09 11:10:13.899  INFO 7348 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8e2677c3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-09-09 11:10:14.395  INFO 7348 --- [main] org.eclipse.jetty.util.log               : Logging initialized @5060ms
+2016-09-09 11:10:14.478  INFO 7348 --- [main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 80
+2016-09-09 11:10:14.480  INFO 7348 --- [main] org.eclipse.jetty.server.Server          : jetty-9.3.11.v20160721
+2016-09-09 11:10:14.625  INFO 7348 --- [main] application                              : Initializing Spring embedded WebApplicationContext
+2016-09-09 11:10:14.626  INFO 7348 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3850 ms
+2016-09-09 11:10:14.918  INFO 7348 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-09 11:10:14.922  INFO 7348 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricFilter' to: [/*]
+2016-09-09 11:10:14.922  INFO 7348 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-09 11:10:14.922  INFO 7348 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-09 11:10:14.922  INFO 7348 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-09 11:10:14.923  INFO 7348 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-09 11:10:14.923  INFO 7348 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-09-09 11:10:14.923  INFO 7348 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-09-09 11:10:15.492  INFO 7348 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@6826b70f{/,file:///E:/mall-mamanger/src/main/webapp/,AVAILABLE}
+2016-09-09 11:10:15.493  INFO 7348 --- [main] org.eclipse.jetty.server.Server          : Started @6159ms
+2016-09-09 11:10:16.660  INFO 7348 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-09 11:10:16.681  INFO 7348 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-09 11:10:16.756  INFO 7348 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-09-09 11:10:16.758  INFO 7348 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-09-09 11:10:16.761  INFO 7348 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-09-09 11:10:16.811  INFO 7348 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-09-09 11:10:16.949  INFO 7348 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-09-09 11:10:17.194  INFO 7348 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-09 11:10:18.180  INFO 7348 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b98f307: startup date [Fri Sep 09 11:10:10 CST 2016]; root of context hierarchy
+2016-09-09 11:10:18.290  INFO 7348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/update]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.update(com.mall.model.ads.TAdsCategory)
+2016-09-09 11:10:18.292  INFO 7348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/delete]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.delete(java.lang.Integer)
+2016-09-09 11:10:18.292  INFO 7348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/deleteIds]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.delete(java.util.List<java.lang.Integer>)
+2016-09-09 11:10:18.292  INFO 7348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/insert]}" onto public java.lang.Integer com.mall.controller.ads.TAdsCategoryController.insert(com.mall.model.ads.TAdsCategory)
+2016-09-09 11:10:18.293  INFO 7348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/query]}" onto public com.github.pagehelper.PageInfo<com.mall.model.ads.TAdsCategory> com.mall.controller.ads.TAdsCategoryController.query()
+2016-09-09 11:10:18.293  INFO 7348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tAdsCategory/test]}" onto public com.mall.model.user.UserInfo com.mall.controller.ads.TAdsCategoryController.test()
+2016-09-09 11:10:18.294  INFO 7348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.mall.controller.IndexController.index()
+2016-09-09 11:10:18.294  INFO 7348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String com.mall.controller.IndexController.main()
+2016-09-09 11:10:18.295  INFO 7348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sort]}" onto public java.lang.String com.mall.controller.IndexController.sort()
+2016-09-09 11:10:18.298  INFO 7348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-09 11:10:18.298  INFO 7348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-09 11:10:18.345  INFO 7348 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 11:10:18.346  INFO 7348 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 11:10:18.370  INFO 7348 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalDefaultexceptionHandler
+2016-09-09 11:10:18.406  INFO 7348 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-09 11:10:19.573  INFO 7348 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:10:19.574  INFO 7348 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:10:19.576  INFO 7348 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:10:19.579  INFO 7348 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:10:19.580  INFO 7348 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-09-09 11:10:19.581  INFO 7348 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:10:19.583  INFO 7348 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-09-09 11:10:19.585  INFO 7348 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:10:19.587  INFO 7348 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-09-09 11:10:19.588  INFO 7348 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:10:19.592  INFO 7348 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-09-09 11:10:19.593  INFO 7348 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:10:19.594  INFO 7348 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-09-09 11:10:19.595  INFO 7348 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2016-09-09 11:10:19.906  INFO 7348 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2016-09-09 11:10:20.021  WARN 7348 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2016-09-09 11:10:20.116  INFO 7348 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-09 11:10:20.131  INFO 7348 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-09-09 11:10:20.245  INFO 7348 --- [main] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-09 11:10:20.245  INFO 7348 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-09 11:10:20.262  INFO 7348 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2016-09-09 11:10:20.294  INFO 7348 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@1958524b{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+2016-09-09 11:10:20.298  INFO 7348 --- [main] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 80 (http/1.1)
+2016-09-09 11:10:20.305  INFO 7348 --- [main] com.mall.WebApp                          : Started WebApp in 10.469 seconds (JVM running for 10.972)
+2016-09-09 11:10:32.935 DEBUG 7348 --- [qtp1769565136-18] c.m.d.u.U.selectByPrimaryKey             : ==>  Preparing: select id, name, password, salt, state, username from user_info where id = ? 
+2016-09-09 11:10:32.960 DEBUG 7348 --- [qtp1769565136-18] c.m.d.u.U.selectByPrimaryKey             : ==> Parameters: 1(Long)
+2016-09-09 11:10:32.970 TRACE 7348 --- [qtp1769565136-18] c.m.d.u.U.selectByPrimaryKey             : <==    Columns: id, name, password, salt, state, username
+2016-09-09 11:10:32.970 TRACE 7348 --- [qtp1769565136-18] c.m.d.u.U.selectByPrimaryKey             : <==        Row: 1, 1, 23, 23das, 1, 32432
+2016-09-09 11:10:32.973 DEBUG 7348 --- [qtp1769565136-18] c.m.d.u.U.selectByPrimaryKey             : <==      Total: 1
