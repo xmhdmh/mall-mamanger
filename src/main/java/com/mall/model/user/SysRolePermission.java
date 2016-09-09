@@ -8,8 +8,23 @@ package com.mall.model.user;
  * 
  */
 public class SysRolePermission {
+    private Long id;
     private Long roleId;
     private Long permissionId;
+    /** 
+     * @return id 
+     */
+    
+    public Long getId() {
+        return id;
+    }
+    /** 
+     * @param id 要设置的 id 
+     */
+    
+    public void setId(Long id) {
+        this.id = id;
+    }
     /** 
      * @return roleId 
      */
