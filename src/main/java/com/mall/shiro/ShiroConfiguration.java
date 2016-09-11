@@ -10,6 +10,9 @@ package com.mall.shiro;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+
+import javax.servlet.Filter;
+
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.mgt.SecurityManager;
@@ -59,6 +62,10 @@ public class ShiroConfiguration {
         filterChainDefinitionMap.put("/**", "authc");
         shiroFilterFactoryBean
                 .setFilterChainDefinitionMap(filterChainDefinitionMap);
+        Map<String, Filter> filterMap = new LinkedHashMap<String, Filter>();
+        //增加登入成功之后的过滤器
+        filterMap.put("authc", new FormFilter());
+        shiroFilterFactoryBean.setFilters(filterMap);
         return shiroFilterFactoryBean;
     }
     

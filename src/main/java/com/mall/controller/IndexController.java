@@ -15,7 +15,7 @@ import com.mall.utils.JsonUtil;
 @Controller
 public class IndexController {
 
-    @RequestMapping({"/index","/"})
+    @RequestMapping("/index")
     public String index() {
         return "/index"; 
     }
