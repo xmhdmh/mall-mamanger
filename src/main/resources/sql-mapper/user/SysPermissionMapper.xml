@@ -132,25 +132,25 @@
     from sys_permission
     where 1 = 1
     <if test="available != null" >
-        AND available = #{available,jdbcType=BIT},
+        AND available = #{available,jdbcType=BIT}
     </if>
     <if test="name != null" >
-        AND name = #{name,jdbcType=VARCHAR},
+        AND name = #{name,jdbcType=VARCHAR}
     </if>
     <if test="parentId != null" >
-        AND parent_id = #{parentId,jdbcType=BIGINT},
+        AND parent_id = #{parentId,jdbcType=BIGINT}
     </if>
     <if test="parentIds != null" >
-        AND parent_ids = #{parentIds,jdbcType=VARCHAR},
+        AND parent_ids = #{parentIds,jdbcType=VARCHAR}
     </if>
     <if test="permission != null" >
-        AND permission = #{permission,jdbcType=VARCHAR},
+        AND permission = #{permission,jdbcType=VARCHAR}
     </if>
     <if test="resourceType != null" >
-        AND resource_type = #{resourceType,jdbcType=VARCHAR},
+        AND resource_type = #{resourceType,jdbcType=VARCHAR}
     </if>
     <if test="url != null" >
-        AND url = #{url,jdbcType=VARCHAR},
+        AND url = #{url,jdbcType=VARCHAR}
     </if>
   </select>
 </mapper>

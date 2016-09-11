@@ -75,10 +75,10 @@
     from sys_role_permission
     where 1 = 1
     <if test="roleId != null" >
-        AND role_id = #{roleId,jdbcType=BIGINT},
+        AND role_id = #{roleId,jdbcType=BIGINT}
     </if>
     <if test="permissionId != null" >
-        AND permission_id = #{permissionId,jdbcType=BIGINT},
+        AND permission_id = #{permissionId,jdbcType=BIGINT}
     </if>
   </select>
 </mapper>
