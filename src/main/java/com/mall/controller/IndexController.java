@@ -19,14 +19,13 @@ public class IndexController {
     public String index() {
         return "/index"; 
     }
-
+    
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() throws Exception {
         return "/login";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    @ResponseBody
     public String login(HttpServletRequest request, Map<String, Object> map)
             throws Exception {
         // 登录失败从request中获取shiro处理的异常信息。
@@ -37,22 +36,22 @@ public class IndexController {
         if (exception != null) {
             if (UnknownAccountException.class.getName().equals(exception)) {
                 // System.out.println("UnknownAccountException -- > 账号不存在：");
-                msg = "UnknownAccountException -- > 账号不存在：";
+                msg = "账号不存在";
             } else if (IncorrectCredentialsException.class.getName().equals(
                     exception)) {
                 // System.out.println("IncorrectCredentialsException -- > 密码不正确：");
-                msg = "IncorrectCredentialsException -- > 密码不正确：";
+                msg = "密码不正确";
             } else if ("kaptchaValidateFailed".equals(exception)) {
                 // System.out.println("kaptchaValidateFailed -- > 验证码错误");
-                msg = "kaptchaValidateFailed -- > 验证码错误";
+                msg = "验证码错误";
             } else {
-                msg = "else >> " + exception;
+                msg = exception;
                 // System.out.println("else -- >" + exception);
             }
         }
         map.put("msg", msg);
         // 此方法不处理登录成功,由shiro进行处理.
-        return JsonUtil.toString(map);
+        return "/login";
     }
 
     @RequestMapping("/test")
