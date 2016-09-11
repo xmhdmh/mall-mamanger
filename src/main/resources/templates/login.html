@@ -2,7 +2,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<div th:include="tag :: link"></div>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" th:href="@{/assets/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" th:href="@{/assets/css/font-awesome.min.css}"/>
+        <!--[if IE 7]>
+          <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css"/>
+        <![endif]-->
+        <link rel="stylesheet" href="assets/css/ace.min.css" th:href="@{/assets/css/ace.min.css}"/>
+        <link rel="stylesheet" href="assets/css/ace-rtl.min.css" th:href="@{/assets/css/ace-rtl.min.css}"/>
+        <link rel="stylesheet" href="assets/css/ace-skins.min.css" th:href="@{/assets/css/ace-skins.min.css}"/>
+        <link rel="stylesheet" href="css/style.css" th:href="@{/css/style.css}"/>
+        <!--[if lte IE 8]>
+          <link rel="stylesheet" href="assets/css/ace-ie.min.css"  />
+        <![endif]-->
+        <script type="text/javascript" src="assets/js/ace-extra.min.js" th:src="@{/assets/js/ace-extra.min.js}"></script>
+        <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.js" ></script>
+        <script src="assets/js/respond.min.js" ></script>
+        <![endif]-->
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js" th:src="@{/js/jquery-1.9.1.min.js}"></script>        
+        <script type="text/javascript" src="assets/layer/layer.js" th:src="@{/assets/layer/layer.js}"></script>
 <title>登陆</title>
 </head>
 

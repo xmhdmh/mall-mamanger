@@ -3,16 +3,12 @@ package com.mall.controller;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
-
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.mall.utils.JsonUtil;
 
 @Controller
 public class IndexController {
@@ -56,9 +52,9 @@ public class IndexController {
         return "/login";
     }
 
-    @RequestMapping("/test")
+    @RequestMapping("/home")
     public String test() {
-        return "/test";
+        return "/home";
     }
 
     @RequestMapping("/403")
