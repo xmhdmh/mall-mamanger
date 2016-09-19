@@ -13,6 +13,8 @@ package com.mall.utils;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import org.apache.shiro.crypto.hash.Md5Hash;
+
 /**
  * @ClassName: MD5Util
  * @Description: TODO(这里用一句话描述这个类的作用)
@@ -86,6 +88,19 @@ public class MD5Util {
             ex.printStackTrace();
         }
         return resultString;
+    }
+    /**
+     * shiro用户数据库密码加密
+    * @Title: shiroPassword 
+    * @Description: TODO(这里用一句话描述这个方法的作用) 
+    * @param @param password
+    * @param @param nameAndSalt
+    * @param @return    设定文件 
+    * @return String    返回类型 
+    * @throws
+     */
+    public static String shiroPassword(String password,String nameAndSalt){
+        return new Md5Hash(password,nameAndSalt,2).toString();
     }
 
     public static void main(String[] args) {
