@@ -104,12 +104,6 @@ public class MD5Util {
     }
 
     public static void main(String[] args) {
-        for (int i = 0; i < 1000; i++) {
-            System.out.println(DataUtil.getRandomInt(4));
-        }
-        String a=MD5Util.GetMD5Code("123456");
-        System.out.println(a);
-        a=MD5Util.GetMD5Code(a, 1234);
-        System.out.println(a);
+        System.out.println(shiroPassword("zyq123456","zyq123456"));
     }
 }
