@@ -3,6 +3,8 @@ package com.mall.controller;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.springframework.stereotype.Controller;
@@ -20,6 +22,9 @@ public class IndexController {
     
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() throws Exception {
+        if(null!=SecurityUtils.getSubject().getSession().getAttribute("userInfo")){
+            return "redirect:/index.html";
+        }
         return "/login";
     }
 
