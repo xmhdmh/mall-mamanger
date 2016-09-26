@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>SpringBootDemo</groupId>
+    <artifactId>SpringBootDemo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.mall.base</groupId>
+  <artifactId>Base</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>Base Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+
+  </dependencies>
+  <build>
+    <finalName>Base</finalName>
+  </build>
+</project>
