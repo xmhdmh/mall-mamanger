@@ -12,6 +12,7 @@ package com.mall.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.mall.dao.system.SysLogMapper;
 import com.mall.dao.user.SysPermissionMapper;
 import com.mall.dao.user.SysRoleMapper;
 import com.mall.dao.user.SysRolePermissionMapper;
@@ -37,8 +38,16 @@ public class BaseServiceImpl {
     private SysRolePermissionMapper sysRolePermissionMapper;
     @Autowired
     private SysPermissionMapper sysPermissionMapper;
+    @Autowired
+    private SysLogMapper sysLogMapper;
     
-    /** 
+    public SysLogMapper getSysLogMapper() {
+		return sysLogMapper;
+	}
+	public void setSysLogMapper(SysLogMapper sysLogMapper) {
+		this.sysLogMapper = sysLogMapper;
+	}
+	/** 
      * @return sysUserRoleMapper 
      */
     

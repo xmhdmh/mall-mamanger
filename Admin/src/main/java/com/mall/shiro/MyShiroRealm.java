@@ -1,5 +1,4 @@
 package com.mall.shiro;
-
 /**
  * @ClassName: MyShiroRealm
  * @Description: TODO(shiro realm)
@@ -7,7 +6,6 @@ package com.mall.shiro;
  * @date 2016年8月29日 上午11:05:27
  * 
  */
-
 import java.util.List;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -23,16 +21,14 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
+import com.mall.model.system.SysLog;
 import com.mall.model.user.SysPermission;
 import com.mall.model.user.SysRole;
 import com.mall.model.user.UserInfo;
+import com.mall.service.system.SysLogService;
 import com.mall.service.user.SysPermissionService;
 import com.mall.service.user.SysRoleService;
 import com.mall.service.user.UserInfoService;
-
-
-
-
 
 public class MyShiroRealm extends AuthorizingRealm {
 
@@ -42,6 +38,8 @@ public class MyShiroRealm extends AuthorizingRealm {
     private SysRoleService sysRoleService;
     @Autowired
     private SysPermissionService sysPermissionService;
+    @Autowired
+    private SysLogService logService;
     /**
      * 认证信息.(身份验证) : Authentication 是用来验证用户身份
      * 
@@ -82,6 +80,9 @@ public class MyShiroRealm extends AuthorizingRealm {
         Subject currentUser = SecurityUtils.getSubject(); 
         Session session = currentUser.getSession();
         session.setAttribute("userInfo",userInfo);
+        SysLog log=new SysLog();
+        log.setOpt_summary("登录系统");
+        logService.insert(log, userInfo);
         // 明文: 若存在，将此用户存放到登录认证info中，无需自己做密码对比，Shiro会为我们进行密码对比校验
         // SimpleAuthenticationInfo authenticationInfo = new
         // SimpleAuthenticationInfo(
