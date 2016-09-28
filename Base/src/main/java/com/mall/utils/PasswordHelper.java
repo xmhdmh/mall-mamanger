@@ -25,11 +25,11 @@ import com.mall.model.user.UserInfo;
  */
 
 public class PasswordHelper {
-    private RandomNumberGenerator randomNumberGenerator = new SecureRandomNumberGenerator();
-    private String algorithmName = "md5";
-    private final int hashIterations = 2;
+    private static RandomNumberGenerator randomNumberGenerator = new SecureRandomNumberGenerator();
+    private static String algorithmName = "md5";
+    private final static int hashIterations = 2;
 
-    public void encryptPassword(UserInfo userInfo) {
+    public static void encryptPassword(UserInfo userInfo) {
         userInfo.setSalt(randomNumberGenerator.nextBytes().toHex());
         String newPassword = new SimpleHash(algorithmName, userInfo.getPassword(),
                 ByteSource.Util.bytes(userInfo.getCredentialsSalt()),
