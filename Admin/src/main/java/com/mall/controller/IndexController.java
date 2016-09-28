@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 @Controller
-public class IndexController {
+public class IndexController extends BaseController{
 
     @RequestMapping("/index")
     public String index() {
