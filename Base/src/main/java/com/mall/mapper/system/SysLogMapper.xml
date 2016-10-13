@@ -21,4 +21,28 @@
     #{operator}
     )
   </insert>
+  
+  <select id="query" parameterType="SysLog" resultType="SysLog">
+  select
+	l.opt_time,
+	l.opt_category,
+	l.opt_summary,
+	l.ip_address,
+	l.computer_name,
+  u.username as userName
+from
+	sys_log l
+left join user_info u
+on u.id=l.operator
+where 1=1
+<if test="opt_summary!=null and ''!=opt_summary">
+and l.opt_summary like CONCAT('%',#{opt_summary},'%')
+</if>
+<if test="startTime != null and ''!=startTime">
+  <![CDATA[ and l.opt_time >= date_format(#{startTime},'%Y-%m-%d %H:%i:%s')]]>
+</if>
+<if test="endTime != null and ''!=endTime">
+ <![CDATA[ and l.opt_time <= date_format(#{endTime},'%Y-%m-%d %H:%i:%s')]]>
+</if>
+  </select>
 </mapper>

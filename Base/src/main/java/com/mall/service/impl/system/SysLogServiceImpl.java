@@ -3,6 +3,8 @@ package com.mall.service.impl.system;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Date;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 import com.mall.model.system.SysLog;
 import com.mall.model.user.UserInfo;
@@ -24,6 +26,11 @@ public class SysLogServiceImpl extends BaseServiceImpl implements SysLogService{
 		    log.setOpt_time(new Date());
 		    log.setOperator(user.getId());
 		    super.getSysLogMapper().insert(log);
+	}
+
+	@Override
+	public List<SysLog> query(SysLog param) {
+		return super.getSysLogMapper().query(param);
 	}
 	
 }

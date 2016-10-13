@@ -7,6 +7,7 @@ package com.mall.shiro;
  * 
  */
 import java.util.List;
+
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
@@ -21,6 +22,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import com.mall.model.system.SysLog;
 import com.mall.model.user.SysPermission;
 import com.mall.model.user.SysRole;
@@ -29,6 +31,8 @@ import com.mall.service.system.SysLogService;
 import com.mall.service.user.SysPermissionService;
 import com.mall.service.user.SysRoleService;
 import com.mall.service.user.UserInfoService;
+
+
 
 public class MyShiroRealm extends AuthorizingRealm {
 

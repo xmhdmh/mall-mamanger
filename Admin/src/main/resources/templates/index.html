@@ -49,12 +49,6 @@
 	jQuery(document)
 			.ready(
 					function() {
-						$.each($(".submenu"), function() {
-							var $aobjs = $(this).children("li");
-							var rowCount = $aobjs.size();
-							var divHeigth = $(this).height();
-							$aobjs.height(divHeigth / rowCount);
-						});
 						//初始化宽度、高度    
 						$("#main-container").height($(window).height() - 76);
 						$("#iframe").height($(window).height() - 140);
@@ -110,31 +104,16 @@
 										});
 
 					});
-
-	//jQuery( document).ready(function(){
-	//	  $("#submit").click(function(){
-	//	// var num=0;
-	//     var str="";
-	//     $("input[type$='password']").each(function(n){
-	//          if($(this).val()=="")
-	//          {
-	//              // num++;
-	//			   layer.alert(str+=""+$(this).attr("name")+"不能为空！\r\n",{
-	//                title: '提示框',				
-	//				icon:0,				
-	//          }); 
-	//             // layer.msg(str+=""+$(this).attr("name")+"不能为空！\r\n");
-	//             layer.close(index);
-	//          }		  
-	//     });    
-	//})		
-	//	});
 	/*********************点击事件*********************/
 	$(document).ready(
 			function() {
 				$('#nav_list').find('li.home').click(function() {
-					$('#nav_list').find('li.home').removeClass('active');
-					$(this).addClass('active');
+					/* $('#nav_list').find('li.home').removeClass('active');
+					$(this).addClass('active'); */
+					$('#nav_list').find('li.active').removeClass('active');
+					$('#nav_list').find('li.open').removeClass('open');
+					$(this).addClass('active home');
+					$(this).parent().parent().addClass("active open");
 				});
 
 				//时间设置
@@ -323,7 +302,7 @@
 				</div>
 				<!-- #sidebar-shortcuts -->
 				<ul class="nav nav-list" id="nav_list">
-					<li class="home"><a href="javascript:void(0)" name="home.html"
+					<li class="active home" ><a href="javascript:void(0)" name="home.html"
 						class="iframeurl" title=""><i class="icon-dashboard"></i><span
 							class="menu-text"> 系统首页 </span></a></li>
 					<li><a href="#" class="dropdown-toggle"><i
@@ -414,7 +393,7 @@
 							class="arrow icon-angle-down"></b></a>
 						<ul class="submenu">
 							<li class="home"><a href="javascript:void(0)"
-								name="Systems.html" title="系统设置" class="iframeurl"><i
+								name="system/query.html" title="系统设置" class="iframeurl"><i
 									class="icon-double-angle-right"></i>系统设置</a></li>
 							<li class="home"><a href="javascript:void(0)"
 								name="菜单管理.html" title="栏目管理" class="iframeurl"><i
@@ -445,12 +424,6 @@
 						data-icon1="icon-double-angle-left"
 						data-icon2="icon-double-angle-right"></i>
 				</div>
-				<script type="text/javascript">
-					try {
-						ace.settings.check('sidebar', 'collapsed')
-					} catch (e) {
-					}
-				</script>
 			</div>
 			<div class="main-content">
 				<script type="text/javascript">
@@ -478,6 +451,7 @@
 
 
 				<!-- /.page-content -->
+				
 			</div>
 			<!-- /.main-content -->
 
@@ -523,14 +497,13 @@
 			<!-- /#ace-settings-container -->
 		</div>
 		<!-- /.main-container-inner -->
-
-	</div>
-	<!--底部样式-->
-
-	<div class="footer_style" id="footerstyle">
+<div class="footer_style" id="footerstyle">
 		<p class="l_f">版权所有：南京四美软件 苏ICP备11011739号</p>
 		<p class="r_f">地址：南京市鼓楼区阅江楼街道公共路64号 邮编：210011 技术支持：XXXX</p>
 	</div>
+	</div>
+	<!--底部样式-->
+
 	<!--修改密码样式-->
 	<div class="change_Pass_style" id="change_Pass">
 		<ul class="xg_style">

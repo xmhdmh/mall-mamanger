@@ -2,6 +2,8 @@ package com.mall.model.system;
 
 import java.util.Date;
 
+import com.mall.utils.DateUtil;
+
 /**
  * 
  * <p>Title:系统日志</p>
@@ -24,6 +26,9 @@ public class SysLog {
 	private String ip_address;//IP地址
 	private String computer_name;//计算机名称
 	private Long operator;//操作者Id
+	private String userName;//操作者名称
+	private String startTime;//开始操作时间
+	private String endTime;//结束操作时间
 	public Long getId() {
 		return id;
 	}
@@ -66,6 +71,23 @@ public class SysLog {
 	public void setOperator(Long operator) {
 		this.operator = operator;
 	}
-	
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getStartTime() {
+		return startTime;
+	}
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
+	}
+	public String getEndTime() {
+		return endTime;
+	}
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
+	}
 	
 }
