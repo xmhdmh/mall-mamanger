@@ -2608,15 +2608,13 @@ li [class^="icon-"],li [class*=" icon-"],.nav-list li [class^="icon-"],.nav-list
 
 .nav-list>li.active:after
 {
-  display: inline-block;
-  content: "";
-  position: absolute;
-  right: -2px;
-  top: -1px;
-  bottom: 0;
-  z-index: 1;
-  border: 2px solid #2b7dbc;
-  border-width: 0 2px 0 0;
+ display: inline-block;
+	content: "";
+	position: absolute;
+	right: -2px;
+	top: -1px;
+	bottom: 0;
+	border-right: 4px solid #0b6cbc
 }
 
 .nav-list>li.open
