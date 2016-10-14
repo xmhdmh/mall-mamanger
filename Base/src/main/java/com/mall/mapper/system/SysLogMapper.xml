@@ -4,6 +4,7 @@
   <insert id="insert" parameterType="SysLog" >
     insert into sys_log
      (
+     id,
      opt_time,
      opt_category, 
      opt_summary,
@@ -13,6 +14,7 @@
       )
     values 
     (
+    #{id},
     #{opt_time},
     #{opt_category}, 
     #{opt_summary},
