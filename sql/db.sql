@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2016/10/14 10:16:12                          */
+/* Created on:     2016/10/14 11:05:41                          */
 /*==============================================================*/
 
 
@@ -175,6 +175,8 @@ create table product
    is_sales             char(1) default 'n' comment '是否促销',
    sales_price          bigint(20) default NULL comment '促销价',
    user_id              bigint(20) default NULL comment '创建人',
+   specifications       varchar(256) comment '规格',
+   repertory            int default 0 comment '库存',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
