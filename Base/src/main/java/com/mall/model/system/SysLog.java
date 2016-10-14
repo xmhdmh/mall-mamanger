@@ -1,8 +1,5 @@
 package com.mall.model.system;
-
 import java.util.Date;
-
-import com.mall.utils.DateUtil;
 
 /**
  * 

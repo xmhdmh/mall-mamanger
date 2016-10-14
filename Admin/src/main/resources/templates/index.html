@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+ <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8" />
 <title>网站后台管理系统</title>
@@ -37,7 +36,7 @@
         <script type="text/javascript" src="assets/js/ace.min.js" th:src="@{/assets/js/ace.min.js}"></script>
         <script type="text/javascript" src="assets/layer/layer.js" th:src="@{/assets/layer/layer.js}"></script>
         <script type="text/javascript" src="assets/laydate/laydate.js" th:src="@{/assets/laydate/laydate.js}"></script>
-
+  
 <script type="text/javascript">
 	$(function() {
 		var cid = $('#nav_list> li>.submenu');
@@ -49,6 +48,12 @@
 	jQuery(document)
 			.ready(
 					function() {
+						$.each($(".submenu"), function() {
+							var $aobjs = $(this).children("li");
+							var rowCount = $aobjs.size();
+							var divHeigth = $(this).height();
+							$aobjs.height(divHeigth / rowCount);
+						});
 						//初始化宽度、高度    
 						$("#main-container").height($(window).height() - 76);
 						$("#iframe").height($(window).height() - 140);
@@ -104,16 +109,31 @@
 										});
 
 					});
+
+	//jQuery( document).ready(function(){
+	//	  $("#submit").click(function(){
+	//	// var num=0;
+	//     var str="";
+	//     $("input[type$='password']").each(function(n){
+	//          if($(this).val()=="")
+	//          {
+	//              // num++;
+	//			   layer.alert(str+=""+$(this).attr("name")+"不能为空！\r\n",{
+	//                title: '提示框',				
+	//				icon:0,				
+	//          }); 
+	//             // layer.msg(str+=""+$(this).attr("name")+"不能为空！\r\n");
+	//             layer.close(index);
+	//          }		  
+	//     });    
+	//})		
+	//	});
 	/*********************点击事件*********************/
 	$(document).ready(
 			function() {
 				$('#nav_list').find('li.home').click(function() {
-					/* $('#nav_list').find('li.home').removeClass('active');
-					$(this).addClass('active'); */
-					$('#nav_list').find('li.active').removeClass('active');
-					$('#nav_list').find('li.open').removeClass('open');
-					$(this).addClass('active home');
-					$(this).parent().parent().addClass("active open");
+					$('#nav_list').find('li.home').removeClass('active');
+					$(this).addClass('active');
 				});
 
 				//时间设置
@@ -225,9 +245,8 @@
 					</a>
 						<ul
 							class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-							<!-- <li><a href="#"><i class="icon-cog"></i>设置</a></li> -->
+							<li><a href="#"><i class="icon-cog"></i>设置</a></li>
 							<li><a href="#"><i class="icon-user"></i>个人资料</a></li>
-							<li><a href="javascript:void(0)" class="change_Password"><i class="icon-edit"></i>修改密码</a></li>
 							<li class="divider"></li>
 							<li><a href="javascript:void(0)" id="Exit_system"><i
 									class="icon-off"></i>退出</a></li>
@@ -270,7 +289,18 @@
 							<li><a href="#"> 查看所有通知 <i class="icon-arrow-right"></i>
 							</a></li>
 						</ul></li>
+
+
 				</ul>
+				<!-- <div class="right_info">
+                 
+                   <div class="get_time" ><span id="time" class="time"></span>欢迎光临,管理员</span></div>
+					<ul class="nav ace-nav">	
+						<li><a href="javascript:void(0)" class="change_Password">修改密码</a></li>
+                        <li><a href="javascript:void(0)" id="Exit_system">退出系统</a></li>
+                       
+					</ul>
+				</div>-->
 			</div>
 		</div>
 	</div>
@@ -302,7 +332,7 @@
 				</div>
 				<!-- #sidebar-shortcuts -->
 				<ul class="nav nav-list" id="nav_list">
-					<li class="active home" ><a href="javascript:void(0)" name="home.html"
+					<li class="home"><a href="javascript:void(0)" name="home.html"
 						class="iframeurl" title=""><i class="icon-dashboard"></i><span
 							class="menu-text"> 系统首页 </span></a></li>
 					<li><a href="#" class="dropdown-toggle"><i
@@ -310,13 +340,13 @@
 							class="arrow icon-angle-down"></b></a>
 						<ul class="submenu">
 							<li class="home"><a href="javascript:void(0)"
-								name="product/productsList.html" title="产品类表" class="iframeurl"><i
+								name="Products_List.html" title="产品类表" class="iframeurl"><i
 									class="icon-double-angle-right"></i>产品类表</a></li>
 							<li class="home"><a href="javascript:void(0)"
-								name="product/brandList.html" title="品牌管理" class="iframeurl"><i
+								name="Brand_Manage.html" title="品牌管理" class="iframeurl"><i
 									class="icon-double-angle-right"></i>品牌管理</a></li>
 							<li class="home"><a href="javascript:void(0)"
-								name="product/categoryList.html" title="分类管理" class="iframeurl"><i
+								name="Category_Manage.html" title="分类管理" class="iframeurl"><i
 									class="icon-double-angle-right"></i>分类管理</a></li>
 
 						</ul></li>
@@ -325,9 +355,9 @@
 							class="arrow icon-angle-down"></b></a>
 						<ul class="submenu">
 							<li class="home"><a href="javascript:void(0)"
-								name="image/adsList.html" title="广告管理" class="iframeurl"><i
+								name="advertising.html" title="广告管理" class="iframeurl"><i
 									class="icon-double-angle-right"></i>广告管理</a></li>
-							<li class="home"><a href="javascript:void(0)" name="/picture/adsSort.html"
+							<li class="home"><a href="javascript:void(0)" name="/sort"
 								title="分类管理" class="iframeurl"><i
 									class="icon-double-angle-right"></i>分类管理</a></li>
 						</ul></li>
@@ -339,7 +369,7 @@
 								name="transaction.html" title="交易信息" class="iframeurl"><i
 									class="icon-double-angle-right"></i>交易信息</a></li>
 							<li class="home"><a href="javascript:void(0)"
-								name="order/orderForm.html" title="订单管理" class="iframeurl"><i
+								name="Orderform.html" title="订单管理" class="iframeurl"><i
 									class="icon-double-angle-right"></i>订单管理</a></li>
 							<li class="home"><a href="javascript:void(0)"
 								name="Amounts.html" title="交易金额" class="iframeurl"><i
@@ -356,7 +386,7 @@
 							class="arrow icon-angle-down"></b></a>
 						<ul class="submenu">
 							<li class="home"><a href="javascript:void(0)"
-								name="member/memberList.html" title="会员列表" class="iframeurl"><i
+								name="user_list.html" title="会员列表" class="iframeurl"><i
 									class="icon-double-angle-right"></i>会员列表</a></li>
 							<li class="home"><a href="javascript:void(0)"
 								name="member-Grading.html" title="等级管理" class="iframeurl"><i
@@ -371,7 +401,7 @@
 							class="arrow icon-angle-down"></b></a>
 						<ul class="submenu">
 							<li class="home"><a href="javascript:void(0)"
-								name="message/messageList.html" title="留言列表" class="iframeurl"><i
+								name="Guestbook.html" title="留言列表" class="iframeurl"><i
 									class="icon-double-angle-right"></i>留言列表</a></li>
 							<li class="home"><a href="javascript:void(0)"
 								name="Feedback.html" title="意见反馈" class="iframeurl"><i
@@ -393,7 +423,7 @@
 							class="arrow icon-angle-down"></b></a>
 						<ul class="submenu">
 							<li class="home"><a href="javascript:void(0)"
-								name="system/query.html" title="系统设置" class="iframeurl"><i
+								name="/system/query.html" title="系统设置" class="iframeurl"><i
 									class="icon-double-angle-right"></i>系统设置</a></li>
 							<li class="home"><a href="javascript:void(0)"
 								name="菜单管理.html" title="栏目管理" class="iframeurl"><i
@@ -424,6 +454,12 @@
 						data-icon1="icon-double-angle-left"
 						data-icon2="icon-double-angle-right"></i>
 				</div>
+				<script type="text/javascript">
+					try {
+						ace.settings.check('sidebar', 'collapsed')
+					} catch (e) {
+					}
+				</script>
 			</div>
 			<div class="main-content">
 				<script type="text/javascript">
@@ -451,7 +487,6 @@
 
 
 				<!-- /.page-content -->
-				
 			</div>
 			<!-- /.main-content -->
 
@@ -497,13 +532,14 @@
 			<!-- /#ace-settings-container -->
 		</div>
 		<!-- /.main-container-inner -->
-<div class="footer_style" id="footerstyle">
-		<p class="l_f">版权所有：南京四美软件 苏ICP备11011739号</p>
-		<p class="r_f">地址：南京市鼓楼区阅江楼街道公共路64号 邮编：210011 技术支持：XXXX</p>
-	</div>
+
 	</div>
 	<!--底部样式-->
 
+	<div class="footer_style" id="footerstyle">
+		<p class="l_f">版权所有：南京四美软件 苏ICP备11011739号</p>
+		<p class="r_f">地址：南京市鼓楼区阅江楼街道公共路64号 邮编：210011 技术支持：XXXX</p>
+	</div>
 	<!--修改密码样式-->
 	<div class="change_Pass_style" id="change_Pass">
 		<ul class="xg_style">

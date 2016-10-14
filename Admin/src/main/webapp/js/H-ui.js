@@ -12,11 +12,11 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 $(document).ready(function(){
 if(screen.width > 1366 && $(window).width() > 1366)
 {
-	window.onresize=function(){ location=location };
+	//window.onresize=function(){ location=location };
 	$("html").addClass("Narrow");
 }
 else{
-	window.onresize=function(){ location=location };	
+	//window.onresize=function(){ location=location };	
 	$("html").addClass("Resolution");
 	}
 });/*添加收藏
