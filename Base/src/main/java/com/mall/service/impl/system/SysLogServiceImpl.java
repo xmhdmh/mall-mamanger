@@ -5,13 +5,17 @@ import java.net.UnknownHostException;
 import java.util.Date;
 import java.util.List;
 
+
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.mall.model.system.SysLog;
 import com.mall.model.user.UserInfo;
 import com.mall.service.impl.BaseServiceImpl;
 import com.mall.service.system.SysLogService;
 
 @Service
+@Transactional
 public class SysLogServiceImpl extends BaseServiceImpl implements SysLogService{
 	
 	@Override
@@ -20,7 +24,7 @@ public class SysLogServiceImpl extends BaseServiceImpl implements SysLogService{
 			try {
 				addr = InetAddress.getLocalHost();
 			} catch (UnknownHostException e) {
-			}   
+			}
 			log.setComputer_name(addr.getHostName());
 			log.setIp_address(addr.getHostAddress());
 		    log.setOpt_time(new Date());
