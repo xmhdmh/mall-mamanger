@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mall.dao.product.ProductMapper" >
+  <resultMap id="BaseResultMap" type="com.mall.model.product.Product" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+    <result column="is_delete" property="isDelete" jdbcType="CHAR" />
+    <result column="sort" property="sort" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="thumbnail" property="thumbnail" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="BIGINT" />
+    <result column="introduce" property="introduce" jdbcType="VARCHAR" />
+    <result column="province" property="province" jdbcType="BIGINT" />
+    <result column="city" property="city" jdbcType="BIGINT" />
+    <result column="district" property="district" jdbcType="BIGINT" />
+    <result column="is_sales" property="isSales" jdbcType="CHAR" />
+    <result column="sales_price" property="salesPrice" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.mall.model.product.Product" extends="BaseResultMap" >
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, create_time, modify_time, is_delete, sort, remark, name, thumbnail, price, introduce, 
+    province, city, district, is_sales, sales_price, user_id
+  </sql>
+  <sql id="Blob_Column_List" >
+    content
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from product
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from product
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.mall.model.product.Product" >
+    insert into product (id, create_time, modify_time, 
+      is_delete, sort, remark, 
+      name, thumbnail, price, 
+      introduce, province, city, 
+      district, is_sales, sales_price, 
+      user_id, content)
+    values (#{id,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}, 
+      #{isDelete,jdbcType=CHAR}, #{sort,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR}, #{thumbnail,jdbcType=VARCHAR}, #{price,jdbcType=BIGINT}, 
+      #{introduce,jdbcType=VARCHAR}, #{province,jdbcType=BIGINT}, #{city,jdbcType=BIGINT}, 
+      #{district,jdbcType=BIGINT}, #{isSales,jdbcType=CHAR}, #{salesPrice,jdbcType=BIGINT}, 
+      #{userId,jdbcType=BIGINT}, #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.mall.model.product.Product" >
+    insert into product
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="modifyTime != null" >
+        modify_time,
+      </if>
+      <if test="isDelete != null" >
+        is_delete,
+      </if>
+      <if test="sort != null" >
+        sort,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="thumbnail != null" >
+        thumbnail,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="introduce != null" >
+        introduce,
+      </if>
+      <if test="province != null" >
+        province,
+      </if>
+      <if test="city != null" >
+        city,
+      </if>
+      <if test="district != null" >
+        district,
+      </if>
+      <if test="isSales != null" >
+        is_sales,
+      </if>
+      <if test="salesPrice != null" >
+        sales_price,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyTime != null" >
+        #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isDelete != null" >
+        #{isDelete,jdbcType=CHAR},
+      </if>
+      <if test="sort != null" >
+        #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="thumbnail != null" >
+        #{thumbnail,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=BIGINT},
+      </if>
+      <if test="introduce != null" >
+        #{introduce,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        #{province,jdbcType=BIGINT},
+      </if>
+      <if test="city != null" >
+        #{city,jdbcType=BIGINT},
+      </if>
+      <if test="district != null" >
+        #{district,jdbcType=BIGINT},
+      </if>
+      <if test="isSales != null" >
+        #{isSales,jdbcType=CHAR},
+      </if>
+      <if test="salesPrice != null" >
+        #{salesPrice,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mall.model.product.Product" >
+    update product
+    <set >
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyTime != null" >
+        modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isDelete != null" >
+        is_delete = #{isDelete,jdbcType=CHAR},
+      </if>
+      <if test="sort != null" >
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="thumbnail != null" >
+        thumbnail = #{thumbnail,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=BIGINT},
+      </if>
+      <if test="introduce != null" >
+        introduce = #{introduce,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        province = #{province,jdbcType=BIGINT},
+      </if>
+      <if test="city != null" >
+        city = #{city,jdbcType=BIGINT},
+      </if>
+      <if test="district != null" >
+        district = #{district,jdbcType=BIGINT},
+      </if>
+      <if test="isSales != null" >
+        is_sales = #{isSales,jdbcType=CHAR},
+      </if>
+      <if test="salesPrice != null" >
+        sales_price = #{salesPrice,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.mall.model.product.Product" >
+    update product
+    set create_time = #{createTime,jdbcType=TIMESTAMP},
+      modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      is_delete = #{isDelete,jdbcType=CHAR},
+      sort = #{sort,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      thumbnail = #{thumbnail,jdbcType=VARCHAR},
+      price = #{price,jdbcType=BIGINT},
+      introduce = #{introduce,jdbcType=VARCHAR},
+      province = #{province,jdbcType=BIGINT},
+      city = #{city,jdbcType=BIGINT},
+      district = #{district,jdbcType=BIGINT},
+      is_sales = #{isSales,jdbcType=CHAR},
+      sales_price = #{salesPrice,jdbcType=BIGINT},
+      user_id = #{userId,jdbcType=BIGINT},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mall.model.product.Product" >
+    update product
+    set create_time = #{createTime,jdbcType=TIMESTAMP},
+      modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      is_delete = #{isDelete,jdbcType=CHAR},
+      sort = #{sort,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      thumbnail = #{thumbnail,jdbcType=VARCHAR},
+      price = #{price,jdbcType=BIGINT},
+      introduce = #{introduce,jdbcType=VARCHAR},
+      province = #{province,jdbcType=BIGINT},
+      city = #{city,jdbcType=BIGINT},
+      district = #{district,jdbcType=BIGINT},
+      is_sales = #{isSales,jdbcType=CHAR},
+      sales_price = #{salesPrice,jdbcType=BIGINT},
+      user_id = #{userId,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
