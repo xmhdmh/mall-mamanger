@@ -1,14 +1,13 @@
 package com.mall.controller.system;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import com.github.pagehelper.PageHelper;
+import com.mall.controller.BaseController;
 import com.mall.model.Page;
 import com.mall.model.system.SysLog;
-import com.mall.service.system.SysLogService;
 
 /**
  * 
@@ -25,15 +24,13 @@ import com.mall.service.system.SysLogService;
  */
 @Controller
 @RequestMapping("/system")
-public class SysLogController {
+public class SysLogController extends BaseController{
 
-	@Autowired
-	private SysLogService service;
 	
 	@RequestMapping("/query")
 	public String query(SysLog param,@RequestParam(defaultValue="1") Integer currentPage,@RequestParam(defaultValue="10") Integer pageSize,ModelMap map){
 		 PageHelper.startPage(currentPage,pageSize);
-		 List<SysLog> list=service.query(param);
+		 List<SysLog> list=super.getSysLogService().query(param);
 		 Page page=new Page(list);
 		 map.put("sysList", list);
 		 map.put("sysLog", param);

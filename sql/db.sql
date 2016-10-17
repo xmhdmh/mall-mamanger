@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2016/10/14 11:05:41                          */
+/* Created on:     2016/10/14 15:18:35                          */
 /*==============================================================*/
 
 
@@ -14,9 +14,9 @@ drop table if exists category_relation;
 
 drop table if exists orders;
 
-drop table if exists pro_brand_relation;
-
 drop table if exists product;
+
+drop table if exists product_brand_relation;
 
 drop table if exists product_order_relation;
 
@@ -136,24 +136,6 @@ create table orders
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*==============================================================*/
-/* Table: pro_brand_relation                                    */
-/*==============================================================*/
-create table pro_brand_relation
-(
-   id                   bigint(20) not null comment 'id',
-   create_time          timestamp not null default CURRENT_TIMESTAMP comment '创建时间',
-   modify_time          timestamp not null default CURRENT_TIMESTAMP comment '修改时间',
-   is_delete            char(1) default 'n' comment '是否删除',
-   sort                 int(11) default 0 comment '排序',
-   remark               varchar(32) default NULL comment '备注',
-   product_id           bigint(20) default NULL comment '产品ID',
-   brand_id             bigint(20) default NULL comment '品牌ID',
-   shop_id              bigint(20) default NULL comment '店铺ID',
-   primary key (id)
-)
-ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-/*==============================================================*/
 /* Table: product                                               */
 /*==============================================================*/
 create table product
@@ -177,6 +159,24 @@ create table product
    user_id              bigint(20) default NULL comment '创建人',
    specifications       varchar(256) comment '规格',
    repertory            int default 0 comment '库存',
+   primary key (id)
+)
+ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*==============================================================*/
+/* Table: product_brand_relation                                */
+/*==============================================================*/
+create table product_brand_relation
+(
+   id                   bigint(20) not null comment 'id',
+   create_time          timestamp not null default CURRENT_TIMESTAMP comment '创建时间',
+   modify_time          timestamp not null default CURRENT_TIMESTAMP comment '修改时间',
+   is_delete            char(1) default 'n' comment '是否删除',
+   sort                 int(11) default 0 comment '排序',
+   remark               varchar(32) default NULL comment '备注',
+   product_id           bigint(20) default NULL comment '产品ID',
+   brand_id             bigint(20) default NULL comment '品牌ID',
+   shop_id              bigint(20) default NULL comment '店铺ID',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;

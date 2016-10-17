@@ -12,9 +12,12 @@ package com.mall.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.mall.service.system.SysLogService;
 
 /**
  * @ClassName: BaseController
@@ -26,6 +29,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping(produces = { "text/html;charset=UTF-8" })
 public class BaseController {
+    
+    @Autowired
+    private SysLogService sysLogService;
+    
+    public SysLogService getSysLogService() {
+        return sysLogService;
+    }
+
+    public void setSysLogService(SysLogService sysLogService) {
+        this.sysLogService = sysLogService;
+    }
+
+
+
     /**
      * 全局默认异常
     * @Title: defaultErrorHandler 
