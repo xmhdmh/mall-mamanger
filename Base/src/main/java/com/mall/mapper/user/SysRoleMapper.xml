@@ -10,89 +10,61 @@
   <sql id="Base_Column_List" >
     id, available, description, role
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
-    select 
-    <include refid="Base_Column_List" />
-    from sys_role
-    where id = #{id,jdbcType=BIGINT}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
-    delete from sys_role
-    where id = #{id,jdbcType=BIGINT}
-  </delete>
-  <insert id="insert" parameterType="com.mall.model.user.SysRole" >
-    insert into sys_role (id, available, description, 
-      role)
-    values (#{id,jdbcType=BIGINT}, #{available,jdbcType=BIT}, #{description,jdbcType=VARCHAR}, 
-      #{role,jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="com.mall.model.user.SysRole" >
+  <insert id="insert" parameterType="SysRole" >
     insert into sys_role
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="available != null" >
-        available,
-      </if>
-      <if test="description != null" >
-        description,
-      </if>
-      <if test="role != null" >
-        role,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=BIGINT},
-      </if>
-      <if test="available != null" >
-        #{available,jdbcType=BIT},
-      </if>
-      <if test="description != null" >
-        #{description,jdbcType=VARCHAR},
-      </if>
-      <if test="role != null" >
-        #{role,jdbcType=VARCHAR},
-      </if>
-    </trim>
+     (
+     description, 
+     role
+      )
+    values 
+    (
+    #{description}, 
+    #{role}
+    )
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.mall.model.user.SysRole" >
+  
+  <update id="update" parameterType="SysRole" >
     update sys_role
     <set >
       <if test="available != null" >
-        available = #{available,jdbcType=BIT},
+        available = #{available},
       </if>
-      <if test="description != null" >
-        description = #{description,jdbcType=VARCHAR},
+      <if test="description != null and ''!=description" >
+        description = #{description},
       </if>
-      <if test="role != null" >
-        role = #{role,jdbcType=VARCHAR},
+      <if test="role != null and ''!=role" >
+        role = #{role},
       </if>
     </set>
-    where id = #{id,jdbcType=BIGINT}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.mall.model.user.SysRole" >
-    update sys_role
-    set available = #{available,jdbcType=BIT},
-      description = #{description,jdbcType=VARCHAR},
-      role = #{role,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id}
   </update>
   
-  <select id="query" resultMap="BaseResultMap" parameterType="com.mall.model.user.SysRole" >
+  <select id="query" resultMap="BaseResultMap" parameterType="SysRole" >
     select 
     <include refid="Base_Column_List" />
     from sys_role
     where 1 = 1
     <if test="available != null" >
-        AND available = #{available,jdbcType=BIT}
+        and available = #{available}
     </if>
-    <if test="description != null" >
-        AND description = #{description,jdbcType=VARCHAR}
-    </if>
-    <if test="role != null" >
-        AND role = #{role,jdbcType=VARCHAR}
+    <if test="role != null and ''!=role" >
+        and role like CONCAT('%',#{role},'%') 
     </if>
   </select>
+  
+  <select id="findById" resultType="SysRole">
+  select 
+   <include refid="Base_Column_List" />
+   from sys_role where id=#{id}
+  </select>
+  
+  <select id="findByName" resultType="SysRole">
+  select 
+   <include refid="Base_Column_List" /> 
+   from sys_role where role=#{role}
+  </select>
+  
+  <delete id="delete">
+  delete from sys_role where id=#{id}
+  </delete>
 </mapper>

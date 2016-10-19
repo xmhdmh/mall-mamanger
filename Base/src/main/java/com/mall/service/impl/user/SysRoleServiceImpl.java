@@ -39,16 +39,44 @@ public class SysRoleServiceImpl extends BaseServiceImpl implements SysRoleServic
     */ 
     @Override
     public List<SysRole> findByUserRole(Long userId) {
-        // TODO Auto-generated method stub
         SysUserRole model=new SysUserRole();
         model.setUserId(userId);
         List<SysUserRole> sysUserRoles=super.getSysUserRoleMapper().query(model);
         List<SysRole> list=new ArrayList<SysRole>();
         for (SysUserRole sysUserRole : sysUserRoles) {
-            SysRole sysRole=super.getSysRoleMapper().selectByPrimaryKey(sysUserRole.getRoleId());
+            SysRole sysRole=super.getSysRoleMapper().findById(sysUserRole.getRoleId());
             list.add(sysRole);
         }
         return list;
     }
+
+	@Override
+	public List<SysRole> query(SysRole param) {
+		return super.getSysRoleMapper().query(param);
+	}
+
+	@Override
+	public Integer update(SysRole param) {
+		return super.getSysRoleMapper().update(param);
+	}
+
+	@Override
+	public Integer delete(Long id) {
+		return super.getSysRoleMapper().delete(id);
+	}
+
+	@Override
+	public Integer insert(SysRole param) {
+		Integer result=0;
+		SysRole role=super.getSysRoleMapper().findByName(param.getRole());
+		if(role!=null){
+			result=-1;
+		}else{
+			result=super.getSysRoleMapper().insert(param);
+		}
+		return result;
+	}
+
+   
 
 }

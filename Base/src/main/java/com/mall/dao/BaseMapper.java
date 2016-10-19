@@ -17,11 +17,11 @@ public abstract interface BaseMapper {
 
     public abstract <T> Integer update(T param);
 
-    public abstract <T> Integer delete(Integer id);
+    public abstract <T> Integer delete(Long id);
 
     public abstract <T> Integer insert(T param);
 
-    public abstract <T> T findById(Integer id);
+    public abstract <T> T findById(Long id);
 
     public abstract <T> T findByName(String name);
 }

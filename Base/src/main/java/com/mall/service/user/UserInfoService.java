@@ -22,4 +22,13 @@ import com.mall.model.user.UserInfo;
 
 public interface UserInfoService {
     public UserInfo findByName(String userName);
+    
+    /**
+     * 
+     * @Title: 修改密码
+     * @author xuliting
+     * @param param
+     * @return
+     */
+    public Integer editPwd(UserInfo param);
 }

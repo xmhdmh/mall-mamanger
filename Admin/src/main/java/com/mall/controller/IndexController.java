@@ -3,15 +3,13 @@ package com.mall.controller;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
-
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class IndexController extends BaseController{
@@ -61,5 +59,15 @@ public class IndexController extends BaseController{
     @RequestMapping("/403")
     public String noPermission() {
         return "/403";
+    }
+    
+    /**
+     * 
+     * @Title: 修改密码
+     * @author xuliting
+     */
+    @RequestMapping("/editPwd")
+    public void editPwd(@RequestParam  String oldPwd,@RequestParam String newPwd){
+    	
     }
 }

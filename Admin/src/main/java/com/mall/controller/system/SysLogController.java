@@ -35,6 +35,6 @@ public class SysLogController extends BaseController{
 		 map.put("sysList", list);
 		 map.put("sysLog", param);
 		 map.put("page", page);
-		 return "/system/syslogList";
+		 return "/system/syslog/main";
 	}
 }

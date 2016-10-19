@@ -15,7 +15,7 @@
 							<li><label class="l_f">操作内容:</label><input name=""
 								type="text" th:field="*{opt_summary}"
 								th:value="${sysLog.opt_summary}" class="text_add"
-								placeholder="输入会操作内容关键字" style="width: 400px" /></li>
+								placeholder="请输入操作内容关键字" style="width: 400px" /></li>
 							<li><label class="l_f">操作时间</label><input
 								class="inline laydate-icon" id="start" type="text"
 								style="margin-left: 10px;width:200px" th:field="*{startTime}"
@@ -47,9 +47,9 @@
 						<tbody>
 							<tr th:each="sysLog:${sysList}">
 								<td th:text="${sysLog.id}">1</td>
-								<td th:text="${sysLog.userName}">1</td>
-								<td th:text="${sysLog.ip_address}">1</td>
-								<td th:text="${sysLog.opt_summary}">1</td>
+								<td th:text="${sysLog.userName}">张三</td>
+								<td th:text="${sysLog.ip_address}">192.168.1.1</td>
+								<td th:text="${sysLog.opt_summary}">登录</td>
 								<td
 									th:text="${#dates.format(sysLog.opt_time,'yyyy-MM-dd hh:mm:ss')}">1</td>
 							</tr>

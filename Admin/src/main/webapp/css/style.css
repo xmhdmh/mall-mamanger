@@ -78,7 +78,7 @@ body
 .Manager_style .title_name,
 .search_style .title_names{ position:absolute; top:-20px; font-size:18px; background-color:#ffffff; padding:5px 20px; left:10px;}
 .state-overview{ margin-top:15px;}
-#add_administrator_style .c-red{ color:#F33}
+.c-red{ color:#F33}
 /*****************************闈㈠寘灞戞牱寮�*****************************/
 #breadcrumbs .iframeurl{ color:#333;text-decoration : none;}
 /******************杈规鏍峰紡**************/
@@ -177,7 +177,7 @@ body
 }
 .search_style .search_content li .btn_search i{ padding-right:5px;}
 /***********搴曢儴鏍峰紡灞炴€�***********/
-.footer_style{ width:100%; border-top:1px solid #ddd; padding:2px 0px; color:#666666; background-color:#f2f2f2; font-family:"鏂板畫浣�"; position: fixed; bottom:0px; z-index:1111; text-align:center;}
+.footer_style{ width:100%; border-top:1px solid #ddd; padding:2px 0px; color:#666666; background-color:#f2f2f2; font-family:"新宋体"; position: fixed; bottom:0px; z-index:1111; text-align:center;}
 .footer_style p{ padding:0px 20px;}
 /*************************************************************寰呯‘璁よ鍗曟牱寮忓睘鎬�**********************************************************/
 .d_Confirm_Order_style{}
@@ -522,7 +522,7 @@ body
 .dd_title_name{ text-align:center; font-size:18px; margin-bottom:20px; line-height:40px}
 .d_submit_btn{ text-align:center; margin-top:30px;}
 /*********绠＄悊鍛樻牱寮忓睘鎬�***********/
-#add_administrator_style{ padding:10px;}
+.openDiv{ padding:10px;}
 .administrator_style{ border-top:1px solid #dddddd; border-right:1px solid #dddddd; border-left:1px solid #dddddd;}
 .administrator_style .table_menu_list{float: right; margin-left: 220px;overflow: auto;position: absolute;  padding-left:10px;}
 .administrator_style .table_menu_list.Widescreen{ margin-left:0px;}
@@ -532,11 +532,12 @@ body
     background-color: #FFF;
     border: 0px;
 }
-#add_administrator_style .form-label,
+.wordage{
+	margin-left: 10px;margin-top: 10px;
+}
+.openDiv .form-label,
 .admin_info_style .form-group{ line-height:32px;}
-.admin_info_style .form-group  input,
-#add_administrator_style input,
-#add_administrator_style textarea{ margin-left:0px;}
+.admin_info_style .form-group  input{ margin-left:0px;}
 .admin_info_style .form-group input[disabled]{background-color: #FFFFFF !important;}
 .admin_info_style .text_info.add {
     border: 1px solid #ddd;

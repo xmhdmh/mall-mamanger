@@ -6,12 +6,8 @@
 * @date 2016年9月9日 下午1:50:01
 * @version V1.0   
 */
-
-
 package com.mall.service.user;
-
 import java.util.List;
-
 import com.mall.model.user.SysRole;
 
 /**
@@ -22,7 +18,7 @@ import com.mall.model.user.SysRole;
  * 
  */
 
-public interface SysRoleService {
+public interface SysRoleService{
     /**
      * 根据用户id获取角色列表
     * @Title: findByUserRole 
@@ -33,4 +29,14 @@ public interface SysRoleService {
     * @throws
      */
     public List<SysRole> findByUserRole(Long userId);
+
+	public  List<SysRole> query(SysRole param);
+
+	public  Integer update(SysRole param) ;
+
+	public  Integer delete(Long id);
+
+	public  Integer insert(SysRole param);
+
+
 }

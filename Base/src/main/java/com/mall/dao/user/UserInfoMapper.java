@@ -1,25 +1,18 @@
 package com.mall.dao.user;
-
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-
 import com.mall.dao.BaseMapper;
 import com.mall.model.user.UserInfo;
 
 @Mapper
 public interface UserInfoMapper extends BaseMapper{
-    int deleteByPrimaryKey(Long id);
 
-    int insert(UserInfo record);
-
-    int insertSelective(UserInfo record);
-
-    UserInfo selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(UserInfo record);
-
-    int updateByPrimaryKey(UserInfo record);
-    
-    @SuppressWarnings("unchecked")
-    UserInfo findByName(@Param("userName")String  userName);
+    /**
+     * 
+     * @Title: 修改密码
+     * @author xuliting
+     * @param userName 用户名
+     * @param newPwd 新密码
+     * @return
+     */
+    Integer editPwd(UserInfo param);
 }

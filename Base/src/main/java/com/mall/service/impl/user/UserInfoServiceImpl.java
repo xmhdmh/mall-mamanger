@@ -1,7 +1,5 @@
 package com.mall.service.impl.user;
-
 import org.springframework.stereotype.Service;
-
 import com.mall.model.user.UserInfo;
 import com.mall.service.impl.BaseServiceImpl;
 import com.mall.service.user.UserInfoService;
@@ -15,19 +13,15 @@ import com.mall.service.user.UserInfoService;
  */
 @Service
 public class UserInfoServiceImpl extends BaseServiceImpl implements UserInfoService{
-    /* (非 Javadoc) 
-    * <p>Title: findByName</p> 
-    * <p>Description: </p> 
-    * @param userName
-    * @return 
-    * @see com.mall.service.user.UserInfoService#findByName(java.lang.String) 
-    */ 
-    
     
     @Override
     public UserInfo findByName(String userName) {
-        // TODO Auto-generated method stub
         return super.getUserInfoMapper().findByName(userName);
     }
+
+	@Override
+	public Integer editPwd(UserInfo param) {
+		return super.getUserInfoMapper().editPwd(param);
+	}
 
 }

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head th:include="util ::util">
+</head>
+ <script type="text/javascript" src="Widget/Validform/5.3.2/Validform.min.js" th:src="@{/Widget/Validform/5.3.2/Validform.min.js}"></script>
+<body>
+	<div class="page-content clearfix">
+		<div id="Member_Ratings">
+			<div class="d_Confirm_Order_style">
+				<form action="" method="post" th:action="@{/sysRole/query.html}"
+					th:object="${sysRole}" id="searchForm">
+					<div class="search_style">
+						<div class="title_names">搜索查询</div>
+						<ul class="search_content clearfix">
+							<li><label class="l_f">角色名称:</label><input name=""
+								type="text" th:field="*{role}" th:value="${sysRole.role}"
+								class="text_add" placeholder="请输入角色名称" style="width: 400px" /></li>
+							<li style="width: 90px;"><button type="button"
+									id="searchBtn" class="btn_search">
+									<i class="icon-search"></i>查询
+								</button></li>
+						</ul>
+					</div>
+				</form>
+				<div class="border clearfix">
+					<span class="l_f"> <a href="javascript:void(0)" id="roleAdd"
+						class="btn btn-warning"><i class="icon-plus"></i>添加</a> <a
+						href="javascript:void(0)" class="btn btn-danger"><i
+							class="icon-trash"></i>批量删除</a>
+					</span>
+				</div>
+				<!---->
+				<div class="table_menu_list">
+					<table class="table table-striped table-bordered table-hover"
+						id="sample-table">
+						<thead>
+							<tr>
+								<th width="25"><label><input type="checkbox"
+										class="ace" /><span class="lbl"></span></label></th>
+								<th width="80">ID</th>
+								<th width="100">角色名称</th>
+								<th width="100">角色描述</th>
+								<th width="80">状态</th>
+								<th width="150">操作</th>
+								<!-- <th width="100">创建人</th>
+								<th width="120">创建时间</th> -->
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="sysRole:${roleList}">
+								<td><label><input type="checkbox" class="ace" /><span
+										class="lbl"></span></label></td>
+								<td th:text="${sysRole.id}">1</td>
+								<td th:text="${sysRole.role}">admin</td>
+								<td th:text="${sysRole.description}">角色描述</td>
+								<td class="td-status" th:if="${sysRole.available==true}"><span class="label label-success radius">已启用</span></td>
+								<td class="td-status" th:if="${sysRole.available==false}"><span class="label label-defaunt radius">已停用</span></td>
+								<td class="td-manage">
+        <a th:if="${sysRole.available==true}"  href="javascript:;" title="停用" th:onclick="'changeRoleStatus(this,'+${sysRole.id}+',false)'" class="btn btn-xs "><i class="fa fa-close bigger-120"></i></a>   
+        <a th:if="${sysRole.available==false}" style="text-decoration:none" class="btn btn-xs btn-success" th:onclick="'changeRoleStatus(this,'+${sysRole.id}+',true)'" href="javascript:;" title="启用"><i class="fa fa-check  bigger-120"></i></a>
+        <a title="编辑"  href="javascript:;"  class="btn btn-xs btn-info" ><i class="fa fa-edit bigger-120"></i></a>      
+        <a title="删除" href="javascript:;" th:onclick="'deleteRole(this,'+${sysRole.id}+');'"  class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
+        <a href="javascript:ovid()" class="btn btn-xs btn-pink ads_link"  title="授权"><i class="fa  fa-bars  bigger-120"></i></a>
+                                 </td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="page-header position-relative">
+						<table style="width: 100%;">
+							<tr>
+								<td style="vertical-align: top;"><div class="pagination"
+										style="float: right; padding-top: 0px; margin-top: 0px;"
+										th:utext="${page.pageStr}"></div></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--添加角色图层-->
+	<form th:action="@{/sysRole/add.html}" method="post" id="roleForm" th:object="${sysRole}">
+	 <div id="roleAddDiv" class="openDiv" style="display:none">
+		<div class="form-group">
+			<label class="form-label"><span class="c-red">*</span>角色名称：</label>
+			<div class="formControls">
+				<input type="text" class="input-text" value=""  id="roleName" th:field="*{role}" datatype="*2-16" nullmsg="角色名称不能为空"/>
+			</div>
+			<div class="col-4"> <span class="Validform_checktip"></span></div>
+		</div>
+		<div class="form-group">
+			<label class="form-label">角色描述：</label>
+			<div class="formControls">
+				<textarea th:field="*{description}" cols="" rows="" style="width:300px " placeholder="200个字符以内"  onkeyup="checkLength(this);"></textarea>
+				<span class="wordage">剩余字数：<span id="sy" style="color:Red;">200</span>字</span>
+			</div>
+			<div class="col-4"> </div>
+		</div>
+   </div>
+   </form>
+</body>
+<script type="text/javascript">
+	$(function() {
+		$("#searchBtn").click(function() {
+			$("#searchForm").submit();
+		});
+
+		/*用户-添加*/
+		$('#roleAdd').on('click',function() {
+					layer.open({
+						type : 1,
+						title : '添加角色',
+						maxmin : true,
+						shadeClose : true, //点击遮罩关闭层
+						area : [ '500px', '' ],
+						content : $('#roleAddDiv'),
+						btn : [ '提交', '取消' ],
+						yes : function(index, layero) {
+							$("#roleForm").submit();
+							}
+						});
+					});
+		
+		$("#roleForm").Validform({
+			callback:function(data){
+				alert(data);
+				console.info(data);
+				if(data==1){ 
+					 
+		            } 		  
+				}
+		});
+	});
+	
+	function checkLength(which) {
+		var maxChars = 200; //
+		if(which.value.length > maxChars){
+		   layer.open({
+		   icon:2,
+		   title:'提示框',
+		   content:'您输入的字数超出限制!',	
+	    });
+			// 超过限制的字数了就将 文本框中的内容按规定的字数 截取
+			which.value = which.value.substring(0,maxChars);
+			return false;
+		}else{
+			var curr = maxChars - which.value.length; //250 减去 当前输入的
+			document.getElementById("sy").innerHTML = curr.toString();
+			return true;
+		}
+	};
+	
+	/*角色-删除*/
+	function deleteRole(obj,id){
+		layer.confirm('确认要删除吗？',function(index){
+			 $.get("/sysRole/delete.html?id="+id,function(data) {
+				 if(result==1){
+	            		$(obj).parents("tr").remove();
+	        			layer.alert('删除成功!',{icon:1,title:"提示框"});
+	            	}else{
+	            		layer.alert('删除成功！',{ title: '提示框',	icon:2,		
+	         			  });
+	            	}
+	            });
+		});
+	}
+	
+	/*更改角色状态*/
+	function changeRoleStatus(obj,id,status){
+		var msg="停用";
+		if(status){
+			msg="启用";
+		}
+		layer.confirm("确认要"+msg+"吗？",function(index){
+			$.post("/sysRole/update.html",{available:status,id:id},function(data) {
+				 if(data==1){
+					 if(status){
+						$(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" class="btn btn-xs " onclick="changeRoleStatus(this,'+id+',false)" href="javascript:;" title="停用"><i class="fa fa-close bigger-120"></i></a>');
+						$(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">已启用</span>');
+						$(obj).remove();
+						layer.msg('已启用!',{icon: 6,time:1000});
+					 }else{
+						$(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" class="btn btn-xs btn-success" onclick="changeRoleStatus(this,'+id+',true)" href="javascript:;" title="启用"><i class="fa fa-check  bigger-120"></i></a>');
+						$(obj).parents("tr").find(".td-status").html('<span class="label label-defaunt radius">已停用</span>');
+						$(obj).remove();
+						layer.msg('已停用!',{icon: 5,time:1000});
+						 }
+	            	}else{
+	            		layer.msg(msg+"失败!",{icon: 5,time:1000});
+	            	}
+			
+		});
+		});
+	}
+</script>
+</html>

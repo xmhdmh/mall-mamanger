@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.mall.service.system.SysLogService;
+import com.mall.service.user.SysRoleService;
 
 /**
  * @ClassName: BaseController
@@ -32,6 +33,8 @@ public class BaseController {
     
     @Autowired
     private SysLogService sysLogService;
+    @Autowired
+    private SysRoleService sysRoleService;
     
     public SysLogService getSysLogService() {
         return sysLogService;
@@ -43,18 +46,11 @@ public class BaseController {
 
 
 
-    /**
-     * 全局默认异常
-    * @Title: defaultErrorHandler 
-    * @Description: TODO(这里用一句话描述这个方法的作用) 
-    * @param @param req
-    * @param @param e
-    * @param @return    设定文件 
-    * @return String    返回类型 
-    * @throws
-     */
-    @ExceptionHandler(value = Exception.class)
-    public String defaultErrorHandler(HttpServletRequest req, Exception e){
-        return "/404";
-    }
+    public SysRoleService getSysRoleService() {
+		return sysRoleService;
+	}
+
+	public void setSysRoleService(SysRoleService sysRoleService) {
+		this.sysRoleService = sysRoleService;
+	}
 }
