@@ -27,7 +27,7 @@ public class SysLogServiceImpl extends BaseServiceImpl implements SysLogService{
 			} catch (UnknownHostException e) {
 			}
 			SysSequences sysSequences=new SysSequences();
-			//sysSequences.setName();
+			sysSequences.setName(log.getClass().getName());
 			super.getSysSequencesMapper().insert(sysSequences);
 			log.setId(sysSequences.getId());
 			log.setComputer_name(addr.getHostName());
