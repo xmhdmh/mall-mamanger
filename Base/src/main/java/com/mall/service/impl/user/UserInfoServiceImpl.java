@@ -1,6 +1,6 @@
 package com.mall.service.impl.user;
-import org.apache.shiro.SecurityUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mall.model.Result;
 import com.mall.model.user.UserInfo;
@@ -16,6 +16,7 @@ import com.mall.utils.MD5Util;
  * 
  */
 @Service
+@Transactional
 public class UserInfoServiceImpl extends BaseServiceImpl implements UserInfoService{
     
     @Override

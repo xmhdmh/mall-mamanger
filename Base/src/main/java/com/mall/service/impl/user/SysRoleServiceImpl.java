@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mall.model.user.SysRole;
 import com.mall.model.user.SysUserRole;
@@ -28,6 +29,7 @@ import com.mall.service.user.SysRoleService;
  * 
  */
 @Service
+@Transactional
 public class SysRoleServiceImpl extends BaseServiceImpl implements SysRoleService{
 
     /* (非 Javadoc) 

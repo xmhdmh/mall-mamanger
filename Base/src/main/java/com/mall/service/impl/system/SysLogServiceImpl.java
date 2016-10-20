@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.mall.model.system.SysLog;
+import com.mall.model.system.SysSequences;
 import com.mall.model.user.UserInfo;
 import com.mall.service.impl.BaseServiceImpl;
 import com.mall.service.system.SysLogService;
@@ -25,6 +26,10 @@ public class SysLogServiceImpl extends BaseServiceImpl implements SysLogService{
 				addr = InetAddress.getLocalHost();
 			} catch (UnknownHostException e) {
 			}
+			SysSequences sysSequences=new SysSequences();
+			//sysSequences.setName();
+			super.getSysSequencesMapper().insert(sysSequences);
+			log.setId(sysSequences.getId());
 			log.setComputer_name(addr.getHostName());
 			log.setIp_address(addr.getHostAddress());
 		    log.setOpt_time(new Date());

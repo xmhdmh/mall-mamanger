@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mall.model.user.SysPermission;
 import com.mall.model.user.SysRolePermission;
@@ -28,6 +29,7 @@ import com.mall.service.user.SysPermissionService;
  * 
  */
 @Service
+@Transactional
 public class SysPermissionServiceImpl extends BaseServiceImpl implements SysPermissionService{
 
     /* (非 Javadoc) 

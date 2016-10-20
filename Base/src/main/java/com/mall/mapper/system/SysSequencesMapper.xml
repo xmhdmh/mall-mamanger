@@ -19,7 +19,7 @@
     delete from sys_sequences
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.mall.model.system.SysSequences" >
+  <insert id="insert" parameterType="com.mall.model.system.SysSequences" useGeneratedKeys="true" keyProperty="id">
     insert into sys_sequences (id, name, create_time
       )
     values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}

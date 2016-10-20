@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.mall.service.system.SysLogService;
+import com.mall.service.system.SysSequencesService;
 import com.mall.service.user.SysRoleService;
 import com.mall.service.user.UserInfoService;
 
@@ -38,8 +39,17 @@ public class BaseController {
     private SysRoleService sysRoleService;
     @Autowired
     private UserInfoService userInfoService;
+    @Autowired
+    private SysSequencesService sysSequencesService;
     
-    
+    public SysSequencesService getSysSequencesService() {
+        return sysSequencesService;
+    }
+
+    public void setSysSequencesService(SysSequencesService sysSequencesService) {
+        this.sysSequencesService = sysSequencesService;
+    }
+
     public UserInfoService getUserInfoService() {
         return userInfoService;
     }
