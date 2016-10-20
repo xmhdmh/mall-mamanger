@@ -15,7 +15,7 @@ public class ArticleMessage {
 
     private String remark;
 
-    private Long userId;
+    private Long createUserId;
 
     private Long acticleId;
 
@@ -71,12 +71,12 @@ public class ArticleMessage {
         this.remark = remark == null ? null : remark.trim();
     }
 
-    public Long getUserId() {
-        return userId;
+    public Long getCreateUserId() {
+        return createUserId;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setCreateUserId(Long createUserId) {
+        this.createUserId = createUserId;
     }
 
     public Long getActicleId() {

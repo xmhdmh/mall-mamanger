@@ -1,8 +1,8 @@
-package com.mall.model.orders;
+package com.mall.model.brand;
 
 import java.util.Date;
 
-public class Orders {
+public class Brand {
     private Long id;
 
     private Date createTime;
@@ -15,15 +15,13 @@ public class Orders {
 
     private String remark;
 
-    private String orderNum;
+    private String name;
 
-    private Long sumPrice;
+    private String image;
+
+    private String introduce;
 
     private Long createUserId;
-    
-    private Long modifyUserId;
-    
-    
 
     public Long getId() {
         return id;
@@ -73,20 +71,28 @@ public class Orders {
         this.remark = remark == null ? null : remark.trim();
     }
 
-    public String getOrderNum() {
-        return orderNum;
+    public String getName() {
+        return name;
     }
 
-    public void setOrderNum(String orderNum) {
-        this.orderNum = orderNum == null ? null : orderNum.trim();
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
     }
 
-    public Long getSumPrice() {
-        return sumPrice;
+    public String getImage() {
+        return image;
     }
 
-    public void setSumPrice(Long sumPrice) {
-        this.sumPrice = sumPrice;
+    public void setImage(String image) {
+        this.image = image == null ? null : image.trim();
+    }
+
+    public String getIntroduce() {
+        return introduce;
+    }
+
+    public void setIntroduce(String introduce) {
+        this.introduce = introduce == null ? null : introduce.trim();
     }
 
     public Long getCreateUserId() {
@@ -96,13 +102,4 @@ public class Orders {
     public void setCreateUserId(Long createUserId) {
         this.createUserId = createUserId;
     }
-
-    public Long getModifyUserId() {
-        return modifyUserId;
-    }
-
-    public void setModifyUserId(Long modifyUserId) {
-        this.modifyUserId = modifyUserId;
-    }
-    
 }

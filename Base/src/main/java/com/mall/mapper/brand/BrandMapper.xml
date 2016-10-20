@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.mall.dao.orders.OrdersMapper" >
-  <resultMap id="BaseResultMap" type="com.mall.model.orders.Orders" >
+<mapper namespace="com.mall.dao.brand.BrandMapper" >
+  <resultMap id="BaseResultMap" type="com.mall.model.brand.Brand" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
     <result column="is_delete" property="isDelete" jdbcType="CHAR" />
     <result column="sort" property="sort" jdbcType="INTEGER" />
     <result column="remark" property="remark" jdbcType="VARCHAR" />
-    <result column="order_num" property="orderNum" jdbcType="VARCHAR" />
-    <result column="sum_price" property="sumPrice" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="image" property="image" jdbcType="VARCHAR" />
+    <result column="introduce" property="introduce" jdbcType="VARCHAR" />
     <result column="create_user_id" property="createUserId" jdbcType="BIGINT" />
-    <result column="modify_user_id" property="modifyUserId" jdbcType="BIGINT" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, create_time, modify_time, is_delete, sort, remark, order_num, sum_price, create_user_id,modify_user_id
+    id, create_time, modify_time, is_delete, sort, remark, name, image, introduce, create_user_id
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
-    from orders
+    from brand
     where id = #{id,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
-    delete from orders
+    delete from brand
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.mall.model.orders.Orders" >
-    insert into orders (id, create_time, modify_time, 
+  <insert id="insert" parameterType="com.mall.model.brand.Brand" >
+    insert into brand (id, create_time, modify_time, 
       is_delete, sort, remark, 
-      order_num, sum_price, create_user_id,modify_user_id
-      )
+      name, image, introduce, 
+      create_user_id)
     values (#{id,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}, 
       #{isDelete,jdbcType=CHAR}, #{sort,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 
-      #{orderNum,jdbcType=VARCHAR}, #{sumPrice,jdbcType=BIGINT}, #{createUserId,jdbcType=BIGINT},#{modifyUserId,jdbcType=BIGINT}
-      )
+      #{name,jdbcType=VARCHAR}, #{image,jdbcType=VARCHAR}, #{introduce,jdbcType=VARCHAR}, 
+      #{createUserId,jdbcType=BIGINT})
   </insert>
-  <insert id="insertSelective" parameterType="com.mall.model.orders.Orders" >
-    insert into orders
+  <insert id="insertSelective" parameterType="com.mall.model.brand.Brand" >
+    insert into brand
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
@@ -57,17 +57,17 @@
       <if test="remark != null" >
         remark,
       </if>
-      <if test="orderNum != null" >
-        order_num,
+      <if test="name != null" >
+        name,
       </if>
-      <if test="sumPrice != null" >
-        sum_price,
+      <if test="image != null" >
+        image,
+      </if>
+      <if test="introduce != null" >
+        introduce,
       </if>
       <if test="createUserId != null" >
         create_user_id,
-      </if>
-      <if test="modifyUserId != null">
-        modify_user_id,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -89,22 +89,22 @@
       <if test="remark != null" >
         #{remark,jdbcType=VARCHAR},
       </if>
-      <if test="orderNum != null" >
-        #{orderNum,jdbcType=VARCHAR},
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
       </if>
-      <if test="sumPrice != null" >
-        #{sumPrice,jdbcType=BIGINT},
+      <if test="image != null" >
+        #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="introduce != null" >
+        #{introduce,jdbcType=VARCHAR},
       </if>
       <if test="createUserId != null" >
         #{createUserId,jdbcType=BIGINT},
       </if>
-      <if test="modifyUserId != null">
-        #{modifyUserId,jdbcType=BIGINT},
-      </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.mall.model.orders.Orders" >
-    update orders
+  <update id="updateByPrimaryKeySelective" parameterType="com.mall.model.brand.Brand" >
+    update brand
     <set >
       <if test="createTime != null" >
         create_time = #{createTime,jdbcType=TIMESTAMP},
@@ -121,32 +121,32 @@
       <if test="remark != null" >
         remark = #{remark,jdbcType=VARCHAR},
       </if>
-      <if test="orderNum != null" >
-        order_num = #{orderNum,jdbcType=VARCHAR},
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="sumPrice != null" >
-        sum_price = #{sumPrice,jdbcType=BIGINT},
+      <if test="image != null" >
+        image = #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="introduce != null" >
+        introduce = #{introduce,jdbcType=VARCHAR},
       </if>
       <if test="createUserId != null" >
         create_user_id = #{createUserId,jdbcType=BIGINT},
       </if>
-      <if test="modifyUserId != null">
-        modify_user_id = #{modifyUserId,jdbcType=BIGINT},
-      </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.mall.model.orders.Orders" >
-    update orders
+  <update id="updateByPrimaryKey" parameterType="com.mall.model.brand.Brand" >
+    update brand
     set create_time = #{createTime,jdbcType=TIMESTAMP},
       modify_time = #{modifyTime,jdbcType=TIMESTAMP},
       is_delete = #{isDelete,jdbcType=CHAR},
       sort = #{sort,jdbcType=INTEGER},
       remark = #{remark,jdbcType=VARCHAR},
-      order_num = #{orderNum,jdbcType=VARCHAR},
-      sum_price = #{sumPrice,jdbcType=BIGINT},
-      create_user_id = #{createUserId,jdbcType=BIGINT},
-      modify_user_id = #{modifyUserId,jdbcType=BIGINT}
+      name = #{name,jdbcType=VARCHAR},
+      image = #{image,jdbcType=VARCHAR},
+      introduce = #{introduce,jdbcType=VARCHAR},
+      create_user_id = #{createUserId,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

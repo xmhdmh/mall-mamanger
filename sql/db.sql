@@ -73,7 +73,7 @@ create table article_message
    is_delete            char(1) default 'n' comment '是否删除',
    sort                 int(11) default 0 comment '排序',
    remark               varchar(32) default NULL comment '备注',
-   user_id              bigint(20) default NULL comment '用户ID',
+   create_user_id       bigint(20) default NULL comment '用户ID',
    acticle_id           bigint(20) default NULL comment '文章ID',
    message              varchar(256) default NULL comment '留言内容',
    parent_id            bigint(20) default 0 comment '父编号',
@@ -95,7 +95,7 @@ create table brand
    name                 varchar(32) default NULL comment '品牌名称',
    image                varchar(128) default NULL comment '品牌图片',
    introduce            varchar(256) default NULL comment '品牌介绍',
-   user_id              bigint(20) default NULL comment '创建人',
+   create_user_id       bigint(20) default NULL comment '创建人',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -130,7 +130,8 @@ create table orders
    remark               varchar(32) default NULL comment '备注',
    order_num            varchar(32) default NULL comment '订单号',
    sum_price            bigint(20) default NULL comment '订单总价',
-   user_id              bigint(20) default NULL comment '用户ID',
+   create_user_id       bigint(20) default NULL comment '创建人',
+   modify_user_id       bigint(20) default NULL comment '修改人',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -375,9 +376,9 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*数据库修改*/
 /*角色表增加创建人字段*/
-alter TABLE sys_role add user_id BIGINT;
+alter TABLE sys_role add create_user_id BIGINT;
 /*权限表添加创建人字段*/
-alter TABLE sys_permission add user_id BIGINT;
+alter TABLE sys_permission add create_user_id BIGINT;
 /*用户表增加邮箱和电话号码*/
 alter TABLE user_info add email VARCHAR(32);
 alter TABLE user_info add phone VARCHAR(32);
