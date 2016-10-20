@@ -10,9 +10,10 @@
     <result column="permission" property="permission" jdbcType="VARCHAR" />
     <result column="resource_type" property="resourceType" jdbcType="VARCHAR" />
     <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, available, name, parent_id, parent_ids, permission, resource_type, url
+    id, available, name, parent_id, parent_ids, permission, resource_type, url,userId
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 

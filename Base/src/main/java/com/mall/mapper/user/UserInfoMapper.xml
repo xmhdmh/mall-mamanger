@@ -3,14 +3,14 @@
 <mapper namespace="com.mall.dao.user.UserInfoMapper" >
  
   <sql id="Base_Column_List" >
-    id, name, password, salt, state, username
+    id, name, password, salt, state, username,email,phone
   </sql>
   <insert id="insert" parameterType="com.mall.model.user.UserInfo" >
     insert into user_info (id, name, password, 
-      salt, state, username
+      salt, state, usernameemail,phone
       )
     values (#{id}, #{name}, #{password}, 
-      #{salt}, #{state}, #{username}
+      #{salt}, #{state}, #{username},#{email},#{phone}
       )
   </insert>
   

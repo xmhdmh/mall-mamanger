@@ -17,6 +17,15 @@ public class SysPermission {
     private Long parentId; // 父编号
     private String parentIds; // 父编号列表
     private Boolean available = Boolean.FALSE;
+    private Long userId;//创建人用户ID
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
     public Long getId() {
         return id;
     }

@@ -15,6 +15,24 @@ public class UserInfo{
     private String salt;// 加密密码的盐
     private byte state;// 用户状态,0:创建未认证（比如没有激活，没有输入验证码等等）--等待验证的用户 ,
                        // 1:正常状态,2：用户被锁定.
+    private String email;//邮箱
+    private String phone;//电话
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public Long getId() {
         return id;
     }
