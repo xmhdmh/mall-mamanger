@@ -21,7 +21,7 @@ public class Brand {
 
     private String introduce;
 
-    private Long createUserId;
+    private Long createdBy;
 
     public Long getId() {
         return id;
@@ -95,11 +95,12 @@ public class Brand {
         this.introduce = introduce == null ? null : introduce.trim();
     }
 
-    public Long getCreateUserId() {
-        return createUserId;
+    public Long getCreatedBy() {
+        return createdBy;
     }
 
-    public void setCreateUserId(Long createUserId) {
-        this.createUserId = createUserId;
+    public void setCreatedBy(Long createdBy) {
+        this.createdBy = createdBy;
     }
+    
 }

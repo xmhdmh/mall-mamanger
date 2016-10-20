@@ -10,10 +10,10 @@
     <result column="permission" property="permission" jdbcType="VARCHAR" />
     <result column="resource_type" property="resourceType" jdbcType="VARCHAR" />
     <result column="url" property="url" jdbcType="VARCHAR" />
-    <result column="create_user_id" property="createUserId" jdbcType="BIGINT" />
+    <result column="created_by" property="createdBy" jdbcType="BIGINT" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, available, name, parent_id, parent_ids, permission, resource_type, url,create_user_id
+    id, available, name, parent_id, parent_ids, permission, resource_type, url,created_by
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
@@ -28,10 +28,10 @@
   <insert id="insert" parameterType="com.mall.model.user.SysPermission" >
     insert into sys_permission (id, available, name, 
       parent_id, parent_ids, permission, 
-      resource_type, url)
+      resource_type, url,created_by)
     values (#{id,jdbcType=BIGINT}, #{available,jdbcType=BIT}, #{name,jdbcType=VARCHAR}, 
       #{parentId,jdbcType=BIGINT}, #{parentIds,jdbcType=VARCHAR}, #{permission,jdbcType=VARCHAR}, 
-      #{resourceType,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR})
+      #{resourceType,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR},#{createdBy,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="com.mall.model.user.SysPermission" >
     insert into sys_permission
@@ -60,6 +60,9 @@
       <if test="url != null" >
         url,
       </if>
+      <if test="createdBy != null" >
+        created_by,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -85,6 +88,9 @@
       </if>
       <if test="url != null" >
         #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="createdBy != null" >
+        #{createdBy,jdbcType=BIGINT},
       </if>
     </trim>
   </insert>
@@ -112,6 +118,9 @@
       <if test="url != null" >
         url = #{url,jdbcType=VARCHAR},
       </if>
+      <if test="createdBy != null" >
+        created_by = #{createdBy,jdbcType=BIGINT},
+      </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
@@ -123,7 +132,8 @@
       parent_ids = #{parentIds,jdbcType=VARCHAR},
       permission = #{permission,jdbcType=VARCHAR},
       resource_type = #{resourceType,jdbcType=VARCHAR},
-      url = #{url,jdbcType=VARCHAR}
+      url = #{url,jdbcType=VARCHAR},
+      created_by= #{createdBy,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
   
@@ -152,6 +162,9 @@
     </if>
     <if test="url != null" >
         AND url = #{url,jdbcType=VARCHAR}
+    </if>
+    <if test="createdBy != null" >
+        AND created_by = #{createdBy,jdbcType=BIGINT}
     </if>
   </select>
 </mapper>

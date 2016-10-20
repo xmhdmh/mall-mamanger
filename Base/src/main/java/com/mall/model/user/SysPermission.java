@@ -17,14 +17,14 @@ public class SysPermission {
     private Long parentId; // 父编号
     private String parentIds; // 父编号列表
     private Boolean available = Boolean.FALSE;
-    private Long createUserId;//创建人用户ID
+    private Long createdBy;//创建人用户ID
     
-    public Long getCreateUserId() {
-        return createUserId;
+    public Long getCreatedBy() {
+        return createdBy;
     }
 
-    public void setCreateUserId(Long createUserId) {
-        this.createUserId = createUserId;
+    public void setCreatedBy(Long createdBy) {
+        this.createdBy = createdBy;
     }
 
     public Long getId() {

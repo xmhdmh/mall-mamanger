@@ -10,11 +10,11 @@
     <result column="remark" property="remark" jdbcType="VARCHAR" />
     <result column="order_num" property="orderNum" jdbcType="VARCHAR" />
     <result column="sum_price" property="sumPrice" jdbcType="BIGINT" />
-    <result column="create_user_id" property="createUserId" jdbcType="BIGINT" />
-    <result column="modify_user_id" property="modifyUserId" jdbcType="BIGINT" />
+    <result column="created_by" property="createdBy" jdbcType="BIGINT" />
+    <result column="modify_by" property="modifyBy" jdbcType="BIGINT" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, create_time, modify_time, is_delete, sort, remark, order_num, sum_price, create_user_id,modify_user_id
+    id, create_time, modify_time, is_delete, sort, remark, order_num, sum_price, created_by,modify_by
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
@@ -29,11 +29,11 @@
   <insert id="insert" parameterType="com.mall.model.orders.Orders" >
     insert into orders (id, create_time, modify_time, 
       is_delete, sort, remark, 
-      order_num, sum_price, create_user_id,modify_user_id
+      order_num, sum_price, created_by,modify_by
       )
     values (#{id,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}, 
       #{isDelete,jdbcType=CHAR}, #{sort,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 
-      #{orderNum,jdbcType=VARCHAR}, #{sumPrice,jdbcType=BIGINT}, #{createUserId,jdbcType=BIGINT},#{modifyUserId,jdbcType=BIGINT}
+      #{orderNum,jdbcType=VARCHAR}, #{sumPrice,jdbcType=BIGINT}, #{createdBy,jdbcType=BIGINT},#{modifyBy,jdbcType=BIGINT}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.mall.model.orders.Orders" >
@@ -63,11 +63,11 @@
       <if test="sumPrice != null" >
         sum_price,
       </if>
-      <if test="createUserId != null" >
-        create_user_id,
+      <if test="createdBy != null" >
+        created_by,
       </if>
-      <if test="modifyUserId != null">
-        modify_user_id,
+      <if test="modifyBy != null">
+        modify_by,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -95,11 +95,11 @@
       <if test="sumPrice != null" >
         #{sumPrice,jdbcType=BIGINT},
       </if>
-      <if test="createUserId != null" >
-        #{createUserId,jdbcType=BIGINT},
+      <if test="createdBy != null" >
+        #{createdBy,jdbcType=BIGINT},
       </if>
-      <if test="modifyUserId != null">
-        #{modifyUserId,jdbcType=BIGINT},
+      <if test="modifyBy != null">
+        #{modifyBy,jdbcType=BIGINT},
       </if>
     </trim>
   </insert>
@@ -127,11 +127,11 @@
       <if test="sumPrice != null" >
         sum_price = #{sumPrice,jdbcType=BIGINT},
       </if>
-      <if test="createUserId != null" >
-        create_user_id = #{createUserId,jdbcType=BIGINT},
+      <if test="createdBy != null" >
+        created_by = #{createdBy,jdbcType=BIGINT},
       </if>
-      <if test="modifyUserId != null">
-        modify_user_id = #{modifyUserId,jdbcType=BIGINT},
+      <if test="modifyBy != null">
+        modify_by = #{modifyBy,jdbcType=BIGINT},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
@@ -145,8 +145,8 @@
       remark = #{remark,jdbcType=VARCHAR},
       order_num = #{orderNum,jdbcType=VARCHAR},
       sum_price = #{sumPrice,jdbcType=BIGINT},
-      create_user_id = #{createUserId,jdbcType=BIGINT},
-      modify_user_id = #{modifyUserId,jdbcType=BIGINT}
+      created_by = #{createdBy,jdbcType=BIGINT},
+      modify_by = #{modifyBy,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

@@ -8,13 +8,13 @@
     <result column="is_delete" property="isDelete" jdbcType="CHAR" />
     <result column="sort" property="sort" jdbcType="INTEGER" />
     <result column="remark" property="remark" jdbcType="VARCHAR" />
-    <result column="create_user_id" property="createUserId" jdbcType="BIGINT" />
+    <result column="created_by" property="createdBy" jdbcType="BIGINT" />
     <result column="acticle_id" property="acticleId" jdbcType="BIGINT" />
     <result column="message" property="message" jdbcType="VARCHAR" />
     <result column="parent_id" property="parentId" jdbcType="BIGINT" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, create_time, modify_time, is_delete, sort, remark, create_user_id, acticle_id, message, 
+    id, create_time, modify_time, is_delete, sort, remark, created_by, acticle_id, message, 
     parent_id
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
@@ -30,11 +30,11 @@
   <insert id="insert" parameterType="com.mall.model.article.ArticleMessage" >
     insert into article_message (id, create_time, modify_time, 
       is_delete, sort, remark, 
-      create_user_id, acticle_id, message, 
+      created_by, acticle_id, message, 
       parent_id)
     values (#{id,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}, 
       #{isDelete,jdbcType=CHAR}, #{sort,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 
-      #{createUserId,jdbcType=BIGINT}, #{acticleId,jdbcType=BIGINT}, #{message,jdbcType=VARCHAR}, 
+      #{createdBy,jdbcType=BIGINT}, #{acticleId,jdbcType=BIGINT}, #{message,jdbcType=VARCHAR}, 
       #{parentId,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="com.mall.model.article.ArticleMessage" >
@@ -58,8 +58,8 @@
       <if test="remark != null" >
         remark,
       </if>
-      <if test="createUserId != null" >
-        create_user_id,
+      <if test="createdBy != null" >
+        created_by,
       </if>
       <if test="acticleId != null" >
         acticle_id,
@@ -90,8 +90,8 @@
       <if test="remark != null" >
         #{remark,jdbcType=VARCHAR},
       </if>
-      <if test="createUserId != null" >
-        #{createUserId,jdbcType=BIGINT},
+      <if test="createdBy != null" >
+        #{createdBy,jdbcType=BIGINT},
       </if>
       <if test="acticleId != null" >
         #{acticleId,jdbcType=BIGINT},
@@ -122,8 +122,8 @@
       <if test="remark != null" >
         remark = #{remark,jdbcType=VARCHAR},
       </if>
-      <if test="createUserId != null" >
-        create_user_id = #{createUserId,jdbcType=BIGINT},
+      <if test="createdBy != null" >
+        created_by = #{createdBy,jdbcType=BIGINT},
       </if>
       <if test="acticleId != null" >
         acticle_id = #{acticleId,jdbcType=BIGINT},
@@ -144,7 +144,7 @@
       is_delete = #{isDelete,jdbcType=CHAR},
       sort = #{sort,jdbcType=INTEGER},
       remark = #{remark,jdbcType=VARCHAR},
-      create_user_id = #{createUserId,jdbcType=BIGINT},
+      created_by = #{createdBy,jdbcType=BIGINT},
       acticle_id = #{acticleId,jdbcType=BIGINT},
       message = #{message,jdbcType=VARCHAR},
       parent_id = #{parentId,jdbcType=BIGINT}

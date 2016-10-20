@@ -17,14 +17,15 @@
     <result column="district" property="district" jdbcType="BIGINT" />
     <result column="is_sales" property="isSales" jdbcType="CHAR" />
     <result column="sales_price" property="salesPrice" jdbcType="BIGINT" />
-    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="created_by" property="createdBy" jdbcType="BIGINT" />
+    <result column="modify_by" property="modifyBy" jdbcType="BIGINT" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.mall.model.product.Product" extends="BaseResultMap" >
     <result column="content" property="content" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, create_time, modify_time, is_delete, sort, remark, name, thumbnail, price, introduce, 
-    province, city, district, is_sales, sales_price, user_id
+    province, city, district, is_sales, sales_price, created_by,modify_by
   </sql>
   <sql id="Blob_Column_List" >
     content
@@ -47,13 +48,13 @@
       name, thumbnail, price, 
       introduce, province, city, 
       district, is_sales, sales_price, 
-      user_id, content)
+      created_by, content,modify_by)
     values (#{id,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}, 
       #{isDelete,jdbcType=CHAR}, #{sort,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 
       #{name,jdbcType=VARCHAR}, #{thumbnail,jdbcType=VARCHAR}, #{price,jdbcType=BIGINT}, 
       #{introduce,jdbcType=VARCHAR}, #{province,jdbcType=BIGINT}, #{city,jdbcType=BIGINT}, 
       #{district,jdbcType=BIGINT}, #{isSales,jdbcType=CHAR}, #{salesPrice,jdbcType=BIGINT}, 
-      #{userId,jdbcType=BIGINT}, #{content,jdbcType=LONGVARCHAR})
+      #{createdBy,jdbcType=BIGINT}, #{content,jdbcType=LONGVARCHAR},#{modifyBy,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="com.mall.model.product.Product" >
     insert into product
@@ -103,11 +104,14 @@
       <if test="salesPrice != null" >
         sales_price,
       </if>
-      <if test="userId != null" >
-        user_id,
+      <if test="createdBy != null" >
+        created_by,
       </if>
       <if test="content != null" >
         content,
+      </if>
+      <if test="modifyBy != null" >
+        modify_by,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -156,11 +160,14 @@
       <if test="salesPrice != null" >
         #{salesPrice,jdbcType=BIGINT},
       </if>
-      <if test="userId != null" >
-        #{userId,jdbcType=BIGINT},
+      <if test="createdBy != null" >
+        #{createdBy,jdbcType=BIGINT},
       </if>
       <if test="content != null" >
         #{content,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="modifyBy != null" >
+        #{modifyBy,jdbcType=BIGINT},
       </if>
     </trim>
   </insert>
@@ -209,11 +216,14 @@
       <if test="salesPrice != null" >
         sales_price = #{salesPrice,jdbcType=BIGINT},
       </if>
-      <if test="userId != null" >
-        user_id = #{userId,jdbcType=BIGINT},
+      <if test="createdBy != null" >
+        created_by = #{createdBy,jdbcType=BIGINT},
       </if>
       <if test="content != null" >
         content = #{content,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="modifyBy != null" >
+        modify_by = #{modifyBy,jdbcType=BIGINT},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
@@ -234,8 +244,9 @@
       district = #{district,jdbcType=BIGINT},
       is_sales = #{isSales,jdbcType=CHAR},
       sales_price = #{salesPrice,jdbcType=BIGINT},
-      user_id = #{userId,jdbcType=BIGINT},
-      content = #{content,jdbcType=LONGVARCHAR}
+      created_by = #{createdBy,jdbcType=BIGINT},
+      content = #{content,jdbcType=LONGVARCHAR},
+      modify_by = #{modifyBy,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.mall.model.product.Product" >
@@ -254,7 +265,8 @@
       district = #{district,jdbcType=BIGINT},
       is_sales = #{isSales,jdbcType=CHAR},
       sales_price = #{salesPrice,jdbcType=BIGINT},
-      user_id = #{userId,jdbcType=BIGINT}
+      created_by = #{createdBy,jdbcType=BIGINT},
+      modify_by = #{modifyBy,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

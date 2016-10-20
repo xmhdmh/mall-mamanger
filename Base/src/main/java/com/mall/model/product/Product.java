@@ -33,10 +33,12 @@ public class Product {
 
     private Long salesPrice;
 
-    private Long userId;
-
+    private Long createdBy;
+    
     private String content;
-
+    
+    private Long modifyBy;
+    
     public Long getId() {
         return id;
     }
@@ -156,15 +158,7 @@ public class Product {
     public void setSalesPrice(Long salesPrice) {
         this.salesPrice = salesPrice;
     }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
+    
     public String getContent() {
         return content;
     }
@@ -172,4 +166,21 @@ public class Product {
     public void setContent(String content) {
         this.content = content == null ? null : content.trim();
     }
+
+    public Long getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(Long createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public Long getModifyBy() {
+        return modifyBy;
+    }
+
+    public void setModifyBy(Long modifyBy) {
+        this.modifyBy = modifyBy;
+    }
+    
 }

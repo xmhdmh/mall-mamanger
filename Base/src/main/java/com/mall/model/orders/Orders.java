@@ -19,9 +19,9 @@ public class Orders {
 
     private Long sumPrice;
 
-    private Long createUserId;
+    private Long createdBy;
     
-    private Long modifyUserId;
+    private Long modifyBy;
     
     
 
@@ -89,20 +89,20 @@ public class Orders {
         this.sumPrice = sumPrice;
     }
 
-    public Long getCreateUserId() {
-        return createUserId;
+    public Long getCreatedBy() {
+        return createdBy;
     }
 
-    public void setCreateUserId(Long createUserId) {
-        this.createUserId = createUserId;
+    public void setCreatedBy(Long createdBy) {
+        this.createdBy = createdBy;
     }
 
-    public Long getModifyUserId() {
-        return modifyUserId;
+    public Long getModifyBy() {
+        return modifyBy;
     }
 
-    public void setModifyUserId(Long modifyUserId) {
-        this.modifyUserId = modifyUserId;
+    public void setModifyBy(Long modifyBy) {
+        this.modifyBy = modifyBy;
     }
     
 }
