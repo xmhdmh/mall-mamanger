@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.mall.service.system.SysLogService;
 import com.mall.service.user.SysRoleService;
+import com.mall.service.user.UserInfoService;
 
 /**
  * @ClassName: BaseController
@@ -35,7 +36,18 @@ public class BaseController {
     private SysLogService sysLogService;
     @Autowired
     private SysRoleService sysRoleService;
+    @Autowired
+    private UserInfoService userInfoService;
     
+    
+    public UserInfoService getUserInfoService() {
+        return userInfoService;
+    }
+
+    public void setUserInfoService(UserInfoService userInfoService) {
+        this.userInfoService = userInfoService;
+    }
+
     public SysLogService getSysLogService() {
         return sysLogService;
     }

@@ -60,14 +60,4 @@ public class IndexController extends BaseController{
     public String noPermission() {
         return "/403";
     }
-    
-    /**
-     * 
-     * @Title: 修改密码
-     * @author xuliting
-     */
-    @RequestMapping("/editPwd")
-    public void editPwd(@RequestParam  String oldPwd,@RequestParam String newPwd){
-    	
-    }
 }

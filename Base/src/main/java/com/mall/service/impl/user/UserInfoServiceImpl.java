@@ -1,8 +1,12 @@
 package com.mall.service.impl.user;
+import org.apache.shiro.SecurityUtils;
 import org.springframework.stereotype.Service;
+
+import com.mall.model.Result;
 import com.mall.model.user.UserInfo;
 import com.mall.service.impl.BaseServiceImpl;
 import com.mall.service.user.UserInfoService;
+import com.mall.utils.MD5Util;
 
 /**
  * @ClassName: UserInfoServiceImpl
@@ -18,10 +22,21 @@ public class UserInfoServiceImpl extends BaseServiceImpl implements UserInfoServ
     public UserInfo findByName(String userName) {
         return super.getUserInfoMapper().findByName(userName);
     }
-
+    /**
+     * 修改密码
+     */
 	@Override
-	public Integer editPwd(UserInfo param) {
-		return super.getUserInfoMapper().editPwd(param);
+	public Result editPwd(UserInfo param,String oldPwd,String newPwd) {
+	    Result result=new Result("修改成功，请重新登入");
+	    if(param.getPassword().equals(MD5Util.shiroPassword(oldPwd, param.getCredentialsSalt()))){
+	        param.setPassword(MD5Util.shiroPassword(newPwd, param.getCredentialsSalt()));
+	        super.getUserInfoMapper().editPwd(param);
+	        result.setUrl("logout.html");
+	    }else{
+	        result.setResult(false);
+	        result.setMessage("原密码输入错误!");
+	    }
+		return result;
 	}
 
 }

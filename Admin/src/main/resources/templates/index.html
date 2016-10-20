@@ -452,11 +452,48 @@
 										});
 										return false;
 									} else {
-										layer.alert('修改成功！', {
-											title : '提示框',
-											icon : 1,
-										});
-										layer.close(index);
+									    $.ajax( {  
+									        url:'/user/editPwd.html',
+									        data:{
+									            oldPwd : $("#password").val(),
+									            newPwd : $("#Nes_pas").val()
+									        },  
+									        type:'post',  
+									        dataType:'json',  
+									        success:function(data) {  
+									            if(data.result == true){
+                                                   layer.alert(data.message, {
+                                                        title : '提示框',
+                                                        icon : 1,
+                                                        cancel: function(){ 
+                                                            window.location.href=data.url;
+                                                        },
+                                                    },function() {
+                                                        window.location.href=data.url;
+                                                    });
+                                                    layer.close(index);
+									            }else{
+                                                   layer.alert(data.message, {
+                                                        title : '提示框',
+                                                        icon : 0,
+                                                    });
+                                                    layer.close(index);
+                                                    $("#password").val("");
+                                                    $("#Nes_pas").val("");
+                                                    $("#c_mew_pas").val("");
+									            }
+									         },  
+									         error:function() {  
+			                                        layer.alert('系统异常！', {
+			                                            title : '提示框',
+			                                            icon : 0,
+			                                        });
+			                                        layer.close(index);
+                                                    $("#password").val("");
+                                                    $("#Nes_pas").val("");
+                                                    $("#c_mew_pas").val("");
+									         }
+									    });
 									}
 								}
 							});
@@ -467,7 +504,6 @@
 						icon : 2,
 					}, function() {
 						location.href = "logout.html";
-
 					});
 				});
 			})

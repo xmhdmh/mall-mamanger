@@ -94,6 +94,6 @@ public class MD5Util {
     }
 
     public static void main(String[] args) {
-        System.out.println(shiroPassword("zyq123456","zyq123456"));
+        System.out.println(shiroPassword("123456","admin8d78869f470951332959580424d4bf4f"));
     }
 }
