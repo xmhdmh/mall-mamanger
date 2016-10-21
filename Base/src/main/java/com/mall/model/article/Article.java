@@ -19,9 +19,9 @@ public class Article {
 
     private String remark;
 
-    private Long createUserId;
+    private Long createdBy;
 
-    private Long modifyUserId;
+    private Long modifyBy;
 
     private String content;
 
@@ -89,23 +89,25 @@ public class Article {
         this.remark = remark == null ? null : remark.trim();
     }
 
-    public Long getCreateUserId() {
-        return createUserId;
-    }
+  
 
-    public void setCreateUserId(Long createUserId) {
-        this.createUserId = createUserId;
-    }
+    public Long getCreatedBy() {
+		return createdBy;
+	}
 
-    public Long getModifyUserId() {
-        return modifyUserId;
-    }
+	public void setCreatedBy(Long createdBy) {
+		this.createdBy = createdBy;
+	}
 
-    public void setModifyUserId(Long modifyUserId) {
-        this.modifyUserId = modifyUserId;
-    }
+	public Long getModifyBy() {
+		return modifyBy;
+	}
 
-    public String getContent() {
+	public void setModifyBy(Long modifyBy) {
+		this.modifyBy = modifyBy;
+	}
+
+	public String getContent() {
         return content;
     }
 

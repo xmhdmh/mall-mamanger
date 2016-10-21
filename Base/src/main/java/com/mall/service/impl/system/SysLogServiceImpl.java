@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.mall.model.system.SysLog;
 import com.mall.model.system.SysSequences;
-import com.mall.model.user.UserInfo;
+import com.mall.model.user.UserLogin;
 import com.mall.service.impl.BaseServiceImpl;
 import com.mall.service.system.SysLogService;
 
@@ -20,7 +20,7 @@ import com.mall.service.system.SysLogService;
 public class SysLogServiceImpl extends BaseServiceImpl implements SysLogService{
 	
 	@Override
-	public void insert(SysLog log,UserInfo user) {
+	public void insert(SysLog log,UserLogin user) {
 		 InetAddress addr = null;
 			try {
 				addr = InetAddress.getLocalHost();

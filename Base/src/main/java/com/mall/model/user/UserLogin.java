@@ -1,22 +1,26 @@
 package com.mall.model.user;
+
+import java.util.Date;
+
 /**
  * 
-* @ClassName: UserInfo
+* @ClassName: UserLogin
 * @Description: TODO(这里用一句话描述这个类的作用)
 * @author 庄友权
 * @date 2016年9月9日 上午10:28:36
 *
  */
-public class UserInfo{
+public class UserLogin{
     private Long id;// 用户id;
-    private String username;// 账号.
-    private String name;// 名称（昵称或者真实姓名，不同系统不同定义）
+    private String userName;// 账号.
     private String password; // 密码;
     private String salt;// 加密密码的盐
     private byte state;// 用户状态,0:创建未认证（比如没有激活，没有输入验证码等等）--等待验证的用户 ,
                        // 1:正常状态,2：用户被锁定.
     private String email;//邮箱
     private String phone;//电话
+    private Date lastLoginTime;
+    private Long userId;
     public String getEmail() {
         return email;
     }
@@ -41,21 +45,6 @@ public class UserInfo{
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getPassword() {
         return password;
@@ -87,6 +76,32 @@ public class UserInfo{
      * @return
      */
     public String getCredentialsSalt() {
-        return this.username + this.salt;
+        return this.userName + this.salt;
     }
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public Date getLastLoginTime() {
+		return lastLoginTime;
+	}
+
+	public void setLastLoginTime(Date lastLoginTime) {
+		this.lastLoginTime = lastLoginTime;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+    
+    
 }

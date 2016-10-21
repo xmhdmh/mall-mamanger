@@ -6,17 +6,10 @@
 * @date 2016年9月28日 下午3:27:40
 * @version V1.0   
 */
-
-
 package com.mall.controller;
-
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import com.mall.service.system.SysLogService;
 import com.mall.service.system.SysSequencesService;
 import com.mall.service.user.SysRoleService;

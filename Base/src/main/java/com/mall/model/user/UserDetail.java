@@ -9,11 +9,13 @@ public class UserDetail {
 
     private Date birthday;
 
-    private Date createTime;
-
     private String sex;
 
     private String qq;
+    
+    private String avatarFile;
+    
+    private String homeAddre;
 
     public Long getId() {
         return id;
@@ -39,13 +41,6 @@ public class UserDetail {
         this.birthday = birthday;
     }
 
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
 
     public String getSex() {
         return sex;
@@ -62,4 +57,24 @@ public class UserDetail {
     public void setQq(String qq) {
         this.qq = qq == null ? null : qq.trim();
     }
+
+	public String getAvatarFile() {
+		return avatarFile;
+	}
+
+	public void setAvatarFile(String avatarFile) {
+		this.avatarFile = avatarFile;
+	}
+
+	public String getHomeAddre() {
+		return homeAddre;
+	}
+
+	public void setHomeAddre(String homeAddre) {
+		this.homeAddre = homeAddre;
+	}
+
+
+    
+    
 }

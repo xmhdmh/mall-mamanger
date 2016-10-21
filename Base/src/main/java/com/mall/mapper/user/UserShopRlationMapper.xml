@@ -8,11 +8,11 @@
     <result column="is_delete" property="isDelete" jdbcType="CHAR" />
     <result column="sort" property="sort" jdbcType="INTEGER" />
     <result column="remark" property="remark" jdbcType="VARCHAR" />
-    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="created_by" property="createdBy" jdbcType="BIGINT" />
     <result column="shop_id" property="shopId" jdbcType="BIGINT" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, create_time, modify_time, is_delete, sort, remark, user_id, shop_id
+    id, create_time, modify_time, is_delete, sort, remark, created_by, shop_id
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
@@ -27,10 +27,10 @@
   <insert id="insert" parameterType="com.mall.model.user.UserShopRlation" >
     insert into user_shop_relation (id, create_time, modify_time, 
       is_delete, sort, remark, 
-      user_id, shop_id)
+      created_by, shop_id)
     values (#{id,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}, 
       #{isDelete,jdbcType=CHAR}, #{sort,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 
-      #{userId,jdbcType=BIGINT}, #{shopId,jdbcType=BIGINT})
+      #{createdBy,jdbcType=BIGINT}, #{shopId,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="com.mall.model.user.UserShopRlation" >
     insert into user_shop_relation
@@ -53,8 +53,8 @@
       <if test="remark != null" >
         remark,
       </if>
-      <if test="userId != null" >
-        user_id,
+      <if test="createdBy != null" >
+        created_by,
       </if>
       <if test="shopId != null" >
         shop_id,
@@ -79,8 +79,8 @@
       <if test="remark != null" >
         #{remark,jdbcType=VARCHAR},
       </if>
-      <if test="userId != null" >
-        #{userId,jdbcType=BIGINT},
+      <if test="createdBy != null" >
+        #{createdBy,jdbcType=BIGINT},
       </if>
       <if test="shopId != null" >
         #{shopId,jdbcType=BIGINT},
@@ -105,8 +105,8 @@
       <if test="remark != null" >
         remark = #{remark,jdbcType=VARCHAR},
       </if>
-      <if test="userId != null" >
-        user_id = #{userId,jdbcType=BIGINT},
+      <if test="createdBy != null" >
+        created_by = #{createdBy,jdbcType=BIGINT},
       </if>
       <if test="shopId != null" >
         shop_id = #{shopId,jdbcType=BIGINT},
@@ -121,7 +121,7 @@
       is_delete = #{isDelete,jdbcType=CHAR},
       sort = #{sort,jdbcType=INTEGER},
       remark = #{remark,jdbcType=VARCHAR},
-      user_id = #{userId,jdbcType=BIGINT},
+      created_by = #{createdBy,jdbcType=BIGINT},
       shop_id = #{shopId,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>

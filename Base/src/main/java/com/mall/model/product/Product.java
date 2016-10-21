@@ -37,6 +37,10 @@ public class Product {
     
     private String content;
     
+    private String specifications;
+    
+    private Integer repertory;
+    
     private Long modifyBy;
     
     public Long getId() {
@@ -182,5 +186,23 @@ public class Product {
     public void setModifyBy(Long modifyBy) {
         this.modifyBy = modifyBy;
     }
+
+	public String getSpecifications() {
+		return specifications;
+	}
+
+	public void setSpecifications(String specifications) {
+		this.specifications = specifications;
+	}
+
+	public Integer getRepertory() {
+		return repertory;
+	}
+
+	public void setRepertory(Integer repertory) {
+		this.repertory = repertory;
+	}
+    
+    
     
 }

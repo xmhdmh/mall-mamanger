@@ -14,7 +14,7 @@ import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.util.ByteSource;
 
-import com.mall.model.user.UserInfo;
+import com.mall.model.user.UserLogin;
 
 /**
  * @ClassName: 用户注册的时候密码生成工具
@@ -29,11 +29,11 @@ public class PasswordHelper {
     private static String algorithmName = "md5";
     private final static int hashIterations = 2;
 
-    public static void encryptPassword(UserInfo userInfo) {
-        userInfo.setSalt(randomNumberGenerator.nextBytes().toHex());
-        String newPassword = new SimpleHash(algorithmName, userInfo.getPassword(),
-                ByteSource.Util.bytes(userInfo.getCredentialsSalt()),
+    public static void encryptPassword(UserLogin userLogin) {
+    	userLogin.setSalt(randomNumberGenerator.nextBytes().toHex());
+        String newPassword = new SimpleHash(algorithmName, userLogin.getPassword(),
+                ByteSource.Util.bytes(userLogin.getCredentialsSalt()),
                 hashIterations).toHex();
-        userInfo.setPassword(newPassword);
+        userLogin.setPassword(newPassword);
     }
 }

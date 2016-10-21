@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.mall.controller.BaseController;
-import com.mall.model.user.UserInfo;
+import com.mall.model.user.UserLogin;
 import com.mall.utils.JsonUtil;
 
 /**
@@ -38,8 +38,8 @@ public class UserController extends BaseController{
     @RequestMapping("/editPwd")
     @ResponseBody
     public String editPwd(String oldPwd,String newPwd){
-        UserInfo userInfo=(UserInfo) SecurityUtils.getSubject().getSession().getAttribute("userInfo");
-        return JsonUtil.toString(super.getUserInfoService().editPwd(userInfo, oldPwd, newPwd));
+        UserLogin userLogin=(UserLogin) SecurityUtils.getSubject().getSession().getAttribute("userInfo");
+        return JsonUtil.toString(super.getUserInfoService().editPwd(userLogin, oldPwd, newPwd));
     }
     
     @RequestMapping("/userList")

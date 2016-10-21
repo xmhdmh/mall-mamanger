@@ -29,7 +29,7 @@ import com.mall.dao.user.SysPermissionMapper;
 import com.mall.dao.user.SysRoleMapper;
 import com.mall.dao.user.SysRolePermissionMapper;
 import com.mall.dao.user.SysUserRoleMapper;
-import com.mall.dao.user.UserInfoMapper;
+import com.mall.dao.user.UserLoginMapper;
 import com.mall.dao.user.UserShopRlationMapper;
 
 /**
@@ -42,7 +42,7 @@ import com.mall.dao.user.UserShopRlationMapper;
 @Service
 public class BaseServiceImpl {
     @Autowired
-    private UserInfoMapper userInfoMapper;
+    private UserLoginMapper userLoginMapper;
     @Autowired
     private SysUserRoleMapper sysUserRoleMapper;
     @Autowired
@@ -216,21 +216,16 @@ public class BaseServiceImpl {
     /** 
      * @return tAdsCategoryMapper 
      */
+	public UserLoginMapper getUserLoginMapper() {
+		return userLoginMapper;
+	}
+	public void setUserLoginMapper(UserLoginMapper userLoginMapper) {
+		this.userLoginMapper = userLoginMapper;
+	}
     
     /** 
      * @return userInfoMapper 
      */
-    
-    public UserInfoMapper getUserInfoMapper() {
-        return userInfoMapper;
-    }
-    /** 
-     * @param userInfoMapper 要设置的 userInfoMapper 
-     */
-    
-    public void setUserInfoMapper(UserInfoMapper userInfoMapper) {
-        this.userInfoMapper = userInfoMapper;
-    }
     
     
 }

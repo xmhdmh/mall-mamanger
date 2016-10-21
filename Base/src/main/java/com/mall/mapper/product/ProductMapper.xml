@@ -18,6 +18,8 @@
     <result column="is_sales" property="isSales" jdbcType="CHAR" />
     <result column="sales_price" property="salesPrice" jdbcType="BIGINT" />
     <result column="created_by" property="createdBy" jdbcType="BIGINT" />
+    <result column="specifications" property="specifications" jdbcType="VARCHAR" />
+    <result column="repertory" property="repertory" jdbcType="INTEGER" />
     <result column="modify_by" property="modifyBy" jdbcType="BIGINT" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.mall.model.product.Product" extends="BaseResultMap" >
@@ -25,7 +27,7 @@
   </resultMap>
   <sql id="Base_Column_List" >
     id, create_time, modify_time, is_delete, sort, remark, name, thumbnail, price, introduce, 
-    province, city, district, is_sales, sales_price, created_by,modify_by
+    province, city, district, is_sales, sales_price, created_by,modify_by,specifications,repertory
   </sql>
   <sql id="Blob_Column_List" >
     content

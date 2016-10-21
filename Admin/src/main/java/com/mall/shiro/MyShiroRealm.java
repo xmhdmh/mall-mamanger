@@ -26,7 +26,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.mall.model.system.SysLog;
 import com.mall.model.user.SysPermission;
 import com.mall.model.user.SysRole;
-import com.mall.model.user.UserInfo;
+import com.mall.model.user.UserLogin;
 import com.mall.service.system.SysLogService;
 import com.mall.service.user.SysPermissionService;
 import com.mall.service.user.SysRoleService;
@@ -60,9 +60,9 @@ public class MyShiroRealm extends AuthorizingRealm {
         //System.out.println(token.getCredentials());
         // 通过username从数据库中查找 User对象，如果找到，没找到.
         // 实际项目中，这里可以根据实际情况做缓存，如果不做，Shiro自己也是有时间间隔机制，2分钟内不会重复执行该方法
-        UserInfo userInfo = userInfoService.findByName(username);
+        UserLogin userLogin = userInfoService.findByName(username);
         //System.out.println("----->>userInfo=" + userInfo);
-        if (userInfo == null) {
+        if (userLogin == null) {
             throw new UnknownAccountException();
         }
         /*
@@ -76,17 +76,17 @@ public class MyShiroRealm extends AuthorizingRealm {
         // 加密方式;
         // 交给AuthenticatingRealm使用CredentialsMatcher进行密码匹配，如果觉得人家的不好可以自定义实现
         SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(
-                userInfo, // 用户名
-                userInfo.getPassword(), // 密码
-                ByteSource.Util.bytes(userInfo.getCredentialsSalt()),// salt=username+salt
+        		userLogin, // 用户名
+        		userLogin.getPassword(), // 密码
+                ByteSource.Util.bytes(userLogin.getCredentialsSalt()),// salt=username+salt
                 getName() // realm name
         );
         Subject currentUser = SecurityUtils.getSubject(); 
         Session session = currentUser.getSession();
-        session.setAttribute("userInfo",userInfo);
+        session.setAttribute("userInfo",userLogin);
         SysLog log=new SysLog();
         log.setOpt_summary("登录系统");
-        logService.insert(log, userInfo);
+        logService.insert(log, userLogin);
         // 明文: 若存在，将此用户存放到登录认证info中，无需自己做密码对比，Shiro会为我们进行密码对比校验
         // SimpleAuthenticationInfo authenticationInfo = new
         // SimpleAuthenticationInfo(
@@ -119,7 +119,7 @@ public class MyShiroRealm extends AuthorizingRealm {
         //System.out.println("权限配置-->MyShiroRealm.doGetAuthorizationInfo()");
 
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
-        UserInfo userInfo = (UserInfo) principals.getPrimaryPrincipal();
+        UserLogin userLogin = (UserLogin) principals.getPrimaryPrincipal();
 
         // 实际项目中，这里可以根据实际情况做缓存，如果不做，Shiro自己也是有时间间隔机制，2分钟内不会重复执行该方法
         // UserInfo userInfo = userInfoService.findByUsername(username)
@@ -139,7 +139,7 @@ public class MyShiroRealm extends AuthorizingRealm {
         // for (Role role : roleList) {
         // info.addStringPermissions(role.getPermissionsName());
         // }
-        List<SysRole> sysRoles=sysRoleService.findByUserRole(userInfo.getId());
+        List<SysRole> sysRoles=sysRoleService.findByUserRole(userLogin.getId());
         for (SysRole role : sysRoles) {
             authorizationInfo.addRole(role.getRole());
             List<SysPermission> sysPermissions=sysPermissionService.findByRolePermission(role.getId());

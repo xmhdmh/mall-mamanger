@@ -15,7 +15,7 @@ public class UserShopRlation {
 
     private String remark;
 
-    private Long userId;
+    private Long createdBy;
 
     private Long shopId;
 
@@ -67,15 +67,17 @@ public class UserShopRlation {
         this.remark = remark == null ? null : remark.trim();
     }
 
-    public Long getUserId() {
-        return userId;
-    }
+    
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
+    public Long getCreatedBy() {
+		return createdBy;
+	}
 
-    public Long getShopId() {
+	public void setCreatedBy(Long createdBy) {
+		this.createdBy = createdBy;
+	}
+
+	public Long getShopId() {
         return shopId;
     }
 

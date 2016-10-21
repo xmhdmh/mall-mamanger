@@ -1,10 +1,10 @@
 package com.mall.dao.user;
 import org.apache.ibatis.annotations.Mapper;
 import com.mall.dao.BaseMapper;
-import com.mall.model.user.UserInfo;
+import com.mall.model.user.UserLogin;
 
 @Mapper
-public interface UserInfoMapper extends BaseMapper{
+public interface UserLoginMapper extends BaseMapper{
 
     /**
      * 
@@ -14,5 +14,5 @@ public interface UserInfoMapper extends BaseMapper{
      * @param newPwd 新密码
      * @return
      */
-    Integer editPwd(UserInfo param);
+    Integer editPwd(UserLogin param);
 }

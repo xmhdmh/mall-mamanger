@@ -22,6 +22,8 @@ public class Brand {
     private String introduce;
 
     private Long createdBy;
+    
+    private Long modifyBy;
 
     public Long getId() {
         return id;
@@ -102,5 +104,13 @@ public class Brand {
     public void setCreatedBy(Long createdBy) {
         this.createdBy = createdBy;
     }
+
+	public Long getModifyBy() {
+		return modifyBy;
+	}
+
+	public void setModifyBy(Long modifyBy) {
+		this.modifyBy = modifyBy;
+	}
     
 }

@@ -17,7 +17,8 @@ public class SysRole{
     private Boolean available;// 是否可用,如果不可用将不会添加给用户
     private Long createdBy;//创建人用户ID
     private Date createTime;//创建时间
-    
+    private Date modifyTime;
+    private Long modifyBy;
     public Date getCreateTime() {
         return createTime;
     }
@@ -65,4 +66,22 @@ public class SysRole{
     public void setAvailable(Boolean available) {
         this.available = available;
     }
+
+	public Date getModifyTime() {
+		return modifyTime;
+	}
+
+	public void setModifyTime(Date modifyTime) {
+		this.modifyTime = modifyTime;
+	}
+
+	public Long getModifyBy() {
+		return modifyBy;
+	}
+
+	public void setModifyBy(Long modifyBy) {
+		this.modifyBy = modifyBy;
+	}
+    
+    
 }

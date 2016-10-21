@@ -3,7 +3,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.mall.model.Result;
-import com.mall.model.user.UserInfo;
+import com.mall.model.user.UserLogin;
 import com.mall.service.impl.BaseServiceImpl;
 import com.mall.service.user.UserInfoService;
 import com.mall.utils.MD5Util;
@@ -20,18 +20,18 @@ import com.mall.utils.MD5Util;
 public class UserInfoServiceImpl extends BaseServiceImpl implements UserInfoService{
     
     @Override
-    public UserInfo findByName(String userName) {
-        return super.getUserInfoMapper().findByName(userName);
+    public UserLogin findByName(String userName) {
+        return super.getUserLoginMapper().findByName(userName);
     }
     /**
      * 修改密码
      */
 	@Override
-	public Result editPwd(UserInfo param,String oldPwd,String newPwd) {
+	public Result editPwd(UserLogin param,String oldPwd,String newPwd) {
 	    Result result=new Result("修改成功，请重新登入");
 	    if(param.getPassword().equals(MD5Util.shiroPassword(oldPwd, param.getCredentialsSalt()))){
 	        param.setPassword(MD5Util.shiroPassword(newPwd, param.getCredentialsSalt()));
-	        super.getUserInfoMapper().editPwd(param);
+	        super.getUserLoginMapper().editPwd(param);
 	        result.setUrl("logout.html");
 	    }else{
 	        result.setResult(false);

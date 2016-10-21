@@ -11,7 +11,7 @@
 package com.mall.service.user;
 
 import com.mall.model.Result;
-import com.mall.model.user.UserInfo;
+import com.mall.model.user.UserLogin;
 
 /**
  * @ClassName: UserInfoService
@@ -22,7 +22,7 @@ import com.mall.model.user.UserInfo;
  */
 
 public interface UserInfoService {
-    public UserInfo findByName(String userName);
+    public UserLogin findByName(String userName);
     
     /**
      * 
@@ -31,5 +31,5 @@ public interface UserInfoService {
      * @param param
      * @return
      */
-    public Result editPwd(UserInfo param,String oldPwd,String newPwd);
+    public Result editPwd(UserLogin param,String oldPwd,String newPwd);
 }
