@@ -384,3 +384,17 @@ alter TABLE user_info add email VARCHAR(32);
 alter TABLE user_info add phone VARCHAR(32);
 /*产品增加修改人字段*/
 alter TABLE product add modify_by BIGINT;
+/*==============================================================*/
+/* Table: user_detail  用户详细信息表                                         */
+/*==============================================================*/
+drop table if exists user_detail;
+create table user_detail
+(
+   id                   bigint not null comment '用户主键ID',
+   nick_name            varchar(32) comment '昵称',
+   birthday             timestamp default CURRENT_TIMESTAMP comment '生日',
+   create_time          timestamp default CURRENT_TIMESTAMP comment '注册时间',
+   sex                  char(2) default '男' comment '性别',
+   qq                   varchar(16) comment 'QQ',
+   primary key (id)
+);
