@@ -1,5 +1,7 @@
 package com.mall.model.user;
 
+import java.util.Date;
+
 /**
  * 
 * @ClassName: SysRole
@@ -14,6 +16,15 @@ public class SysRole{
     private String description; // 角色描述,UI界面显示使用
     private Boolean available;// 是否可用,如果不可用将不会添加给用户
     private Long createdBy;//创建人用户ID
+    private Date createTime;//创建时间
+    
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
 
     public Long getCreatedBy() {
         return createdBy;

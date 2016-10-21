@@ -377,6 +377,8 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*数据库修改*/
 /*角色表增加创建人字段*/
 alter TABLE sys_role add created_by BIGINT;
+/*角色表增加创建时间*/
+alter TABLE sys_role add create_time timestamp not null default CURRENT_TIMESTAMP;
 /*权限表添加创建人字段*/
 alter TABLE sys_permission add created_by BIGINT;
 /*用户表增加邮箱和电话号码*/

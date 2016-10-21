@@ -7,9 +7,10 @@
     <result column="description" property="description" jdbcType="VARCHAR" />
     <result column="role" property="role" jdbcType="VARCHAR" />
     <result column="created_by" property="createdBy" jdbcType="BIGINT" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, available, description, role,created_by
+    id, available, description, role,created_by,create_time
   </sql>
   <insert id="insert" parameterType="SysRole" >
     insert into sys_role
