@@ -32,7 +32,7 @@
 	l.opt_summary,
 	l.ip_address,
 	l.computer_name,
-  u.username as userName
+  u.user_name as userName
 from
 	sys_log l
 left join user_login u
