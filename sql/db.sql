@@ -49,43 +49,43 @@ drop table if exists user_shop_relation;
 /*==============================================================*/
 create table article
 (
-   id                   bigint(20) not null comment 'Ö÷¼ü',
-   title                varchar(64) default NULL comment 'ÎÄÕÂ±êÌâ',
-   create_time          timestamp not null default CURRENT_TIMESTAMP comment '´´½¨Ê±¼ä',
-   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ÐÞ¸ÄÊ±¼ä',
-   is_delete            char(1) default 'n' comment 'ÊÇ·ñÉ¾³ý',
-   sort                 int(11) default 0 comment 'ÅÅÐò',
-   content              text comment 'ÎÄÕÂÄÚÈÝ',
-   thumbnail            varchar(128) default NULL comment 'ÎÄÕÂËõÂÔÍ¼µØÖ·',
-   remark               varchar(64) default NULL comment '±¸×¢',
-   created_by           bigint(20) default NULL comment '´´½¨ÈË',
-   modify_by            bigint(20) default NULL comment 'ÐÞ¸ÄÈË',
+   id                   bigint(20) not null comment 'ï¿½ï¿½ï¿½ï¿½',
+   title                varchar(64) default NULL comment 'ï¿½ï¿½ï¿½Â±ï¿½ï¿½ï¿½',
+   create_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
+   is_delete            char(1) default 'n' comment 'ï¿½Ç·ï¿½É¾ï¿½ï¿½',
+   sort                 int(11) default 0 comment 'ï¿½ï¿½ï¿½ï¿½',
+   content              text comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   thumbnail            varchar(128) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Ö·',
+   remark               varchar(64) default NULL comment 'ï¿½ï¿½×¢',
+   created_by           bigint(20) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   modify_by            bigint(20) default NULL comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-alter table article comment 'ÎÄÕÂ¹ÜÀí±í';
+alter table article comment 'ï¿½ï¿½ï¿½Â¹ï¿½ï¿½ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: article_message                                       */
 /*==============================================================*/
 create table article_message
 (
-   id                   bigint(20) not null comment 'Ö÷¼ü',
-   create_time          timestamp not null default CURRENT_TIMESTAMP comment '´´½¨Ê±¼ä',
-   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ÐÞ¸ÄÊ±¼ä',
-   is_delete            char(1) default 'n' comment 'ÊÇ·ñÉ¾³ý',
-   sort                 int(11) default 0 comment 'ÅÅÐò',
-   remark               varchar(64) default NULL comment '±¸×¢',
-   created_by           bigint(20) default NULL comment '´´½¨ÈË',
-   acticle_id           bigint(20) default NULL comment 'ÎÄÕÂID',
-   message              varchar(255) default NULL comment 'ÁôÑÔÄÚÈÝ',
-   parent_id            bigint(20) default 0 comment '¸¸±àºÅ',
+   id                   bigint(20) not null comment 'ï¿½ï¿½ï¿½ï¿½',
+   create_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
+   is_delete            char(1) default 'n' comment 'ï¿½Ç·ï¿½É¾ï¿½ï¿½',
+   sort                 int(11) default 0 comment 'ï¿½ï¿½ï¿½ï¿½',
+   remark               varchar(64) default NULL comment 'ï¿½ï¿½×¢',
+   created_by           bigint(20) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   acticle_id           bigint(20) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ID',
+   message              varchar(255) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   parent_id            bigint(20) default 0 comment 'ï¿½ï¿½ï¿½ï¿½ï¿½',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-alter table article_message comment 'ÎÄÕÂÁôÑÔÐÅÏ¢¹ÜÀí';
+alter table article_message comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: brand                                                 */
@@ -93,21 +93,21 @@ alter table article_message comment 'ÎÄÕÂÁôÑÔÐÅÏ¢¹ÜÀí';
 create table brand
 (
    id                   bigint(20) not null comment 'id',
-   create_time          timestamp not null default CURRENT_TIMESTAMP comment '´´½¨Ê±¼ä',
-   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ÐÞ¸ÄÊ±¼ä',
-   is_delete            char(1) default 'n' comment 'ÊÇ·ñÉ¾³ý',
-   sort                 int(11) default 0 comment 'ÅÅÐò',
-   remark               varchar(64) default NULL comment '±¸×¢',
-   name                 varchar(32) default NULL comment 'Æ·ÅÆÃû³Æ',
-   image                varchar(128) default NULL comment 'Æ·ÅÆÍ¼Æ¬',
-   introduce            text default NULL comment 'Æ·ÅÆ½éÉÜ',
-   created_by           bigint(20) default NULL comment '´´½¨ÈË',
-   modify_by            bigint(20) comment 'ÐÞ¸ÄÈË',
+   create_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
+   is_delete            char(1) default 'n' comment 'ï¿½Ç·ï¿½É¾ï¿½ï¿½',
+   sort                 int(11) default 0 comment 'ï¿½ï¿½ï¿½ï¿½',
+   remark               varchar(64) default NULL comment 'ï¿½ï¿½×¢',
+   name                 varchar(32) default NULL comment 'Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   image                varchar(128) default NULL comment 'Æ·ï¿½ï¿½Í¼Æ¬',
+   introduce            text default NULL comment 'Æ·ï¿½Æ½ï¿½ï¿½ï¿½',
+   created_by           bigint(20) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   modify_by            bigint(20) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-alter table brand comment 'Æ·ÅÆ¹ÜÀí';
+alter table brand comment 'Æ·ï¿½Æ¹ï¿½ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: category_relation                                     */
@@ -115,13 +115,13 @@ alter table brand comment 'Æ·ÅÆ¹ÜÀí';
 create table category_relation
 (
    id                   bigint(20) not null,
-   create_time          timestamp not null default CURRENT_TIMESTAMP comment '´´½¨Ê±¼ä',
-   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ÐÞ¸ÄÊ±¼ä',
-   is_delete            varchar(1) default 'n' comment 'ÊÇ·ñÉ¾³ý',
-   sort                 int(11) default 0 comment 'ÅÅÐò',
-   dic_id               bigint(20) default NULL comment '×ÖµäID',
-   obj_id               bigint(20) default NULL comment '¶ÔÏóID',
-   remark               varchar(64) default NULL comment '±¸×¢',
+   create_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
+   is_delete            varchar(1) default 'n' comment 'ï¿½Ç·ï¿½É¾ï¿½ï¿½',
+   sort                 int(11) default 0 comment 'ï¿½ï¿½ï¿½ï¿½',
+   dic_id               bigint(20) default NULL comment 'ï¿½Öµï¿½ID',
+   obj_id               bigint(20) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ID',
+   remark               varchar(64) default NULL comment 'ï¿½ï¿½×¢',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -131,67 +131,67 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*==============================================================*/
 create table orders
 (
-   id                   bigint(20) not null comment 'Ö÷¼ü',
-   create_time          timestamp not null default CURRENT_TIMESTAMP comment '´´½¨Ê±¼ä',
-   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ÐÞ¸ÄÊ±¼ä',
-   is_delete            char(1) default 'n' comment 'ÊÇ·ñÉ¾³ý',
-   sort                 int(11) default 0 comment 'ÅÅÐò',
-   remark               varchar(64) default NULL comment '±¸×¢',
-   order_num            varchar(32) default NULL comment '¶©µ¥ºÅ',
-   sum_price            bigint(20) default NULL comment '¶©µ¥×Ü¼Û',
-   created_by           bigint(20) default NULL comment '´´½¨ÈË',
-   modify_by            bigint(20) default NULL comment 'ÐÞ¸ÄÈË',
+   id                   bigint(20) not null comment 'ï¿½ï¿½ï¿½ï¿½',
+   create_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
+   is_delete            char(1) default 'n' comment 'ï¿½Ç·ï¿½É¾ï¿½ï¿½',
+   sort                 int(11) default 0 comment 'ï¿½ï¿½ï¿½ï¿½',
+   remark               varchar(64) default NULL comment 'ï¿½ï¿½×¢',
+   order_num            varchar(32) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   sum_price            bigint(20) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ï¿½Ü¼ï¿½',
+   created_by           bigint(20) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   modify_by            bigint(20) default NULL comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-alter table orders comment '¶©µ¥¹ÜÀí';
+alter table orders comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: product                                               */
 /*==============================================================*/
 create table product
 (
-   id                   bigint(20) not null comment 'Ö÷¼ü',
-   create_time          timestamp not null default CURRENT_TIMESTAMP comment '´´½¨Ê±¼ä',
-   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ÐÞ¸ÄÊ±¼ä',
-   is_delete            char(1) default 'n' comment 'ÊÇ·ñÉ¾³ý',
-   sort                 int(11) default 0 comment 'ÅÅÐò',
-   remark               varchar(64) default NULL comment '±¸×¢',
-   name                 varchar(32) default NULL comment '²úÆ·Ãû³Æ',
-   thumbnail            varchar(128) default NULL comment '²úÆ·ËõÂÔÍ¼',
-   price                bigint(20) default NULL comment '²úÆ·¼Û¸ñ£¨ÒÔ·ÖÎªµ¥Î»£©',
-   introduce            text default NULL comment '²úÆ·¼ò½é',
-   content              text comment '²úÆ·ÏêÇé',
+   id                   bigint(20) not null comment 'ï¿½ï¿½ï¿½ï¿½',
+   create_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
+   is_delete            char(1) default 'n' comment 'ï¿½Ç·ï¿½É¾ï¿½ï¿½',
+   sort                 int(11) default 0 comment 'ï¿½ï¿½ï¿½ï¿½',
+   remark               varchar(64) default NULL comment 'ï¿½ï¿½×¢',
+   name                 varchar(32) default NULL comment 'ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½',
+   thumbnail            varchar(128) default NULL comment 'ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Í¼',
+   price                bigint(20) default NULL comment 'ï¿½ï¿½Æ·ï¿½Û¸ï¿½ï¿½Ô·ï¿½Îªï¿½ï¿½Î»ï¿½ï¿½',
+   introduce            text default NULL comment 'ï¿½ï¿½Æ·ï¿½ï¿½ï¿½',
+   content              text comment 'ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½',
    province             bigint(20) default NULL comment 'Ê¡',
-   city                 bigint(20) default NULL comment 'ÊÐ',
-   district             bigint(20) default NULL comment 'Çø',
-   is_sales             char(1) default 'n' comment 'ÊÇ·ñ´ÙÏú',
-   sales_price          bigint(20) default NULL comment '´ÙÏú¼Û',
-   created_by           bigint(20) default NULL comment '´´½¨ÈË',
-   specifications       varchar(64) default NULL comment '¹æ¸ñ',
-   repertory            int(11) default 0 comment '¿â´æ',
-   modify_by            bigint(20) default NULL comment 'ÐÞ¸ÄÈË',
+   city                 bigint(20) default NULL comment 'ï¿½ï¿½',
+   district             bigint(20) default NULL comment 'ï¿½ï¿½',
+   is_sales             char(1) default 'n' comment 'ï¿½Ç·ï¿½ï¿½ï¿½ï¿½',
+   sales_price          bigint(20) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   created_by           bigint(20) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   specifications       varchar(64) default NULL comment 'ï¿½ï¿½ï¿½',
+   repertory            int(11) default 0 comment 'ï¿½ï¿½ï¿½',
+   modify_by            bigint(20) default NULL comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-alter table product comment '²úÆ·¹ÜÀí';
+alter table product comment 'ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: product_brand_relation                                */
 /*==============================================================*/
 create table product_brand_relation
 (
-   id                   bigint(20) not null comment 'Ö÷¼ü',
-   create_time          timestamp not null default CURRENT_TIMESTAMP comment '´´½¨Ê±¼ä',
-   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ÐÞ¸ÄÊ±¼ä',
-   is_delete            char(1) default 'n' comment 'ÊÇ·ñÉ¾³ý',
-   sort                 int(11) default 0 comment 'ÅÅÐò',
-   remark               varchar(64) default NULL comment '±¸×¢',
-   product_id           bigint(20) default NULL comment '²úÆ·ID',
-   brand_id             bigint(20) default NULL comment 'Æ·ÅÆID',
-   shop_id              bigint(20) default NULL comment 'µêÆÌID',
+   id                   bigint(20) not null comment 'ï¿½ï¿½ï¿½ï¿½',
+   create_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
+   is_delete            char(1) default 'n' comment 'ï¿½Ç·ï¿½É¾ï¿½ï¿½',
+   sort                 int(11) default 0 comment 'ï¿½ï¿½ï¿½ï¿½',
+   remark               varchar(64) default NULL comment 'ï¿½ï¿½×¢',
+   product_id           bigint(20) default NULL comment 'ï¿½ï¿½Æ·ID',
+   brand_id             bigint(20) default NULL comment 'Æ·ï¿½ï¿½ID',
+   shop_id              bigint(20) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ID',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -202,15 +202,15 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 create table product_order_relation
 (
    id                   bigint(20) not null,
-   create_time          timestamp not null default CURRENT_TIMESTAMP comment '´´½¨Ê±¼ä',
-   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ÐÞ¸ÄÊ±¼ä',
-   is_delete            char(1) default 'n' comment 'ÊÇ·ñÉ¾³ý',
-   sort                 int(11) default 0 comment 'ÅÅÐò',
-   remark               varchar(64) default NULL comment '±¸×¢',
-   product_id           bigint(20) default NULL comment '²úÆ·ID',
-   order_id             bigint(20) default NULL comment '¶©µ¥ID',
-   price                bigint(20) default NULL comment 'µ±Ê±²úÆ·¼Û¸ñ',
-   product_num          int(11) default NULL comment '²úÆ·¹ºÂòÊýÁ¿',
+   create_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
+   is_delete            char(1) default 'n' comment 'ï¿½Ç·ï¿½É¾ï¿½ï¿½',
+   sort                 int(11) default 0 comment 'ï¿½ï¿½ï¿½ï¿½',
+   remark               varchar(64) default NULL comment 'ï¿½ï¿½×¢',
+   product_id           bigint(20) default NULL comment 'ï¿½ï¿½Æ·ID',
+   order_id             bigint(20) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ID',
+   price                bigint(20) default NULL comment 'ï¿½ï¿½Ê±ï¿½ï¿½Æ·ï¿½Û¸ï¿½',
+   product_num          int(11) default NULL comment 'ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -220,29 +220,29 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*==============================================================*/
 create table shop
 (
-   id                   bigint(20) not null comment 'Ö÷¼ü',
-   create_time          timestamp not null default CURRENT_TIMESTAMP comment '´´½¨Ê±¼ä',
-   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ÐÞ¸ÄÊ±¼ä',
-   is_delete            char(1) default 'n' comment 'ÊÇ·ñÉ¾³ý',
-   sort                 int(11) default 0 comment 'ÅÅÐò',
-   remark               varchar(64) default NULL comment '±¸×¢',
-   name                 varchar(32) default NULL comment 'µêÃû',
-   thumbnail            varchar(128) default NULL comment 'µêÆÌËõÂÔÍ¼',
-   banner               varchar(128) default NULL comment 'µêÆÌbannerÍ¼',
+   id                   bigint(20) not null comment 'ï¿½ï¿½ï¿½ï¿½',
+   create_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
+   is_delete            char(1) default 'n' comment 'ï¿½Ç·ï¿½É¾ï¿½ï¿½',
+   sort                 int(11) default 0 comment 'ï¿½ï¿½ï¿½ï¿½',
+   remark               varchar(64) default NULL comment 'ï¿½ï¿½×¢',
+   name                 varchar(32) default NULL comment 'ï¿½ï¿½ï¿½ï¿½',
+   thumbnail            varchar(128) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼',
+   banner               varchar(128) default NULL comment 'ï¿½ï¿½ï¿½ï¿½bannerÍ¼',
    province             bigint(20) default NULL comment 'Ê¡',
-   city                 bigint(20) default NULL comment 'ÊÐ',
-   district             bigint(20) default NULL comment 'Çø',
-   street               varchar(64) default NULL comment '½ÖµÀµØÖ·',
-   longitude            float default NULL comment '¾­¶È',
-   latitude             float default NULL comment 'Î³¶È',
-   introduce            text default NULL comment 'µêÆÌ½éÉÜ',
-   created_by           bigint(20) comment '´´½¨ÈË',
-   modify_by            bigint(20) comment 'ÐÞ¸ÄÈË',
+   city                 bigint(20) default NULL comment 'ï¿½ï¿½',
+   district             bigint(20) default NULL comment 'ï¿½ï¿½',
+   street               varchar(64) default NULL comment 'ï¿½Öµï¿½ï¿½ï¿½Ö·',
+   longitude            float default NULL comment 'ï¿½ï¿½ï¿½ï¿½',
+   latitude             float default NULL comment 'Î³ï¿½ï¿½',
+   introduce            text default NULL comment 'ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½',
+   created_by           bigint(20) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   modify_by            bigint(20) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-alter table shop comment 'µêÆÌ¹ÜÀí';
+alter table shop comment 'ï¿½ï¿½ï¿½Ì¹ï¿½ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: sys_area                                              */
@@ -250,13 +250,13 @@ alter table shop comment 'µêÆÌ¹ÜÀí';
 create table sys_area
 (
    id                   bigint(20) not null,
-   create_time          timestamp not null default CURRENT_TIMESTAMP comment '´´½¨Ê±¼ä',
-   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ÐÞ¸ÄÊ±¼ä',
-   is_delete            char(1) default 'n' comment 'ÊÇ·ñÉ¾³ý',
-   sort                 int(11) default 0 comment 'ÅÅÐò',
-   remark               varchar(32) default NULL comment '±¸×¢',
-   name                 varchar(32) default NULL comment 'Ãû³Æ',
-   parent_id            bigint(20) default 0 comment '¸¸±àºÅ',
+   create_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
+   is_delete            char(1) default 'n' comment 'ï¿½Ç·ï¿½É¾ï¿½ï¿½',
+   sort                 int(11) default 0 comment 'ï¿½ï¿½ï¿½ï¿½',
+   remark               varchar(32) default NULL comment 'ï¿½ï¿½×¢',
+   name                 varchar(32) default NULL comment 'ï¿½ï¿½ï¿½ï¿½',
+   parent_id            bigint(20) default 0 comment 'ï¿½ï¿½ï¿½ï¿½ï¿½',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -266,16 +266,16 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*==============================================================*/
 create table sys_dic
 (
-   id                   bigint(20) not null comment 'Ö÷¼ü',
-   name                 varchar(32) default NULL comment 'Ãû³Æ',
-   create_time          timestamp not null default CURRENT_TIMESTAMP comment '´´½¨Ê±¼ä',
-   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ÐÞ¸ÄÊ±¼ä',
-   is_delete            char(1) default 'n' comment 'ÊÇ·ñÉ¾³ý(y/n)',
-   sort                 int(11) default 0 comment 'ÅÅÐò',
-   parent_id            bigint(20) default 0 comment '¸¸±àºÅ',
-   remark               varchar(64) default NULL comment '±¸×¢',
-   created_by           bigint(20) comment '´´½¨ÈË',
-   modify_by            bigint(20) comment 'ÐÞ¸ÄÈË',
+   id                   bigint(20) not null comment 'ï¿½ï¿½ï¿½ï¿½',
+   name                 varchar(32) default NULL comment 'ï¿½ï¿½ï¿½ï¿½',
+   create_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
+   is_delete            char(1) default 'n' comment 'ï¿½Ç·ï¿½É¾ï¿½ï¿½(y/n)',
+   sort                 int(11) default 0 comment 'ï¿½ï¿½ï¿½ï¿½',
+   parent_id            bigint(20) default 0 comment 'ï¿½ï¿½ï¿½ï¿½ï¿½',
+   remark               varchar(64) default NULL comment 'ï¿½ï¿½×¢',
+   created_by           bigint(20) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   modify_by            bigint(20) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -285,18 +285,18 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*==============================================================*/
 create table sys_log
 (
-   id                   bigint(20) not null comment 'Ö÷¼ü',
-   opt_time             timestamp not null default CURRENT_TIMESTAMP comment '²Ù×÷Ê±¼ä',
-   opt_category         bigint(20) default NULL comment 'ÈÕÖ¾·ÖÀà',
-   opt_summary          varchar(255) default NULL comment '¼ÇÂ¼±»²Ù×÷ÒµÎñÊý¾ÝµÄ±ä¸üÄÚÈÝ',
-   ip_address           varchar(16) default NULL comment '¼ÆËã»úipµØÖ·',
-   computer_name        varchar(32) default NULL comment '¼ÆËã»úÃû³Æ',
-   operator             bigint(20) default NULL comment '²Ù×÷ÈËÔ±µÄÓÃ»§Id',
+   id                   bigint(20) not null comment 'ï¿½ï¿½ï¿½ï¿½',
+   opt_time             timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   opt_category         bigint(20) default NULL comment 'ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½',
+   opt_summary          varchar(255) default NULL comment 'ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   ip_address           varchar(16) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ipï¿½ï¿½Ö·',
+   computer_name        varchar(32) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   operator             bigint(20) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ã»ï¿½Id',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-alter table sys_log comment 'ÈÕÖ¾¹ÜÀí';
+alter table sys_log comment 'ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: sys_permission                                        */
@@ -321,19 +321,19 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*==============================================================*/
 create table sys_role
 (
-   id                   bigint(20) not null comment 'Ö÷¼ü',
-   available            bit(1) default NULL comment 'ÊÇ·ñ¿ÉÓÃ',
-   description          varchar(255) default NULL comment 'ÃèÊö',
-   role                 varchar(32) default NULL comment '½ÇÉ«Ãû³Æ',
-   created_by           bigint(20) default NULL comment '´´½¨ÈË',
-   create_time          timestamp comment '´´½¨Ê±¼ä',
-   modify_time          timestamp comment 'ÐÞ¸ÄÊ±¼ä',
-   modify_by            bigint(20) comment 'ÐÞ¸ÄÈË',
+   id                   bigint(20) not null comment 'ï¿½ï¿½ï¿½ï¿½',
+   available            bit(1) default NULL comment 'ï¿½Ç·ï¿½ï¿½ï¿½ï¿½',
+   description          varchar(255) default NULL comment 'ï¿½ï¿½ï¿½ï¿½',
+   role                 varchar(32) default NULL comment 'ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½',
+   created_by           bigint(20) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   create_time          timestamp comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   modify_time          timestamp comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
+   modify_by            bigint(20) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-alter table sys_role comment '½ÇÉ«¹ÜÀí';
+alter table sys_role comment 'ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: sys_role_permission                                   */
@@ -353,8 +353,8 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 create table sys_sequences
 (
    id                   bigint(20) not null auto_increment comment 'id',
-   name                 varchar(32) default NULL comment 'Ãû³Æ',
-   create_time          timestamp not null default CURRENT_TIMESTAMP comment '´´½¨Ê±¼ä',
+   name                 varchar(32) default NULL comment 'ï¿½ï¿½ï¿½ï¿½',
+   create_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -376,32 +376,31 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*==============================================================*/
 create table user_detail
 (
-   id                   bigint(20) not null comment 'ÓÃ»§Ö÷¼üID',
-   nick_name            varchar(32) comment 'êÇ³Æ',
-   birthday             date default NULL comment 'ÉúÈÕ',
-   sex                  int(1) default 1 comment 'ÐÔ±ð',
+   id                   bigint(20) not null comment 'ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ID',
+   nick_name            varchar(32) comment 'ï¿½Ç³ï¿½',
+   birthday             date default NULL comment 'ï¿½ï¿½ï¿½ï¿½',
+   sex                  int(1) default 1 comment 'ï¿½Ô±ï¿½',
    qq                   varchar(16) comment 'QQ',
-   avatar_file          varchar(128) comment 'Í·Ïñ',
-   home_addre           varchar(255) comment '¼ÒÍ¥×¡Ö·',
+   avatar_file          varchar(128) comment 'Í·ï¿½ï¿½',
+   home_addre           varchar(255) comment 'ï¿½ï¿½Í¥×¡Ö·',
    primary key (id)
 );
 
-alter table user_detail comment 'ÓÃ»§¹ÜÀí';
+alter table user_detail comment 'ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: user_login                                            */
 /*==============================================================*/
 create table user_login
 (
-   id                   bigint(20) not null comment 'Ö÷¼ü',
-   password             varchar(255) default NULL comment 'ÃÜÂë',
+   id                   bigint(20) not null comment 'ï¿½ï¿½ï¿½ï¿½',
+   password             varchar(255) default NULL comment 'ï¿½ï¿½ï¿½ï¿½',
    salt                 varchar(255) default NULL,
    state                tinyint(4) not null comment '×´Ì¬',
-   user_name            varchar(32) default NULL comment 'ÓÃ»§Ãû',
-   email                varchar(64) default NULL comment 'ÓÊÏä',
-   phone                varchar(32) default NULL comment 'µç»°',
-   last_login_time      timestamp comment '×îºóµÇÂ¼Ê±¼ä',
-   user_id              bigint(20) comment '¶ÔÓ¦µÄÓÃ»§ÏêÇéId',
+   user_name            varchar(32) default NULL comment 'ï¿½Ã»ï¿½ï¿½ï¿½',
+   email                varchar(64) default NULL comment 'ï¿½ï¿½ï¿½ï¿½',
+   phone                varchar(32) default NULL comment 'ï¿½ç»°',
+   last_login_time      timestamp comment 'ï¿½ï¿½ï¿½ï¿½Â¼Ê±ï¿½ï¿½',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -412,13 +411,13 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 create table user_shop_relation
 (
    id                   bigint(20) not null,
-   create_time          timestamp not null default CURRENT_TIMESTAMP comment '´´½¨Ê±¼ä',
-   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ÐÞ¸ÄÊ±¼ä',
-   is_delete            char(1) default 'n' comment 'ÊÇ·ñÉ¾³ý',
-   sort                 int(11) default 0 comment 'ÅÅÐò',
-   remark               varchar(64) default NULL comment '±¸×¢',
-   created_by           bigint(20) default NULL comment 'ÓÃ»§ID',
-   shop_id              bigint(20) default NULL comment 'µêÆÌID',
+   create_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   modify_time          timestamp not null default CURRENT_TIMESTAMP comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
+   is_delete            char(1) default 'n' comment 'ï¿½Ç·ï¿½É¾ï¿½ï¿½',
+   sort                 int(11) default 0 comment 'ï¿½ï¿½ï¿½ï¿½',
+   remark               varchar(64) default NULL comment 'ï¿½ï¿½×¢',
+   created_by           bigint(20) default NULL comment 'ï¿½Ã»ï¿½ID',
+   shop_id              bigint(20) default NULL comment 'ï¿½ï¿½ï¿½ï¿½ID',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;

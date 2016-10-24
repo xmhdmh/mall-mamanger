@@ -9,48 +9,26 @@
   <sql id="Base_Column_List" >
     id, user_id, role_id
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+  <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
     from sys_user_role
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+  
+  <delete id="delete" parameterType="java.lang.Long" >
     delete from sys_user_role
     where id = #{id,jdbcType=BIGINT}
   </delete>
+  
   <insert id="insert" parameterType="com.mall.model.user.SysUserRole" >
     insert into sys_user_role (id, user_id, role_id
       )
     values (#{id,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, #{roleId,jdbcType=BIGINT}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.mall.model.user.SysUserRole" >
-    insert into sys_user_role
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="userId != null" >
-        user_id,
-      </if>
-      <if test="roleId != null" >
-        role_id,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=BIGINT},
-      </if>
-      <if test="userId != null" >
-        #{userId,jdbcType=BIGINT},
-      </if>
-      <if test="roleId != null" >
-        #{roleId,jdbcType=BIGINT},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.mall.model.user.SysUserRole" >
+
+  <update id="update" parameterType="com.mall.model.user.SysUserRole" >
     update sys_user_role
     <set >
       <if test="userId != null" >
@@ -62,12 +40,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.mall.model.user.SysUserRole" >
-    update sys_user_role
-    set user_id = #{userId,jdbcType=BIGINT},
-      role_id = #{roleId,jdbcType=BIGINT}
-    where id = #{id,jdbcType=BIGINT}
-  </update>
+
   
   <select id="query" resultMap="BaseResultMap" parameterType="com.mall.model.user.SysUserRole" >
     select 

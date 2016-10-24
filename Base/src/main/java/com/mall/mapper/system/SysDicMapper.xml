@@ -14,13 +14,13 @@
   <sql id="Base_Column_List" >
     id, name, create_time, modify_time, is_delete, sort, parent_id, remark
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+  <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
     from sys_dic
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+  <delete id="delete" parameterType="java.lang.Long" >
     delete from sys_dic
     where id = #{id,jdbcType=BIGINT}
   </delete>
@@ -32,62 +32,8 @@
       #{modifyTime,jdbcType=TIMESTAMP}, #{isDelete,jdbcType=CHAR}, #{sort,jdbcType=INTEGER}, 
       #{parentId,jdbcType=BIGINT}, #{remark,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.mall.model.system.SysDic" >
-    insert into sys_dic
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="name != null" >
-        name,
-      </if>
-      <if test="createTime != null" >
-        create_time,
-      </if>
-      <if test="modifyTime != null" >
-        modify_time,
-      </if>
-      <if test="isDelete != null" >
-        is_delete,
-      </if>
-      <if test="sort != null" >
-        sort,
-      </if>
-      <if test="parentId != null" >
-        parent_id,
-      </if>
-      <if test="remark != null" >
-        remark,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=BIGINT},
-      </if>
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="createTime != null" >
-        #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="modifyTime != null" >
-        #{modifyTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="isDelete != null" >
-        #{isDelete,jdbcType=CHAR},
-      </if>
-      <if test="sort != null" >
-        #{sort,jdbcType=INTEGER},
-      </if>
-      <if test="parentId != null" >
-        #{parentId,jdbcType=BIGINT},
-      </if>
-      <if test="remark != null" >
-        #{remark,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.mall.model.system.SysDic" >
+
+  <update id="update" parameterType="com.mall.model.system.SysDic" >
     update sys_dic
     <set >
       <if test="name != null" >
@@ -114,15 +60,32 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.mall.model.system.SysDic" >
-    update sys_dic
-    set name = #{name,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      modify_time = #{modifyTime,jdbcType=TIMESTAMP},
-      is_delete = #{isDelete,jdbcType=CHAR},
-      sort = #{sort,jdbcType=INTEGER},
-      parent_id = #{parentId,jdbcType=BIGINT},
-      remark = #{remark,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=BIGINT}
-  </update>
+  
+  <select id="query" resultMap="BaseResultMap" parameterType="com.mall.model.system.SysDic">
+    select 
+    <include refid="Base_Column_List" />
+    from sys_dic
+    where 1 = 1
+    <if test="name != null" >
+      AND name = #{name,jdbcType=VARCHAR}
+    </if>
+    <if test="createTime != null" >
+      AND create_time = #{createTime,jdbcType=TIMESTAMP}
+    </if>
+    <if test="modifyTime != null" >
+      AND modify_time = #{modifyTime,jdbcType=TIMESTAMP}
+    </if>
+    <if test="isDelete != null" >
+      AND is_delete = #{isDelete,jdbcType=CHAR}
+    </if>
+    <if test="sort != null" >
+      AND sort = #{sort,jdbcType=INTEGER}
+    </if>
+    <if test="parentId != null" >
+      AND parent_id = #{parentId,jdbcType=BIGINT}
+    </if>
+    <if test="remark != null" >
+      AND remark = #{remark,jdbcType=VARCHAR}
+    </if>
+  </select>
 </mapper>

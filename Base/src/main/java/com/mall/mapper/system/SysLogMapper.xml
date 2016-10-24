@@ -35,7 +35,7 @@
   u.username as userName
 from
 	sys_log l
-left join user_info u
+left join user_login u
 on u.id=l.operator
 where 1=1
 <if test="opt_summary!=null and ''!=opt_summary">

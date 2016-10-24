@@ -15,13 +15,13 @@
   <sql id="Base_Column_List" >
     id, available, name, parent_id, parent_ids, permission, resource_type, url,created_by
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+  <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
     from sys_permission
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+  <delete id="delete" parameterType="java.lang.Long" >
     delete from sys_permission
     where id = #{id,jdbcType=BIGINT}
   </delete>
@@ -33,68 +33,8 @@
       #{parentId,jdbcType=BIGINT}, #{parentIds,jdbcType=VARCHAR}, #{permission,jdbcType=VARCHAR}, 
       #{resourceType,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR},#{createdBy,jdbcType=BIGINT})
   </insert>
-  <insert id="insertSelective" parameterType="com.mall.model.user.SysPermission" >
-    insert into sys_permission
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="available != null" >
-        available,
-      </if>
-      <if test="name != null" >
-        name,
-      </if>
-      <if test="parentId != null" >
-        parent_id,
-      </if>
-      <if test="parentIds != null" >
-        parent_ids,
-      </if>
-      <if test="permission != null" >
-        permission,
-      </if>
-      <if test="resourceType != null" >
-        resource_type,
-      </if>
-      <if test="url != null" >
-        url,
-      </if>
-      <if test="createdBy != null" >
-        created_by,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=BIGINT},
-      </if>
-      <if test="available != null" >
-        #{available,jdbcType=BIT},
-      </if>
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="parentId != null" >
-        #{parentId,jdbcType=BIGINT},
-      </if>
-      <if test="parentIds != null" >
-        #{parentIds,jdbcType=VARCHAR},
-      </if>
-      <if test="permission != null" >
-        #{permission,jdbcType=VARCHAR},
-      </if>
-      <if test="resourceType != null" >
-        #{resourceType,jdbcType=VARCHAR},
-      </if>
-      <if test="url != null" >
-        #{url,jdbcType=VARCHAR},
-      </if>
-      <if test="createdBy != null" >
-        #{createdBy,jdbcType=BIGINT},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.mall.model.user.SysPermission" >
+
+  <update id="update" parameterType="com.mall.model.user.SysPermission" >
     update sys_permission
     <set >
       <if test="available != null" >
@@ -122,18 +62,6 @@
         created_by = #{createdBy,jdbcType=BIGINT},
       </if>
     </set>
-    where id = #{id,jdbcType=BIGINT}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.mall.model.user.SysPermission" >
-    update sys_permission
-    set available = #{available,jdbcType=BIT},
-      name = #{name,jdbcType=VARCHAR},
-      parent_id = #{parentId,jdbcType=BIGINT},
-      parent_ids = #{parentIds,jdbcType=VARCHAR},
-      permission = #{permission,jdbcType=VARCHAR},
-      resource_type = #{resourceType,jdbcType=VARCHAR},
-      url = #{url,jdbcType=VARCHAR},
-      created_by= #{createdBy,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
   
