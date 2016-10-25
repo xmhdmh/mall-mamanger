@@ -30,14 +30,14 @@ import com.mall.model.user.UserLogin;
 import com.mall.service.system.SysLogService;
 import com.mall.service.user.SysPermissionService;
 import com.mall.service.user.SysRoleService;
-import com.mall.service.user.UserInfoService;
+import com.mall.service.user.UserLoginService;
 
 
 
 public class MyShiroRealm extends AuthorizingRealm {
 
     @Autowired
-    private UserInfoService userInfoService;
+    private UserLoginService userLoginService;
     @Autowired
     private SysRoleService sysRoleService;
     @Autowired
@@ -60,7 +60,7 @@ public class MyShiroRealm extends AuthorizingRealm {
         //System.out.println(token.getCredentials());
         // 通过username从数据库中查找 User对象，如果找到，没找到.
         // 实际项目中，这里可以根据实际情况做缓存，如果不做，Shiro自己也是有时间间隔机制，2分钟内不会重复执行该方法
-        UserLogin userLogin = userInfoService.findByName(username);
+        UserLogin userLogin = userLoginService.findByName(username);
         //System.out.println("----->>userInfo=" + userInfo);
         if (userLogin == null) {
             throw new UnknownAccountException();

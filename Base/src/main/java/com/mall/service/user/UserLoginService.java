@@ -12,6 +12,7 @@ package com.mall.service.user;
 
 import com.mall.model.Result;
 import com.mall.model.user.UserLogin;
+import com.mall.service.BaseService;
 
 /**
  * @ClassName: UserInfoService
@@ -21,7 +22,7 @@ import com.mall.model.user.UserLogin;
  * 
  */
 
-public interface UserInfoService {
+public interface UserLoginService extends BaseService<UserLogin>{
     public UserLogin findByName(String userName);
     
     /**

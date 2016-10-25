@@ -55,4 +55,34 @@ public class SysPermissionServiceImpl extends BaseServiceImpl implements SysPerm
         return list;
     }
 
+    @Override
+    public List<SysPermission> query(SysPermission param) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Integer update(SysPermission param) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Integer delete(Long id) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Integer insert(SysPermission param) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public SysPermission findById(Long id) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
 }

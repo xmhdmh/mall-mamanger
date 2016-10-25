@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.mall.service.system.SysLogService;
 import com.mall.service.system.SysSequencesService;
 import com.mall.service.user.SysRoleService;
-import com.mall.service.user.UserInfoService;
+import com.mall.service.user.UserLoginService;
 
 /**
  * @ClassName: BaseController
@@ -31,7 +31,7 @@ public class BaseController {
     @Autowired
     private SysRoleService sysRoleService;
     @Autowired
-    private UserInfoService userInfoService;
+    private UserLoginService userInfoService;
     @Autowired
     private SysSequencesService sysSequencesService;
     
@@ -43,11 +43,11 @@ public class BaseController {
         this.sysSequencesService = sysSequencesService;
     }
 
-    public UserInfoService getUserInfoService() {
+    public UserLoginService getUserInfoService() {
         return userInfoService;
     }
 
-    public void setUserInfoService(UserInfoService userInfoService) {
+    public void setUserInfoService(UserLoginService userInfoService) {
         this.userInfoService = userInfoService;
     }
 

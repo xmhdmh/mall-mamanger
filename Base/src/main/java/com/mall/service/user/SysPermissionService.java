@@ -13,6 +13,7 @@ package com.mall.service.user;
 import java.util.List;
 
 import com.mall.model.user.SysPermission;
+import com.mall.service.BaseService;
 
 
 /**
@@ -23,7 +24,7 @@ import com.mall.model.user.SysPermission;
  * 
  */
 
-public interface SysPermissionService {
+public interface SysPermissionService extends BaseService<SysPermission>{
     /**
      * 根据角色ID获取权限列表
     * @Title: findByRolePermission 

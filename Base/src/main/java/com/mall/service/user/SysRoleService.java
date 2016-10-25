@@ -9,6 +9,7 @@
 package com.mall.service.user;
 import java.util.List;
 import com.mall.model.user.SysRole;
+import com.mall.service.BaseService;
 
 /**
  * @ClassName: SysRoleService
@@ -18,7 +19,7 @@ import com.mall.model.user.SysRole;
  * 
  */
 
-public interface SysRoleService{
+public interface SysRoleService extends BaseService<SysRole>{
     /**
      * 根据用户id获取角色列表
     * @Title: findByUserRole 
@@ -29,14 +30,5 @@ public interface SysRoleService{
     * @throws
      */
     public List<SysRole> findByUserRole(Long userId);
-
-	public  List<SysRole> query(SysRole param);
-
-	public  Integer update(SysRole param) ;
-
-	public  Integer delete(Long id);
-
-	public  Integer insert(SysRole param);
-
 
 }

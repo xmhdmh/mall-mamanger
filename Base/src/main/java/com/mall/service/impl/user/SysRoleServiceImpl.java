@@ -79,6 +79,9 @@ public class SysRoleServiceImpl extends BaseServiceImpl implements SysRoleServic
 		return result;
 	}
 
-   
-
+    @Override
+    public SysRole findById(Long id) {
+        // TODO Auto-generated method stub
+        return super.getSysRoleMapper().findById(id);
+    }
 }

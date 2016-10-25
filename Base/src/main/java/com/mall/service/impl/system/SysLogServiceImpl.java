@@ -41,5 +41,29 @@ public class SysLogServiceImpl extends BaseServiceImpl implements SysLogService{
 	public List<SysLog> query(SysLog param) {
 		return super.getSysLogMapper().query(param);
 	}
+
+    @Override
+    public Integer update(SysLog param) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Integer delete(Long id) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Integer insert(SysLog param) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public SysLog findById(Long id) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 	
 }

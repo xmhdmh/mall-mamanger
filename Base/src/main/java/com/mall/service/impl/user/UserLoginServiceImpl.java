@@ -1,11 +1,13 @@
 package com.mall.service.impl.user;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.mall.model.Result;
 import com.mall.model.user.UserLogin;
 import com.mall.service.impl.BaseServiceImpl;
-import com.mall.service.user.UserInfoService;
+import com.mall.service.user.UserLoginService;
 import com.mall.utils.MD5Util;
 
 /**
@@ -17,7 +19,7 @@ import com.mall.utils.MD5Util;
  */
 @Service
 @Transactional
-public class UserInfoServiceImpl extends BaseServiceImpl implements UserInfoService{
+public class UserLoginServiceImpl extends BaseServiceImpl implements UserLoginService{
     
     @Override
     public UserLogin findByName(String userName) {
@@ -39,5 +41,30 @@ public class UserInfoServiceImpl extends BaseServiceImpl implements UserInfoServ
 	    }
 		return result;
 	}
+    @Override
+    public List<UserLogin> query(UserLogin param) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+    @Override
+    public Integer update(UserLogin param) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+    @Override
+    public Integer delete(Long id) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+    @Override
+    public Integer insert(UserLogin param) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+    @Override
+    public UserLogin findById(Long id) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 
 }

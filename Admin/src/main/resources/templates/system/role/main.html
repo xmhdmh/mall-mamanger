@@ -59,8 +59,8 @@
 								<td class="td-manage">
         <a th:if="${sysRole.available==true}"  href="javascript:;" title="停用" th:onclick="'changeRoleStatus(this,'+${sysRole.id}+',false)'" class="btn btn-xs "><i class="fa fa-close bigger-120"></i></a>   
         <a th:if="${sysRole.available==false}" style="text-decoration:none" class="btn btn-xs btn-success" th:onclick="'changeRoleStatus(this,'+${sysRole.id}+',true)'" href="javascript:;" title="启用"><i class="fa fa-check  bigger-120"></i></a>
-        <a title="编辑"  href="javascript:;"  class="btn btn-xs btn-info" ><i class="fa fa-edit bigger-120"></i></a>      
-        <a title="删除" href="javascript:;" th:onclick="'deleteRole(this,'+${sysRole.id}+');'"  class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
+        <a title="编辑"  href="javascript:ovid()" th:onclick="'updateRole(this,'+${sysRole.id}+')'"  class="btn btn-xs btn-info" ><i class="fa fa-edit bigger-120"></i></a>      
+        <!-- <a title="删除" href="javascript:;" th:onclick="'deleteRole(this,'+${sysRole.id}+');'"  class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>-->
         <a href="javascript:ovid()" class="btn btn-xs btn-pink ads_link"  title="授权"><i class="fa  fa-bars  bigger-120"></i></a>
                                  </td>
 							</tr>
@@ -97,6 +97,28 @@
 			</div>
 			<div class="col-4"> </div>
 		</div>
+   </div>
+   </form>
+   
+   <!--修改角色图层-->
+   <form th:action="@{/sysRole/update.html}" method="post" id="roleUpdateForm" th:object="${sysRole}">
+    <div id="roleUpdateDiv" class="openDiv" style="display:none">
+       <div class="form-group">
+           <label class="form-label"><span class="c-red">*</span>角色名称：</label>
+           <div class="formControls">
+               <input type="hidden" value=""  id="roleUpdateId" th:field="*{id}" />
+               <input type="text" class="input-text" value=""  id="roleUpdateName" th:field="*{role}" datatype="*2-16" nullmsg="角色名称不能为空"/>
+           </div>
+           <div class="col-4"> <span class="Validform_checktip"></span></div>
+       </div>
+       <div class="form-group">
+           <label class="form-label">角色描述：</label>
+           <div class="formControls">
+               <textarea th:field="*{description}" id="roleUpdateDescription" cols="" rows="" style="width:300px " placeholder="200个字符以内"  ></textarea>
+               <!--<span class="wordage">剩余字数：<span id="sy" style="color:Red;">200</span>字</span>--><!--onkeyup="checkLength(this);"-->
+           </div>
+           <div class="col-4"> </div>
+       </div>
    </div>
    </form>
 </body>
@@ -192,6 +214,40 @@
 			
 		});
 		});
+	}
+	
+	/*修改角色信息*/
+	function updateRole(obj,id){
+	    $.post("/sysRole/findById.html",{id:id},function(data) {
+            if(null!=data){
+               data = JSON.parse(data); 
+               $("#roleUpdateId").val(data.id);
+               $("#roleUpdateName").val(data.role);
+               $("#roleUpdateDescription").val(data.description);
+            }
+        });
+        layer.open({
+            type : 1,
+            title : '修改角色信息',
+            maxmin : true,
+            shadeClose : true, //点击遮罩关闭层
+            area : [ '500px', '' ],
+            content : $('#roleUpdateDiv'),
+            btn : [ '提交', '取消' ],
+            yes : function(index, layero) {
+                $("#roleUpdateForm").submit();
+                }
+         });
+	     $("#roleUpdateForm").submitForm({
+	         callback:function(data){
+	             alert(data);
+	             console.info(data);
+	             if(data==1){ 
+	                  alert(1);
+	             }
+	             alert(2);
+	         }
+	     });
 	}
 </script>
 </html>

@@ -1,6 +1,9 @@
 package com.mall.service.system;
 
-public interface SysSequencesService {
+import com.mall.model.system.SysSequences;
+import com.mall.service.BaseService;
+
+public interface SysSequencesService extends BaseService<SysSequences>{
     
     public Long getSysSequencesId();
 }

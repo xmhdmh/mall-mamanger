@@ -15,11 +15,13 @@
   <insert id="insert" parameterType="SysRole" >
     insert into sys_role
      (
+     id,
      description, 
      role
       )
     values 
     (
+    #{id},
     #{description}, 
     #{role}
     )

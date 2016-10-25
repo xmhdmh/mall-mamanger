@@ -12,6 +12,7 @@ import com.github.pagehelper.PageHelper;
 import com.mall.controller.BaseController;
 import com.mall.model.Page;
 import com.mall.model.user.SysRole;
+import com.mall.utils.JsonUtil;
 
 /**
  * 
@@ -29,6 +30,13 @@ import com.mall.model.user.SysRole;
 @Controller
 @RequestMapping("/sysRole")
 public class SysRoleController  extends BaseController{
+    
+    
+    @RequestMapping("/findById")
+    @ResponseBody
+    public String findById(Long id){
+        return JsonUtil.toString(super.getSysRoleService().findById(id));
+    }
 
 	@RequestMapping("/query")
 	public String query(SysRole param,@RequestParam(defaultValue="1") Integer currentPage,@RequestParam(defaultValue="10") Integer pageSize,ModelMap map){
