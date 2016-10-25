@@ -14,9 +14,11 @@ import com.mall.service.system.SysSequencesService;
 public class SysSequencesServiceImpl extends BaseServiceImpl implements SysSequencesService{
 
     @Override
-    public Long getSysSequencesId() {
+    public Long getSysSequencesId(SysSequences model,String className) {
         // TODO Auto-generated method stub
-        return null;
+        model.setName(className);
+        super.getSysSequencesMapper().insert(model);
+        return model.getId();
     }
 
     @Override

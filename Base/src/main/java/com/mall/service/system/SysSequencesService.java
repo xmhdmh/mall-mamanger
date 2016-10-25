@@ -5,5 +5,5 @@ import com.mall.service.BaseService;
 
 public interface SysSequencesService extends BaseService<SysSequences>{
     
-    public Long getSysSequencesId();
+    public Long getSysSequencesId(SysSequences model,String className);
 }

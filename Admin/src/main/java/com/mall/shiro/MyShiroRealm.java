@@ -83,7 +83,7 @@ public class MyShiroRealm extends AuthorizingRealm {
         );
         Subject currentUser = SecurityUtils.getSubject(); 
         Session session = currentUser.getSession();
-        session.setAttribute("userInfo",userLogin);
+        session.setAttribute("userLogin",userLogin);
         SysLog log=new SysLog();
         log.setOpt_summary("登录系统");
         logService.insert(log, userLogin);

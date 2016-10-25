@@ -13,11 +13,15 @@ package com.mall.service.impl.user;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.session.Session;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.mall.model.user.SysRole;
 import com.mall.model.user.SysUserRole;
+import com.mall.model.user.UserLogin;
 import com.mall.service.impl.BaseServiceImpl;
 import com.mall.service.user.SysRoleService;
 
@@ -74,6 +78,10 @@ public class SysRoleServiceImpl extends BaseServiceImpl implements SysRoleServic
 		if(role!=null){
 			result=-1;
 		}else{
+	        Subject currentUser = SecurityUtils.getSubject(); 
+	        Session session = currentUser.getSession();
+	        UserLogin userLogin=(UserLogin) session.getAttribute("userLogin");
+	        param.setCreatedBy(userLogin.getId());
 			result=super.getSysRoleMapper().insert(param);
 		}
 		return result;

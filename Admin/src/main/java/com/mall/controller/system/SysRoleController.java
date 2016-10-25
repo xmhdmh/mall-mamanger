@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.github.pagehelper.PageHelper;
 import com.mall.controller.BaseController;
 import com.mall.model.Page;
+import com.mall.model.system.SysSequences;
 import com.mall.model.user.SysRole;
 import com.mall.utils.JsonUtil;
 
@@ -52,6 +53,7 @@ public class SysRoleController  extends BaseController{
 	@RequestMapping("/add")
 	@ResponseBody
 	public String insert(SysRole param){
+	    param.setId(super.getSysSequencesService().getSysSequencesId(new SysSequences(),param.getClass().getName()));
 		return super.getSysRoleService().insert(param).toString();
 	}
 	

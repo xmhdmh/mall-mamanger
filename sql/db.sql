@@ -322,7 +322,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 create table sys_role
 (
    id                   bigint(20) not null comment '����',
-   available            bit(1) default NULL comment '�Ƿ����',
+   available            bit(1) default '1' comment '�Ƿ����',
    description          varchar(255) default NULL comment '����',
    role                 varchar(32) default NULL comment '��ɫ����',
    created_by           bigint(20) default NULL comment '������',

@@ -17,13 +17,15 @@
      (
      id,
      description, 
-     role
+     role,
+     created_by
       )
     values 
     (
     #{id},
     #{description}, 
-    #{role}
+    #{role},
+    #{createdBy}
     )
   </insert>
   
