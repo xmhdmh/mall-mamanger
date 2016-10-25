@@ -11,4 +11,7 @@ public class SysDicController {
 	public String query(){
 		return "/system/dictionary/main";
 	}
+	
+	
+	
 }

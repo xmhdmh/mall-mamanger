@@ -401,6 +401,7 @@ create table user_login
    email                varchar(64) default NULL comment '����',
    phone                varchar(32) default NULL comment '�绰',
    last_login_time      timestamp comment '����¼ʱ��',
+   user_id              bigint(20) comment '��Ӧ���û�����Id',
    primary key (id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
