@@ -18,6 +18,10 @@ public class SysDic {
     private Long parentId;
 
     private String remark;
+    
+    private Long createdBy;
+    
+    private Long modifyBy;
 
     public Long getId() {
         return id;
@@ -82,4 +86,22 @@ public class SysDic {
     public void setRemark(String remark) {
         this.remark = remark == null ? null : remark.trim();
     }
+
+	public Long getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(Long createdBy) {
+		this.createdBy = createdBy;
+	}
+
+	public Long getModifyBy() {
+		return modifyBy;
+	}
+
+	public void setModifyBy(Long modifyBy) {
+		this.modifyBy = modifyBy;
+	}
+    
+    
 }

@@ -8,17 +8,25 @@
 */
 
 
-package com.mall.controller;
+package com.mall.controller.product;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.mall.controller.BaseController;
+
 /**
- * @ClassName: ProductController
- * @Description: TODO(这里用一句话描述这个类的作用)
- * @author 庄友权
- * @date 2016年9月28日 下午3:37:17
  * 
+ * <p>Title:产品控制类</p>
+ * <p>Description:产品控制类</p>
+ * <p>Copyright:Copyright (c) 2016</p>
+ * <p>Company:易泓咨询管理公司 </p>
+ * <p>Date:2016年10月24日 下午2:42:16</p>
+ * <p>Modify:2016年10月24日 下午2:42:16 </p>
+ * <p>Bug:</p>
+ * 
+ * @author xuliting
+ * @version 1.1
  */
 @Controller
 @RequestMapping("/product")
@@ -58,17 +66,5 @@ public class ProductController extends BaseController{
     @RequestMapping("/productsList")
     public String productList(){
         return "/productsList";
-    }
-    /**
-     * 品牌列表
-    * @Title: brandIndex 
-    * @Description: TODO(这里用一句话描述这个方法的作用) 
-    * @param @return    设定文件 
-    * @return String    返回类型 
-    * @throws
-     */
-    @RequestMapping("/brandList")
-    public String brandList(){
-        return "/brandList";
     }
 }
