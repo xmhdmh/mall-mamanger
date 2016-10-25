@@ -49,7 +49,7 @@ public class SysPermissionServiceImpl extends BaseServiceImpl implements SysPerm
         List<SysRolePermission> sysRolePermissions=super.getSysRolePermissionMapper().query(model);
         List<SysPermission> list=new ArrayList<SysPermission>();
         for (SysRolePermission sysRolePermission : sysRolePermissions) {
-            SysPermission sysPermission=super.getSysPermissionMapper().selectByPrimaryKey(sysRolePermission.getPermissionId());
+            SysPermission sysPermission=super.getSysPermissionMapper().findById(sysRolePermission.getPermissionId());
             list.add(sysPermission);
         }
         return list;

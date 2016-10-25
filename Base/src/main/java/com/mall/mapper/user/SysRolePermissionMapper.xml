@@ -9,13 +9,13 @@
   <sql id="Base_Column_List" >
     id, role_id, permission_id
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+  <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
     from sys_role_permission
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+  <delete id="delete" parameterType="java.lang.Long" >
     delete from sys_role_permission
     where id = #{id,jdbcType=BIGINT}
   </delete>
@@ -25,32 +25,8 @@
     values (#{id,jdbcType=BIGINT}, #{roleId,jdbcType=BIGINT}, #{permissionId,jdbcType=BIGINT}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.mall.model.user.SysRolePermission" >
-    insert into sys_role_permission
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="roleId != null" >
-        role_id,
-      </if>
-      <if test="permissionId != null" >
-        permission_id,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=BIGINT},
-      </if>
-      <if test="roleId != null" >
-        #{roleId,jdbcType=BIGINT},
-      </if>
-      <if test="permissionId != null" >
-        #{permissionId,jdbcType=BIGINT},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.mall.model.user.SysRolePermission" >
+
+  <update id="update" parameterType="com.mall.model.user.SysRolePermission" >
     update sys_role_permission
     <set >
       <if test="roleId != null" >
@@ -62,13 +38,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.mall.model.user.SysRolePermission" >
-    update sys_role_permission
-    set role_id = #{roleId,jdbcType=BIGINT},
-      permission_id = #{permissionId,jdbcType=BIGINT}
-    where id = #{id,jdbcType=BIGINT}
-  </update>
-  
+
   <select id="query" resultMap="BaseResultMap" parameterType="com.mall.model.user.SysRolePermission" >
     select 
     <include refid="Base_Column_List" />
