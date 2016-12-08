@@ -38,7 +38,7 @@ public class UserController extends BaseController{
     @RequestMapping("/editPwd")
     @ResponseBody
     public String editPwd(String oldPwd,String newPwd){
-        UserLogin userLogin=(UserLogin) SecurityUtils.getSubject().getSession().getAttribute("userInfo");
+        UserLogin userLogin=(UserLogin) SecurityUtils.getSubject().getSession().getAttribute("userLogin");
         return JsonUtil.toString(super.getUserInfoService().editPwd(userLogin, oldPwd, newPwd));
     }
     
