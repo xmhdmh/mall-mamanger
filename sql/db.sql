@@ -322,7 +322,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 create table sys_role
 (
    id                   bigint(20) not null comment 'id',
-   available            bit(1) default '1' comment '是否启用',
+   available            bit(1) default 1 comment '是否启用',
    description          varchar(255) default NULL comment '描述',
    role                 varchar(32) default NULL comment '角色名',
    created_by           bigint(20) default NULL comment '创建用户id',
@@ -386,7 +386,7 @@ create table user_detail
    primary key (id)
 );
 
-alter table user_detail comment '�û�����';
+alter table user_detail comment '用户详细信息';
 
 /*==============================================================*/
 /* Table: user_login                                            */
